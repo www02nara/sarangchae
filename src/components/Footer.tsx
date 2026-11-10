@@ -8,9 +8,9 @@ import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#fefbfc] text-[#6e585c] text-xs pt-12 pb-20 sm:pb-12 border-t border-[#f5e6e8]">
+    <footer className="bg-[#f8fafc] text-slate-600 text-xs pt-12 pb-20 sm:pb-12 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8 border-b border-[#f5e6e8]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8 border-b border-slate-200">
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-3">
@@ -20,12 +20,12 @@ export default function Footer() {
                 alt={`${CLINIC_INFO.name} ${CLINIC_INFO.branchName}`}
                 className="h-8 w-auto object-contain"
               />
-              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded shrink-0 self-center">
+              <span className="text-[10px] font-bold px-2 py-0.5 bg-white text-[#0f70b1] border border-[#d0e5f5] rounded-md shrink-0 self-center">
                 {CLINIC_INFO.branchName}
               </span>
             </div>
 
-            <p className="text-[#6e585c] text-xs leading-relaxed max-w-sm">
+            <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
               {CLINIC_INFO.slogan}
               <br />
               언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다
@@ -34,14 +34,14 @@ export default function Footer() {
 
           {/* Operating Hours Summary */}
           <div className="lg:col-span-4 space-y-2">
-            <h4 className="text-xs font-bold text-[#261d1f] uppercase tracking-wider flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#a34c5b]" />
+            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#0f70b1]" />
               진료시간 안내
             </h4>
-            <ul className="space-y-1 text-[#6e585c] text-[11px]">
+            <ul className="space-y-1 text-slate-600 text-[11px]">
               <li className="flex justify-between">
-                <span className="text-[#7d3543] font-bold">화 · 목 (야간진료)</span>
-                <span className="font-semibold text-[#261d1f]">09:30 ~ 20:00</span>
+                <span className="text-[#0f70b1] font-bold">화 · 목 (야간진료)</span>
+                <span className="font-semibold text-slate-900">09:30 ~ 20:00</span>
               </li>
               <li className="flex justify-between">
                 <span>월 · 수 · 금</span>
@@ -51,7 +51,7 @@ export default function Footer() {
                 <span>토 요 일 (연속진료)</span>
                 <span>09:30 ~ 14:30</span>
               </li>
-              <li className="flex justify-between text-[#8a4d56]">
+              <li className="flex justify-between text-[#c2410c] font-medium">
                 <span>휴게시간(점심)</span>
                 <span>12:30 ~ 14:00 (14시 진료 시작)</span>
               </li>
@@ -64,14 +64,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-3 space-y-2">
-            <h4 className="text-xs font-bold text-[#261d1f] uppercase tracking-wider flex items-center gap-1.5">
-              <Phone className="w-3.5 h-3.5 text-[#a34c5b]" />
+            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-[#0f70b1]" />
               대표 문의
             </h4>
-            <div className="text-xl font-black text-[#261d1f] tracking-tight">
+            <div className="text-xl font-black text-slate-900 tracking-tight">
               {CLINIC_INFO.formattedPhone}
             </div>
-            <p className="text-[#6e585c] text-[11px] leading-relaxed">
+            <p className="text-slate-600 text-[11px] leading-relaxed">
               {CLINIC_INFO.address}
               <br />
               {CLINIC_INFO.addressDetail}
@@ -80,7 +80,7 @@ export default function Footer() {
         </div>
 
         {/* Business & Legal info */}
-        <div className="pt-6 space-y-2 text-[11px] text-[#8c7478]">
+        <div className="pt-6 space-y-2 text-[11px] text-slate-500">
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <span>상호명: {CLINIC_INFO.name}</span>
             <span>대표자: {CLINIC_INFO.representative}</span>
@@ -89,10 +89,10 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address}</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 text-[10px] text-[#9e878b]">
+          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-400">
             <div>&copy; 2025 {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
-              <a href="#location" className="hover:text-[#261d1f] transition">
+              <a href="#location" className="hover:text-slate-700 transition">
                 오시는 길
               </a>
             </div>

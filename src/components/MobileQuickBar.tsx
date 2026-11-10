@@ -9,14 +9,14 @@ export default function MobileQuickBar() {
   const { openBooking } = useModal();
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#f5e6e8] px-3 py-2 sm:hidden shadow-lg">
+    <div className="fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-md border-t border-slate-200 px-3 py-2 sm:hidden shadow-lg">
       <div className="grid grid-cols-4 gap-1.5 text-center">
         {/* Call button */}
         <a
           href={`tel:${CLINIC_INFO.phone}`}
-          className="flex flex-col items-center justify-center py-1 rounded-lg text-[#3d2b2f] active:bg-[#fef7f9] transition"
+          className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#fef7f9] flex items-center justify-center text-[#a34c5b] mb-0.5 border border-[#f0d8dd]">
+          <div className="w-8 h-8 rounded-full bg-[#f0f7fb] flex items-center justify-center text-[#0f70b1] mb-0.5 border border-[#d0e5f5]">
             <Phone className="w-4 h-4" />
           </div>
           <span className="text-[11px] font-semibold">전화상담</span>
@@ -27,7 +27,7 @@ export default function MobileQuickBar() {
           href={CLINIC_INFO.naverPlaceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col items-center justify-center py-1 rounded-lg text-[#3d2b2f] active:bg-[#fef7f9] transition"
+          className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
           <div className="w-8 h-8 rounded-full bg-[#03C75A]/15 flex items-center justify-center text-[#03C75A] mb-0.5 font-bold text-xs">
             N
@@ -38,20 +38,20 @@ export default function MobileQuickBar() {
         {/* Quick Booking button */}
         <button
           onClick={() => openBooking()}
-          className="flex flex-col items-center justify-center py-1 rounded-lg text-[#3d2b2f] active:bg-[#fef7f9] transition"
+          className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#fef7f9] flex items-center justify-center text-[#7d3543] mb-0.5 border border-[#f0d8dd] shadow-3xs">
-            <Calendar className="w-4 h-4" />
+          <div className="w-8 h-8 rounded-full bg-[#0f70b1] flex items-center justify-center text-white mb-0.5 shadow-3xs">
+            <Calendar className="w-4 h-4 text-white" />
           </div>
-          <span className="text-[11px] font-semibold text-[#7d3543]">간편예약</span>
+          <span className="text-[11px] font-bold text-[#0f70b1]">간편예약</span>
         </button>
 
         {/* Map / Directions button */}
         <a
           href="#location"
-          className="flex flex-col items-center justify-center py-1 rounded-lg text-[#3d2b2f] active:bg-[#fef7f9] transition"
+          className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#fef7f9] flex items-center justify-center text-[#7d3543] mb-0.5 border border-[#f0d8dd]">
+          <div className="w-8 h-8 rounded-full bg-[#f0f7fb] flex items-center justify-center text-[#0f70b1] mb-0.5 border border-[#d0e5f5]">
             <MapPin className="w-4 h-4" />
           </div>
           <span className="text-[11px] font-semibold">오시는길</span>

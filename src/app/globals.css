@@ -3,14 +3,14 @@
 
 :root {
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  --color-pink-whisper: #fefbfc;
-  --color-pink-light: #fdf6f8;
-  --color-pink-soft: #fbf0f3;
-  --color-pink-border: #f4e3e6;
-  --color-pink-border-subtle: #f9eef1;
-  --color-pink-accent: #8c4250;
-  --color-text-main: #2b2022;
-  --color-text-muted: #6e585c;
+  --color-brand-blue: #0f70b1;
+  --color-brand-orange: #ed5f21;
+  --color-brand-green: #72b033;
+  --color-brand-brown: #3d1f18;
+  --color-text-main: #1e293b;
+  --color-text-muted: #64748b;
+  --color-bg-subtle: #f8fafc;
+  --color-border-subtle: #e2e8f0;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: #ffffff;
-  color: #2b2022;
+  color: #1e293b;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-break: keep-all;
@@ -42,10 +42,10 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #f2dfe2;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #e3c4c9;
+  background: #94a3b8;
 }

@@ -28,17 +28,17 @@ export default function ClinicTour() {
   ];
 
   return (
-    <section id="tour" className="py-16 sm:py-20 bg-white border-b border-[#f5e6e8]">
+    <section id="tour" className="py-16 sm:py-20 bg-white border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold text-[#7d3543] bg-[#fef7f9] border border-[#f0d8dd] px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-xs font-bold text-[#0f70b1] bg-[#f0f7fb] border border-[#d0e5f5] px-3 py-1 rounded-full uppercase tracking-wider">
             Clinic Facility
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#261d1f] mt-3 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 mb-2">
             원내 시설 안내
           </h2>
-          <p className="text-[#6e585c] text-xs sm:text-sm">
+          <p className="text-slate-600 text-xs sm:text-sm">
             쾌적함과 위생을 최우선으로 관리하는 경희사랑채한의원 공간입니다.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function ClinicTour() {
           {tourItems.map((item, idx) => (
             <div
               key={idx}
-              className="group rounded-2xl overflow-hidden border border-[#f5e6e8] bg-white shadow-3xs hover:border-[#edd2d7] hover:shadow-xs transition-all"
+              className="group rounded-2xl overflow-hidden border border-slate-200 bg-white shadow-3xs hover:border-[#b9ddf5] hover:shadow-xs transition-all"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -57,10 +57,10 @@ export default function ClinicTour() {
                 />
               </div>
               <div className="p-4 space-y-1">
-                <h3 className="font-bold text-base text-[#362427]">
+                <h3 className="font-bold text-base text-slate-900">
                   {item.title}
                 </h3>
-                <p className="text-xs text-[#73585c] leading-relaxed">
+                <p className="text-xs text-slate-600 leading-relaxed">
                   {item.desc}
                 </p>
               </div>

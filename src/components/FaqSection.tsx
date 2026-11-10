@@ -14,17 +14,17 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-20 bg-white border-b border-[#f5e6e8]">
+    <section id="faq" className="py-16 sm:py-20 bg-white border-b border-slate-200">
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         
         <div className="text-center mb-10">
-          <span className="text-xs font-bold text-[#7d3543] bg-[#fef7f9] px-3 py-1 rounded-full uppercase tracking-wider border border-[#f0d8dd]">
+          <span className="text-xs font-bold text-[#0f70b1] bg-[#f0f7fb] px-3 py-1 rounded-full uppercase tracking-wider border border-[#d0e5f5]">
             FAQ
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#261d1f] mt-3 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 mb-2">
             자주 묻는 질문
           </h2>
-          <p className="text-[#6e585c] text-xs sm:text-sm">
+          <p className="text-slate-600 text-xs sm:text-sm">
             내원 전 환자분들이 가장 많이 질문하시는 내용입니다.
           </p>
         </div>
@@ -36,27 +36,27 @@ export default function FaqSection() {
             return (
               <div
                 key={idx}
-                className="border border-[#f5e6e8] rounded-2xl overflow-hidden bg-white shadow-3xs hover:border-[#edd2d7] transition"
+                className="border border-slate-200 rounded-2xl overflow-hidden bg-white shadow-3xs hover:border-[#b9ddf5] transition"
               >
                 <button
                   onClick={() => toggleAccordion(idx)}
-                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 hover:bg-[#fefbfc] transition text-sm sm:text-base font-bold text-[#261d1f]"
+                  className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-3 hover:bg-slate-50 transition text-sm sm:text-base font-bold text-slate-900"
                 >
                   <span className="flex items-center gap-2.5">
-                    <span className="w-6 h-6 rounded-full bg-[#fef7f9] text-[#7d3543] text-xs font-extrabold flex items-center justify-center shrink-0 border border-[#f0d8dd]">
+                    <span className="w-6 h-6 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-extrabold flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                       Q
                     </span>
                     <span>{faq.question}</span>
                   </span>
                   <ChevronDown
-                    className={`w-4 h-4 text-[#8c6b71] shrink-0 transition-transform ${
-                      isOpen ? "rotate-180 text-[#a34c5b]" : ""
+                    className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${
+                      isOpen ? "rotate-180 text-[#0f70b1]" : ""
                     }`}
                   />
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 pb-5 pt-2 text-xs sm:text-sm text-[#5c4448] leading-relaxed border-t border-[#f5e6e8] bg-[#fefbfc]">
+                  <div className="px-5 pb-5 pt-2 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 bg-[#f8fafc]">
                     {faq.answer}
                   </div>
                 )}

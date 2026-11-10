@@ -10,36 +10,36 @@ export default function Hero() {
   const { openBooking } = useModal();
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-[#fefbfc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-[#f5e6e8]">
+    <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           
-          {/* Left Text (Almost White with a Whisper of Pink) */}
+          {/* Left Text */}
           <div className="lg:col-span-7 space-y-6 text-left">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#fef7f9] text-[#7d3543] text-xs font-bold border border-[#f0d8dd] max-w-full">
-              <Heart className="w-3.5 h-3.5 text-[#a34c5b] fill-[#a34c5b] shrink-0" />
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
+              <Heart className="w-3.5 h-3.5 text-[#ed5f21] fill-[#ed5f21] shrink-0" />
               <span className="truncate">언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#261d1f] tracking-tight leading-[1.2]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.2]">
               몸과 마음이 편안한
               <br />
-              <span>경희사랑채</span><span className="font-light text-[#7d3543]">한의원</span>
+              <span>경희</span><span className="text-[#ed5f21]">사랑채</span><span className="font-light text-[#0f70b1]">한의원</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-[#6e585c] max-w-xl leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
               증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다.
               <br className="hidden sm:inline" />
               내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
             </p>
 
-            {/* Quick Action Buttons (Almost White with Subtle Tint) */}
+            {/* Quick Action Buttons */}
             <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-1">
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
-                className="w-full sm:w-auto px-5 py-3.5 sm:px-6 sm:py-4 rounded-xl bg-[#fdf5f7] hover:bg-[#faebee] text-[#4a2e34] border-2 border-[#edd2d7] font-bold text-sm sm:text-base transition shadow-3xs hover:shadow-xs flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-5 py-3.5 sm:px-6 sm:py-4 rounded-xl bg-white hover:bg-slate-50 text-slate-900 border-2 border-slate-200 font-bold text-sm sm:text-base transition shadow-3xs hover:shadow-xs flex items-center justify-center gap-2"
               >
-                <Phone className="w-4 h-4 text-[#a34c5b]" />
+                <Phone className="w-4 h-4 text-[#0f70b1]" />
                 <span>전화 상담 ({CLINIC_INFO.formattedPhone})</span>
               </a>
 
@@ -55,25 +55,26 @@ export default function Hero() {
 
               <button
                 onClick={() => openBooking()}
-                className="flex-1 sm:flex-initial px-4 py-3.5 sm:px-5 sm:py-4 rounded-xl bg-white hover:bg-[#fdf5f7] text-[#4a2e34] border border-[#f0d8dd] font-bold text-sm sm:text-base transition shadow-3xs flex items-center justify-center"
+                className="flex-1 sm:flex-initial px-4 py-3.5 sm:px-5 sm:py-4 rounded-xl bg-[#0f70b1] hover:bg-[#0c5c92] text-white font-bold text-sm sm:text-base transition shadow-xs hover:shadow-md flex items-center justify-center gap-1.5"
               >
-                진료 예약 신청
+                <Calendar className="w-4 h-4 text-white" />
+                <span>진료 예약 신청</span>
               </button>
             </div>
 
-            {/* 3 Simple Light Badges */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-4 border-t border-[#f5e6e8] max-w-lg text-center">
-              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-[#f5e6e8] shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#7d3543]">화 · 목 야간</div>
-                <div className="text-[10px] sm:text-[11px] text-gray-500 mt-0.5">저녁 8시까지</div>
+            {/* 3 Simple Badges Echoing Logo Colors */}
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-4 border-t border-slate-200 max-w-lg text-center">
+              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-slate-200 shadow-3xs">
+                <div className="font-extrabold text-xs sm:text-sm text-[#0f70b1]">화 · 목 야간</div>
+                <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">저녁 8시까지</div>
               </div>
-              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-[#f5e6e8] shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#7d3543]">한방소아과</div>
-                <div className="text-[10px] sm:text-[11px] text-gray-500 mt-0.5">성장 · 면역</div>
+              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-slate-200 shadow-3xs">
+                <div className="font-extrabold text-xs sm:text-sm text-[#72b033]">한방소아과</div>
+                <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">성장 · 면역</div>
               </div>
-              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-[#f5e6e8] shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#7d3543]">1층 단독</div>
-                <div className="text-[10px] sm:text-[11px] text-gray-500 mt-0.5">편안한 방문</div>
+              <div className="bg-white p-2.5 sm:p-3 rounded-xl border border-slate-200 shadow-3xs">
+                <div className="font-extrabold text-xs sm:text-sm text-[#ed5f21]">1층 단독</div>
+                <div className="text-[10px] sm:text-[11px] text-slate-500 mt-0.5">편안한 방문</div>
               </div>
             </div>
           </div>
@@ -87,10 +88,10 @@ export default function Hero() {
                   alt="경희사랑채한의원"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                  <div className="text-xs font-semibold text-[#ffeef1]">부산 사하구 하신중앙로 341 1층</div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                  <div className="text-xs font-semibold text-slate-200">부산 사하구 하신중앙로 341 1층</div>
                   <div className="text-xl font-bold">경희사랑채한의원</div>
-                  <div className="text-xs text-gray-200 mt-0.5">정병준 대표원장</div>
+                  <div className="text-xs text-slate-300 mt-0.5">정병준 대표원장</div>
                 </div>
               </div>
             </div>

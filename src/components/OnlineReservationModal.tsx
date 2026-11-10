@@ -48,13 +48,13 @@ export default function OnlineReservationModal() {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-fade-in">
       <div
-        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col border border-[#fce7ea]"
+        className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[92vh] flex flex-col border border-slate-200"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header (Refined Medical Dark Charcoal) */}
-        <div className="bg-[#261d1f] text-white px-6 py-4 flex items-center justify-between">
+        {/* Header */}
+        <div className="bg-[#0f70b1] text-white px-6 py-4 flex items-center justify-between">
           <div>
-            <span className="text-[11px] font-semibold tracking-wider text-[#d9b8be] uppercase">
+            <span className="text-[11px] font-semibold tracking-wider text-blue-100 uppercase">
               Online Appointment
             </span>
             <h3 className="text-lg sm:text-xl font-bold mt-0.5">간편 진료 예약 & 상담</h3>
@@ -72,7 +72,7 @@ export default function OnlineReservationModal() {
         <div className="p-6 overflow-y-auto space-y-4">
           {isSubmitted ? (
             <div className="py-6 text-center space-y-4">
-              <div className="w-14 h-14 bg-[#fef7f9] text-[#7d3543] rounded-full flex items-center justify-center mx-auto border border-[#f0d8dd]">
+              <div className="w-14 h-14 bg-[#f0f7fb] text-[#0f70b1] rounded-full flex items-center justify-center mx-auto border border-[#d0e5f5]">
                 <CheckCircle className="w-8 h-8" />
               </div>
               <h4 className="text-xl font-bold text-gray-900">
@@ -82,11 +82,11 @@ export default function OnlineReservationModal() {
                 <strong className="text-gray-900">{name}</strong>님, 접수해 주셔서 감사합니다.
                 <br />
                 원내에서 일정을 확인한 후 남겨주신 번호(
-                <span className="text-[#7d3543] font-semibold">{phone}</span>)로 안내 연락을 드리겠습니다.
+                <span className="text-[#0f70b1] font-semibold">{phone}</span>)로 안내 연락을 드리겠습니다.
               </p>
               <button
                 onClick={handleReset}
-                className="w-full py-3 bg-[#261d1f] hover:bg-[#3d2e32] text-white font-semibold rounded-xl transition shadow-2xs text-sm"
+                className="w-full py-3 bg-[#0f70b1] hover:bg-[#0c5c92] text-white font-semibold rounded-xl transition shadow-2xs text-sm"
               >
                 확인 및 닫기
               </button>
@@ -94,10 +94,10 @@ export default function OnlineReservationModal() {
           ) : (
             <>
               {/* Naver Place Direct Banner */}
-              <div className="bg-[#fefbfc] border border-[#f5e6e8] rounded-xl p-3 flex items-center justify-between gap-3 text-xs">
+              <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between gap-3 text-xs">
                 <div>
-                  <span className="font-bold text-[#261d1f]">네이버 플레이스 예약 / 문의</span>
-                  <p className="text-gray-500 text-[11px] mt-0.5">
+                  <span className="font-bold text-slate-900">네이버 플레이스 예약 / 문의</span>
+                  <p className="text-slate-500 text-[11px] mt-0.5">
                     네이버 지도로 바로 연결하시겠습니까?
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export default function OnlineReservationModal() {
               <form onSubmit={handleSubmit} className="space-y-3.5 text-xs sm:text-sm">
                 <div>
                   <label className="block font-semibold text-gray-700 mb-1">
-                    환자 성함 <span className="text-[#a34c5b]">*</span>
+                    환자 성함 <span className="text-[#ed5f21]">*</span>
                   </label>
                   <input
                     type="text"
@@ -123,13 +123,13 @@ export default function OnlineReservationModal() {
                     placeholder="홍길동"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900"
                   />
                 </div>
 
                 <div>
                   <label className="block font-semibold text-gray-700 mb-1">
-                    연락처 <span className="text-[#a34c5b]">*</span>
+                    연락처 <span className="text-[#ed5f21]">*</span>
                   </label>
                   <input
                     type="tel"
@@ -137,21 +137,21 @@ export default function OnlineReservationModal() {
                     placeholder="010-0000-0000"
                     value={phone}
                     onChange={(e) => setPhone(e.target.value)}
-                    className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900"
+                    className="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900"
                   />
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
                     <label className="block font-semibold text-gray-700 mb-1">
-                      희망일 <span className="text-[#a34c5b]">*</span>
+                      희망일 <span className="text-[#ed5f21]">*</span>
                     </label>
                     <input
                       type="date"
                       required
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900 text-xs sm:text-sm"
+                      className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900 text-xs sm:text-sm"
                     />
                   </div>
                   <div>
@@ -161,7 +161,7 @@ export default function OnlineReservationModal() {
                     <select
                       value={time}
                       onChange={(e) => setTime(e.target.value)}
-                      className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900 text-xs sm:text-sm"
+                      className="w-full px-3 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900 text-xs sm:text-sm"
                     >
                       <option value="10:00">오전 10:00</option>
                       <option value="11:00">오전 11:00</option>
@@ -183,7 +183,7 @@ export default function OnlineReservationModal() {
                   <select
                     value={service}
                     onChange={(e) => setService(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900"
+                    className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900"
                   >
                     {CLINIC_SERVICES.map((s) => (
                       <option key={s.id} value={s.title}>
@@ -203,7 +203,7 @@ export default function OnlineReservationModal() {
                     placeholder="불편하신 증상이나 문의사항을 편하게 적어주세요."
                     value={memo}
                     onChange={(e) => setMemo(e.target.value)}
-                    className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#f0d8dd] text-gray-900 text-xs sm:text-sm resize-none"
+                    className="w-full px-3.5 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#b9ddf5] text-gray-900 text-xs sm:text-sm resize-none"
                   />
                 </div>
 
@@ -213,7 +213,7 @@ export default function OnlineReservationModal() {
                       type="checkbox"
                       checked={agreed}
                       onChange={(e) => setAgreed(e.target.checked)}
-                      className="mt-0.5 rounded border-gray-300 text-[#7d3543] focus:ring-[#f0d8dd]"
+                      className="mt-0.5 rounded border-gray-300 text-[#0f70b1] focus:ring-[#b9ddf5]"
                     />
                     <span>예약 안내를 위한 개인정보(이름, 연락처) 수집 및 이용에 동의합니다.</span>
                   </label>
@@ -221,9 +221,9 @@ export default function OnlineReservationModal() {
 
                 <button
                   type="submit"
-                  className="w-full py-3 bg-[#261d1f] hover:bg-[#3d2e32] text-white font-bold rounded-xl transition shadow-md mt-2 flex items-center justify-center gap-2"
+                  className="w-full py-3 bg-[#0f70b1] hover:bg-[#0c5c92] text-white font-bold rounded-xl transition shadow-md mt-2 flex items-center justify-center gap-2"
                 >
-                  <Phone className="w-4 h-4 text-[#d9b8be]" />
+                  <Phone className="w-4 h-4 text-white" />
                   예약 신청하기
                 </button>
               </form>

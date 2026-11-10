@@ -10,7 +10,7 @@ export default function DoctorIntro() {
   const { openBooking } = useModal();
 
   return (
-    <section id="doctor" className="py-16 sm:py-20 bg-[#fefbfc] border-b border-[#f5e6e8]">
+    <section id="doctor" className="py-16 sm:py-20 bg-[#f8fafc] border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
@@ -24,59 +24,59 @@ export default function DoctorIntro() {
                   className="w-full h-full object-cover object-top"
                 />
               </div>
-              <div className="p-4 bg-[#fef7f9] border-t border-[#f0d8dd] text-center">
-                <div className="text-xs text-[#7d3543] font-medium">경희대학교 한의과대학 출신</div>
-                <div className="text-lg font-bold text-[#261d1f] mt-0.5">정병준 대표원장</div>
+              <div className="p-4 bg-white border-t border-slate-100 text-center">
+                <div className="text-xs text-[#0f70b1] font-semibold">경희대학교 한의과대학 출신</div>
+                <div className="text-lg font-bold text-slate-900 mt-0.5">정병준 대표원장</div>
               </div>
             </div>
           </div>
 
-          {/* Doctor Information (Almost White with Subtle Tint) */}
+          {/* Doctor Information */}
           <div className="lg:col-span-7 space-y-5 text-left">
             <div>
-              <span className="text-xs font-bold text-[#7d3543] bg-white px-3 py-1 rounded-full uppercase tracking-wider border border-[#f0d8dd]">
+              <span className="text-xs font-bold text-[#0f70b1] bg-white px-3 py-1 rounded-full uppercase tracking-wider border border-[#d0e5f5]">
                 Doctor Profile
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-[#261d1f] mt-3 mb-2">
+              <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 mb-2">
                 “내 가족을 치료하는 마음으로
                 <br />
-                <span className="text-[#7d3543]">정직하고 바른 진료</span>를 약속합니다.”
+                <span className="text-[#0f70b1]">정직하고 바른 진료</span>를 약속합니다.”
               </h2>
-              <p className="text-[#6e585c] text-sm leading-relaxed">
+              <p className="text-slate-600 text-sm leading-relaxed">
                 환자 한 분 한 분의 체질과 증상을 깊이 헤아려 근본적인 원인을 치료합니다.
                 과잉 진료 없이 꼭 필요한 정직한 한방 치료만을 시행합니다.
               </p>
             </div>
 
             {/* Core Qualifications */}
-            <div className="bg-white rounded-xl p-4 sm:p-5 border border-[#f5e6e8] shadow-3xs space-y-2.5">
-              <div className="text-xs font-bold text-[#261d1f] flex items-center gap-1.5 pb-1 border-b border-[#f5e6e8]">
-                <Award className="w-4 h-4 text-[#a34c5b]" />
+            <div className="bg-white rounded-xl p-4 sm:p-5 border border-slate-200 shadow-3xs space-y-2.5">
+              <div className="text-xs font-bold text-slate-900 flex items-center gap-1.5 pb-1 border-b border-slate-100">
+                <Award className="w-4 h-4 text-[#0f70b1]" />
                 주요 약력 및 활동
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-[#4a3539]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>경희대학교 한의과대학 출신</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>대한한방소아과학회 회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>대한한의학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>대한한방내과학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>사상체질의학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#a34c5b] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
                   <span>현 경희사랑채한의원 대표원장</span>
                 </div>
               </div>
@@ -96,9 +96,9 @@ export default function DoctorIntro() {
 
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
-                className="px-5 py-3 rounded-xl bg-[#fdf5f7] hover:bg-[#faebee] text-[#4a2e34] border border-[#edd2d7] text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-3xs"
+                className="px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-3xs"
               >
-                <Phone className="w-3.5 h-3.5 text-[#a34c5b]" />
+                <Phone className="w-3.5 h-3.5 text-[#0f70b1]" />
                 <span>원내 전화 상담</span>
               </a>
             </div>
