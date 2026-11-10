@@ -44,10 +44,9 @@ export const metadata: Metadata = {
     type: "website",
     locale: "ko_KR",
     url: "https://www02nara.github.io/sarangchae/",
-    siteName: "하단 한의원 경희사랑채한의원",
-    title: "하단 한의원 | 경희사랑채한의원 (부산 사하구 하단역 야간진료)",
-    description:
-      "하단역 8번 출구 1층. 경희대 출신 정병준 대표원장 1:1 진료. 통증·관절·경락, 한방소아과, 교통사고 후유증(본인부담 0원), 식약처 GMP 인증 한약, 화·목 저녁 8시 야간진료.",
+    siteName: "경희사랑채한의원",
+    title: "하단 한의원 | 경희사랑채한의원",
+    description: "하단역 8번 출구 1층. 경희대 출신 1:1 책임진료, 화·목 저녁 8시 야간진료.",
     images: [
       {
         url: "https://www02nara.github.io/sarangchae/images/hero-clinic.jpg",
@@ -66,8 +65,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "하단 한의원 | 경희사랑채한의원",
-    description:
-      "부산 사하구 하단역 8번 출구 1층. 경희대 출신 정병준 대표원장 1:1 책임진료. 화·목 저녁 8시 야간진료.",
+    description: "하단역 8번 출구 1층. 경희대 출신 1:1 책임진료, 화·목 저녁 8시 야간진료.",
     images: ["https://www02nara.github.io/sarangchae/images/hero-clinic.jpg"],
   },
   robots: {
