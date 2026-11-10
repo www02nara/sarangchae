@@ -27,7 +27,7 @@ export default function ClinicGrid() {
             주요 진료 과목
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            <strong>하단 한의원</strong> 경희사랑채는 환자의 체질과 상태에 맞춰 막힌 경락을 소통시키고 근본 원인을 다스리는 1:1 맞춤 정밀 한방 치료 프로그램을 운영합니다.
+            <strong>하단 한의원</strong> 경희사랑채는 환자의 체질과 상태에 맞춰 근본 원인을 다스리는 1:1 맞춤 정밀 한방 치료 프로그램을 운영합니다.
           </p>
         </div>
 
