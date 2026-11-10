@@ -1,3 +1,3 @@
 :HL["/sarangchae/_next/static/chunks/2c9bcltonswg1.css","style"]
 1:[["children",{"s":"__PAGE__","h":128}]]
-0:{"b":"X2PWpBzAh9KW7lPzWhlXL","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"KK6zZOEoWNw2dfR9tE2W_","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
