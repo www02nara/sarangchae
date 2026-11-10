@@ -28,14 +28,14 @@ export default function NonCoveredModal() {
         className="relative w-full max-w-3xl bg-white rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col border border-[#fce7ea]"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
-        <div className="bg-[#f08998] text-white px-6 py-4 flex items-center justify-between">
+        {/* Header (Refined Medical Dark Charcoal) */}
+        <div className="bg-[#261d1f] text-white px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="p-1.5 bg-white/20 rounded-lg">
-              <FileText className="w-4 h-4 text-white" />
+            <div className="p-1.5 bg-white/10 rounded-lg">
+              <FileText className="w-4 h-4 text-[#d9b8be]" />
             </div>
             <div>
-              <span className="text-[10px] font-semibold tracking-wider text-white/80 uppercase">
+              <span className="text-[10px] font-semibold tracking-wider text-[#d9b8be] uppercase">
                 Medical Law Notice
               </span>
               <h3 className="text-lg font-bold">{CLINIC_INFO.name} 비급여 진료비용 안내</h3>
@@ -51,8 +51,8 @@ export default function NonCoveredModal() {
         </div>
 
         {/* Notice banner */}
-        <div className="bg-[#fff5f7] px-6 py-2.5 border-b border-[#fde5ea] flex items-start gap-2 text-xs text-[#705256]">
-          <ShieldAlert className="w-4 h-4 text-[#f08998] shrink-0 mt-0.5" />
+        <div className="bg-[#fefbfc] px-6 py-2.5 border-b border-[#f5e6e8] flex items-start gap-2 text-xs text-[#6e585c]">
+          <ShieldAlert className="w-4 h-4 text-[#a34c5b] shrink-0 mt-0.5" />
           <p>
             의료법 제45조에 의거하여 {CLINIC_INFO.name}의 비급여 진료비용을 고지합니다.
             환자의 상태와 처방에 따라 차이가 있을 수 있으므로 진료 시 안내받으시기 바랍니다.
@@ -68,8 +68,8 @@ export default function NonCoveredModal() {
                 onClick={() => setActiveCategory(cat)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-medium transition ${
                   activeCategory === cat
-                    ? "bg-[#f08998] text-white shadow-2xs"
-                    : "bg-[#fff0f3] text-[#6b4e52] hover:bg-[#fce7ea]"
+                    ? "bg-[#261d1f] text-white shadow-2xs"
+                    : "bg-[#fef7f9] text-[#5c3e44] border border-[#f0d8dd] hover:bg-[#faebee]"
                 }`}
               >
                 {cat}
@@ -84,7 +84,7 @@ export default function NonCoveredModal() {
               placeholder="항목 검색..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-8 pr-3 py-1.5 text-xs rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#f08998]"
+              className="w-full pl-8 pr-3 py-1.5 text-xs rounded-lg border border-gray-200 focus:outline-none focus:ring-1 focus:ring-[#f0d8dd]"
             />
           </div>
         </div>

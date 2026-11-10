@@ -3,14 +3,14 @@
 
 :root {
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
-  --color-pink-light: #fff5f7;
-  --color-pink-soft: #ffeef2;
-  --color-pink-border: #fde2e7;
-  --color-pink-accent: #f7aab7;
-  --color-pink-brand: #f08998;
-  --color-pink-brand-hover: #e87787;
-  --color-text-main: #362427;
-  --color-text-muted: #73595d;
+  --color-pink-whisper: #fefbfc;
+  --color-pink-light: #fdf6f8;
+  --color-pink-soft: #fbf0f3;
+  --color-pink-border: #f4e3e6;
+  --color-pink-border-subtle: #f9eef1;
+  --color-pink-accent: #8c4250;
+  --color-text-main: #2b2022;
+  --color-text-muted: #6e585c;
 }
 
 html {
@@ -22,8 +22,8 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: #fffbfc;
-  color: #362427;
+  background-color: #ffffff;
+  color: #2b2022;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   word-break: keep-all;
@@ -38,14 +38,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #fff5f7;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fcd7df;
+  background: #f2dfe2;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #f7b2bf;
+  background: #e3c4c9;
 }
