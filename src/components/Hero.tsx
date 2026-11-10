@@ -22,10 +22,12 @@ export default function Hero() {
                 <span className="truncate">언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.2]">
-                몸과 마음이 편안한
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.2]">
+                <span className="text-slate-900">몸과 마음이 편안한</span>
                 <br />
-                <span>경희</span><span className="text-[#ed5f21]">사랑채</span><span className="font-light text-[#0f70b1]">한의원</span>
+                <span className="text-slate-900">경희</span>
+                <span className="text-[#ea4025]">사랑채</span>
+                <span className="text-slate-900">한의원</span>
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
