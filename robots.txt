@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Google & Naver Search Advisor Sitemaps
+Sitemap: https://www02nara.github.io/sarangchae/sitemap.xml
