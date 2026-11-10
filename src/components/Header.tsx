@@ -75,8 +75,8 @@ export default function Header() {
                 <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-[#2b2022]">
                   경희사랑채<span className="font-light text-[#6e585c]">한의원</span>
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded">
-                  부산 하단
+                <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded shrink-0">
+                  {CLINIC_INFO.branchName}
                 </span>
               </div>
               <p className="text-[10px] text-gray-400 tracking-wider uppercase font-medium">

@@ -18,7 +18,7 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-6 text-left">
             <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#fef7f9] text-[#7d3543] text-xs font-bold border border-[#f0d8dd] max-w-full">
               <Heart className="w-3.5 h-3.5 text-[#a34c5b] fill-[#a34c5b] shrink-0" />
-              <span className="truncate">경희대학교 한의과대학 출신 정병준 대표원장 1:1 맞춤 진료</span>
+              <span className="truncate">언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다</span>
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#261d1f] tracking-tight leading-[1.2]">

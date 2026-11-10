@@ -25,7 +25,7 @@ export default function Footer() {
             <p className="text-[#6e585c] text-xs leading-relaxed max-w-sm">
               {CLINIC_INFO.slogan}
               <br />
-              경희대학교 한의과대학 출신 정병준 대표원장의 1:1 맞춤 진료
+              언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다
             </p>
           </div>
 

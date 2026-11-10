@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     url: "https://www02nara.github.io/sarangchae/",
     siteName: CLINIC_INFO.name,
-    title: `${CLINIC_INFO.name} | 부산 하단 한방소아과·통증·교통사고·야간진료 한의원`,
+    title: `${CLINIC_INFO.name} 부산 하단점 | 한방소아과·통증·교통사고·야간진료 한의원`,
     description:
-      "몸과 마음이 편안하게 머무는 곳, 경희대학교 한의과대학 출신 정병준 대표원장 1:1 맞춤 진료. 한방소아과, 통증관절, 교통사고, 화·목 야간진료.",
+      "몸과 마음이 편안하게 머무는 곳, 언제나 곁에서 든든하게 나만의 주치 한의사가 되어 드리겠습니다. 정병준 대표원장 1:1 맞춤 진료. 한방소아과, 통증관절, 교통사고, 화·목 야간진료.",
   },
   twitter: {
     card: "summary_large_image",

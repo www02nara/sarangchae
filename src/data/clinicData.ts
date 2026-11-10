@@ -36,11 +36,11 @@ export interface FaqItem {
 
 export const CLINIC_INFO = {
   name: "경희사랑채한의원",
-  branchName: "부산 하단",
+  branchName: "부산 하단점",
   fullName: "경희사랑채한의원",
   englishName: "Kyunghee Sarangchae Korean Medicine Clinic",
   slogan: "사랑채처럼 따뜻하게 머물고, 경희의 정통 의술로 바르게 치유합니다",
-  subSlogan: "경희대학교 한의과대학 출신 정병준 대표원장의 1:1 정밀 책임 진료",
+  subSlogan: "언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다",
   phone: "051-207-1075",
   formattedPhone: "051. 207. 1075",
   address: "부산광역시 사하구 하신중앙로 341, 1층",
