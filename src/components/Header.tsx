@@ -51,10 +51,10 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <span className="inline-flex items-center gap-1 font-medium bg-[#1b5344] px-2 py-0.5 rounded text-[#dfcaa7]">
               <Clock className="w-3 h-3" />
-              월·수·금 야간진료 (밤 8시까지)
+              화·목 야간진료 (저녁 8시까지)
             </span>
             <span className="hidden sm:inline text-gray-200">
-              하단역 1번 출구 도보 1분 · 2시간 무료 주차
+              부산 사하구 하신중앙로 341 1층 · 정병준 대표원장 1:1 진료
             </span>
           </div>
 

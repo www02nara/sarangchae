@@ -9,26 +9,25 @@ import OnlineReservationModal from "@/components/OnlineReservationModal";
 import NonCoveredModal from "@/components/NonCoveredModal";
 
 export const metadata: Metadata = {
-  title: `${CLINIC_INFO.fullName} | 부산 하단역 척추·추나·교통사고·맞춤한약·야간진료`,
-  description: `${CLINIC_INFO.fullName} - 부산 하단역 1번 출구. 경희대학교 한의과대학 출신 대표원장 1:1 책임진료. 목·허리 디스크 비수술 추나요법(건강보험), 교통사고 후유증(본인부담금 0원), 식약처 GMP 인증 녹용한약, 한방 다이어트, 월·수·금 야간진료. 문의 ${CLINIC_INFO.formattedPhone}`,
+  title: `${CLINIC_INFO.name} | 부산 하단 척추·추나·교통사고·맞춤한약·야간진료 (정병준 대표원장)`,
+  description: `${CLINIC_INFO.name} - 부산 사하구 하신중앙로 341 1층(하단동). 경희대학교 한의과대학 출신 정병준 대표원장 1:1 책임진료. 목·허리 디스크 비수술 추나요법(건강보험), 교통사고 후유증(본인부담금 0원), 식약처 GMP 인증 녹용한약, 한방 다이어트, 화·목 야간진료. 문의 ${CLINIC_INFO.phone}`,
   keywords: [
     "경희사랑채한의원",
-    "경희사랑채한의원 부산점",
+    "정병준",
+    "정병준 한의사",
     "부산한의원",
+    "부산 사하구 한의원",
     "부산 하단 한의원",
-    "하단역 한의원",
-    "사하구 한의원",
+    "하신중앙로 한의원",
     "부산 추나요법",
     "부산 교통사고 한의원",
     "부산 야간진료 한의원",
-    "부산 한방다이어트",
     "부산 공진단",
     "부산 경옥고",
-    "부산 산후보약",
   ],
-  authors: [{ name: CLINIC_INFO.fullName }],
-  creator: CLINIC_INFO.fullName,
-  publisher: CLINIC_INFO.fullName,
+  authors: [{ name: `${CLINIC_INFO.name} 정병준 대표원장` }],
+  creator: CLINIC_INFO.name,
+  publisher: CLINIC_INFO.name,
   formatDetection: {
     telephone: true,
     address: true,
@@ -36,15 +35,15 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://sarangchae.vercel.app",
-    siteName: CLINIC_INFO.fullName,
-    title: `${CLINIC_INFO.fullName} | 부산 하단역 척추·추나·교통사고·야간진료 한의원`,
+    url: "https://www02nara.github.io/sarangchae/",
+    siteName: CLINIC_INFO.name,
+    title: `${CLINIC_INFO.name} | 부산 하단 척추·추나·교통사고·야간진료 한의원`,
     description:
-      "몸과 마음이 편안하게 머무는 곳, 경희대학교 한의과대학 출신 1:1 책임진료. 척추관절 통증, 자동차보험 100%, 청정 규격 한약, 월·수·금 야간진료.",
+      "몸과 마음이 편안하게 머무는 곳, 경희대학교 한의과대학 출신 정병준 대표원장 1:1 책임진료. 척추관절 통증, 자동차보험 100%, 청정 규격 한약, 화·목 야간진료.",
   },
   twitter: {
     card: "summary_large_image",
-    title: CLINIC_INFO.fullName,
+    title: CLINIC_INFO.name,
     description: CLINIC_INFO.slogan,
   },
   robots: {
@@ -69,11 +68,11 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
-    name: CLINIC_INFO.fullName,
-    alternateName: CLINIC_INFO.name,
+    name: CLINIC_INFO.name,
     description: CLINIC_INFO.subSlogan,
-    url: "https://sarangchae.vercel.app",
+    url: "https://www02nara.github.io/sarangchae/",
     telephone: CLINIC_INFO.phone,
+    hasMap: CLINIC_INFO.naverPlaceUrl,
     address: {
       "@type": "PostalAddress",
       streetAddress: CLINIC_INFO.address,
@@ -84,15 +83,15 @@ export default function RootLayout({
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Wednesday", "Friday"],
+        dayOfWeek: ["Tuesday", "Thursday"],
         opens: "09:30",
         closes: "20:00",
       },
       {
         "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Tuesday", "Thursday"],
+        dayOfWeek: ["Monday", "Wednesday", "Friday"],
         opens: "09:30",
-        closes: "19:00",
+        closes: "18:30",
       },
       {
         "@type": "OpeningHoursSpecification",

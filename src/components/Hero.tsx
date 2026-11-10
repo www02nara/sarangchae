@@ -35,9 +35,9 @@ export default function Hero() {
             {/* Top Trust Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#123e32]/8 text-[#123e32] text-xs sm:text-sm font-semibold tracking-wide mb-6 border border-[#123e32]/15 shadow-xs">
               <Sparkles className="w-4 h-4 text-[#c5a47e]" />
-              <span>경희대학교 한의과대학 출신 전문 의료진 1:1 맞춤 진료</span>
+              <span>경희대학교 한의과대학 출신 정병준 대표원장 1:1 맞춤 진료</span>
               <span className="hidden sm:inline text-gray-300">|</span>
-              <span className="hidden sm:inline font-bold text-[#c5a47e]">부산 하단점</span>
+              <span className="hidden sm:inline font-bold text-[#c5a47e]">부산 사하구 하단</span>
             </div>
 
             {/* Main Title */}
@@ -85,12 +85,12 @@ export default function Hero() {
 
             <div className="flex items-center gap-4 text-xs text-gray-500 font-medium pt-2 border-t border-gray-200/60">
               <span className="flex items-center gap-1 text-emerald-800 font-semibold">
-                <CheckCircle2 className="w-4 h-4" /> 하단역 1번 출구 도보 1분
+                <CheckCircle2 className="w-4 h-4" /> 사하구 하신중앙로 341 1층
               </span>
               <span>•</span>
-              <span>건물 2시간 무료 주차</span>
+              <span>편안한 1층 진료</span>
               <span>•</span>
-              <span className="text-[#123e32] font-semibold">월·수·금 저녁 8시 야간진료</span>
+              <span className="text-[#123e32] font-semibold">화·목 저녁 8시 야간진료</span>
             </div>
           </div>
 
@@ -191,7 +191,7 @@ export default function Hero() {
               <Clock className="w-5 h-5" />
             </div>
             <h2 className="font-bold text-sm sm:text-base text-gray-900 mb-1">
-              월·수·금 야간진료 (밤 8시)
+              화·목 야간진료 (저녁 8시)
             </h2>
             <p className="text-xs text-gray-500 leading-relaxed">
               퇴근 후에도 여유롭게 진료받는 바쁜 직장인을 위한 배려

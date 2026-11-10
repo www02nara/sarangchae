@@ -24,19 +24,19 @@ export default function DoctorIntro() {
                 <div className="relative h-96 sm:h-[420px] overflow-hidden">
                   <img
                     src={getAssetPath("/images/doctor.jpg")}
-                    alt="경희사랑채한의원 김경희 대표원장"
+                    alt="경희사랑채한의원 정병준 대표원장"
                     className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
                     <div className="inline-block px-3 py-1 bg-[#123e32] text-[#dfcaa7] text-xs font-bold rounded-full mb-1 w-fit">
-                      대표원장 한의학석사
+                      대표원장 한의사
                     </div>
                     <h3 className="text-2xl font-extrabold text-white">
                       {DOCTOR_PROFILE.name}{" "}
                       <span className="text-sm font-semibold text-gray-300">대표원장</span>
                     </h3>
                     <p className="text-xs text-gray-300 mt-1">
-                      경희대학교 한의과대학 졸업 · 척추신경추나의학회 인증의
+                      경희대학교 한의과대학 출신 · 척추신경추나의학회 인증의
                     </p>
                   </div>
                 </div>

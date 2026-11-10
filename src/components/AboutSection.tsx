@@ -45,8 +45,8 @@ export default function AboutSection() {
                   </p>
 
                   <div className="pt-3 border-t border-white/20 flex items-center justify-between text-xs text-[#dfcaa7] font-semibold">
-                    <span>경희사랑채한의원 부산점</span>
-                    <span>대표원장 김경희 배상</span>
+                    <span>경희사랑채한의원</span>
+                    <span>대표원장 정병준 배상</span>
                   </div>
                 </div>
               </div>

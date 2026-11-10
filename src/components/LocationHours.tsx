@@ -29,9 +29,9 @@ export default function LocationHours() {
             진료시간 & 오시는 길
           </h2>
           <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            부산 하단역 1번 출구 바로 앞 도보 1분 거리에 위치하고 있습니다.
+            부산 사하구 하신중앙로 341, 1층에 위치하고 있습니다.
             <br className="hidden sm:inline" />
-            월·수·금 저녁 8시 야간진료로 직장인도 퇴근 후 여유 있게 내원하실 수 있습니다.
+            화·목 저녁 8시 야간진료 및 토요일 점심시간 없는 진료로 편안하게 내원하실 수 있습니다.
           </p>
         </div>
 
@@ -45,7 +45,7 @@ export default function LocationHours() {
               <div>
                 <h3 className="font-extrabold text-xl text-gray-900">진료시간 안내</h3>
                 <span className="text-xs text-emerald-700 font-semibold">
-                  월 · 수 · 금 야간진료 시행
+                  화 · 목 저녁 8시 야간진료
                 </span>
               </div>
             </div>
@@ -54,7 +54,7 @@ export default function LocationHours() {
             <div className="space-y-3 text-xs sm:text-sm">
               <div className="p-3.5 bg-emerald-50/70 border border-emerald-200/60 rounded-xl">
                 <div className="flex items-center justify-between font-bold text-gray-900 mb-0.5">
-                  <span className="text-emerald-900">월 · 수 · 금 (야간진료)</span>
+                  <span className="text-emerald-900">화 · 목 (야간진료)</span>
                   <span className="text-emerald-800">09:30 ~ 20:00</span>
                 </div>
                 <p className="text-[11px] text-emerald-700">
@@ -63,8 +63,8 @@ export default function LocationHours() {
               </div>
 
               <div className="p-3.5 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between font-semibold text-gray-800">
-                <span>화 · 목</span>
-                <span>09:30 ~ 19:00</span>
+                <span>월 · 수 · 금</span>
+                <span>09:30 ~ 18:30</span>
               </div>
 
               <div className="p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/60 flex items-center justify-between font-bold text-gray-900">
@@ -89,13 +89,15 @@ export default function LocationHours() {
 
             {/* Quick Call & Reserve buttons */}
             <div className="space-y-2 pt-2">
-              <button
-                onClick={() => openBooking()}
-                className="w-full py-3.5 bg-[#123e32] hover:bg-[#1b5344] text-white font-bold rounded-xl transition flex items-center justify-center gap-2 shadow text-sm"
+              <a
+                href={CLINIC_INFO.naverPlaceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full py-3.5 bg-[#03C75A] hover:bg-[#02b14f] text-white font-bold rounded-xl transition flex items-center justify-center gap-2 shadow text-sm"
               >
-                <Calendar className="w-4 h-4 text-[#dfcaa7]" />
-                <span>간편 진료 예약하기</span>
-              </button>
+                <ExternalLink className="w-4 h-4" />
+                <span>네이버 플레이스 바로가기 (리뷰 120+)</span>
+              </a>
 
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
@@ -114,7 +116,7 @@ export default function LocationHours() {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-extrabold text-xl text-gray-900">오시는 길 & 주차 안내</h3>
+                <h3 className="font-extrabold text-xl text-gray-900">오시는 길 안내</h3>
                 <span className="text-xs text-gray-500 font-medium">
                   {CLINIC_INFO.addressDetail}
                 </span>
@@ -138,31 +140,29 @@ export default function LocationHours() {
               </div>
             </div>
 
-            {/* Transit & Parking Details */}
+            {/* Transit & Floor Details */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-              {/* Subway & Bus */}
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200/80 space-y-2">
+              {/* Floor Accessibility */}
+              <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 space-y-2">
                 <div className="font-bold text-gray-900 flex items-center gap-2">
-                  <Train className="w-4 h-4 text-orange-600" />
-                  <span>지하철 / 버스 이용 시</span>
+                  <CheckCircle2 className="w-4 h-4 text-emerald-700" />
+                  <span>편안한 1층 단독 진료</span>
                 </div>
                 <p className="text-gray-600 leading-relaxed text-xs">
-                  • <strong>부산 1호선 하단역 1번 출구</strong> 나오셔서 직진 50m (도보 1분)
-                  <br />
-                  • 하단역 정류장 하차 (시내버스 58, 68, 126, 138, 338번 등 다수 정차)
+                  • 계단이나 엘리베이터를 이용할 필요 없이 <strong>1층에서 바로 진료</strong>받으실 수 있어 어르신과 통증 환자분들이 편안하게 방문하실 수 있습니다.
                 </p>
               </div>
 
-              {/* Parking */}
+              {/* Transit & Location */}
               <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200/80 space-y-2">
                 <div className="font-bold text-gray-900 flex items-center gap-2">
-                  <Car className="w-4 h-4 text-blue-600" />
-                  <span>자가용 주차 지원</span>
+                  <Train className="w-4 h-4 text-orange-600" />
+                  <span>대중교통 / 주차 안내</span>
                 </div>
                 <p className="text-gray-600 leading-relaxed text-xs">
-                  • <strong>건물 지하 자주식 주차장 완비</strong>
+                  • <strong>부산 1호선 하단역 인근</strong> 하신중앙로 방면
                   <br />
-                  • 진료받으시는 모든 환자분께 <strong>2시간 무료 주차권</strong>을 지급해 드립니다.
+                  • 한의원 전용 주차 및 인근 주차 공간 지원 (내원 시 원내 안내)
                 </p>
               </div>
             </div>
@@ -177,20 +177,20 @@ export default function LocationHours() {
                   </div>
                   <div>
                     <h4 className="font-extrabold text-base text-gray-900">
-                      {CLINIC_INFO.fullName}
+                      {CLINIC_INFO.name}
                     </h4>
                     <p className="text-xs text-gray-600 mt-0.5">
-                      부산 1호선 하단역 1번 출구 앞 · 한서메디컬빌딩 3층
+                      {CLINIC_INFO.address} (정병준 대표원장)
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center justify-center gap-2">
                     <a
-                      href={CLINIC_INFO.naverMapUrl}
+                      href={CLINIC_INFO.naverPlaceUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-4 py-2 bg-[#03C75A] hover:bg-[#02b14f] text-white text-xs font-bold rounded-lg shadow-xs flex items-center gap-1.5 transition"
                     >
-                      <span>네이버 지도 길찾기</span>
+                      <span>네이버 지도 길찾기 (naver.me)</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                     <a
