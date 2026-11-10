@@ -3,6 +3,7 @@
 import React from "react";
 import { CLINIC_INFO, OPERATING_HOURS_TABLE } from "@/data/clinicData";
 import { Clock, MapPin, Phone, ExternalLink, Train, Car } from "lucide-react";
+import { getAssetPath } from "@/utils/assetPath";
 
 export default function LocationHours() {
   return (
@@ -128,160 +129,14 @@ export default function LocationHours() {
                 </span>
               </div>
 
-              {/* Accurate Naver-based Schematic Route Map (Unified) */}
-              <div className="rounded-2xl bg-[#f8fafc] border border-slate-200 p-2.5 sm:p-3 overflow-hidden shadow-3xs">
-                <svg viewBox="0 0 560 330" className="w-full h-auto select-none rounded-xl bg-[#f8fafc]" xmlns="http://www.w3.org/2000/svg">
-                  <defs>
-                    <filter id="mapShadow" x="-10%" y="-10%" width="125%" height="130%">
-                      <feDropShadow dx="0" dy="2" stdDeviation="2.5" floodOpacity="0.1" />
-                    </filter>
-                    <filter id="clinicShadow" x="-15%" y="-15%" width="135%" height="140%">
-                      <feDropShadow dx="0" dy="3" stdDeviation="5" floodColor="#ea4025" floodOpacity="0.22" />
-                    </filter>
-                  </defs>
-
-                  {/* Map Base Background */}
-                  <rect width="560" height="330" fill="#f8fafc" />
-
-                  {/* City Blocks (Soft backgrounds matching real topography) */}
-                  <rect x="15" y="15" width="530" height="42" rx="6" fill="#e2e8f0" opacity="0.4" />
-                  <path d="M 15 125 L 305 125 L 180 320 L 15 320 Z" fill="#e2e8f0" opacity="0.35" />
-                  <path d="M 375 125 L 545 125 L 545 320 L 255 320 Z" fill="#e2e8f0" opacity="0.35" />
-
-                  {/* Horizontal Road: 낙동남로 (낙동대로) */}
-                  <rect x="0" y="65" width="560" height="52" fill="#e2e8f0" />
-                  <line x1="0" y1="91" x2="560" y2="91" stroke="#cbd5e1" strokeWidth="1.5" strokeDasharray="8 6" />
-                  <text x="35" y="78" fill="#64748b" fontSize="10" fontWeight="bold">낙동남로 (대로변)</text>
-
-                  {/* Busan Metro Line 1 - Hadan Station Tube Bar */}
-                  <g transform="translate(40, 75)">
-                    <rect x="0" y="0" width="480" height="32" rx="16" fill="#ea580c" />
-                    <circle cx="20" cy="16" r="11" fill="#ffffff" />
-                    <text x="20" y="20" textAnchor="middle" fill="#ea580c" fontSize="11" fontWeight="900">1</text>
-                    <text x="42" y="21" fill="#ffffff" fontSize="13" fontWeight="bold">부산 1호선  하단역</text>
-                    <text x="380" y="20" fill="#ffedd5" fontSize="10" fontWeight="bold">하단교차로 방면 ➔</text>
-                  </g>
-
-                  {/* Diagonal Street: 하신중앙로 (Curves Southward to Shinpyeong) */}
-                  <polygon points="315,117 375,117 255,330 195,330" fill="#cbd5e1" />
-                  <line x1="345" y1="117" x2="225" y2="330" stroke="#94a3b8" strokeWidth="1.5" strokeDasharray="8 6" />
-
-                  {/* Street Label */}
-                  <g transform="translate(245, 295) rotate(-30)">
-                    <rect x="0" y="0" width="105" height="20" rx="10" fill="#475569" />
-                    <text x="52" y="14" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="bold">
-                      하신중앙로 (신평 ⬇)
-                    </text>
-                  </g>
-
-                  {/* Cross Street: 하신중앙로335번길 */}
-                  <rect x="15" y="248" width="190" height="18" fill="#cbd5e1" opacity="0.8" />
-                  <text x="95" y="260" textAnchor="middle" fill="#64748b" fontSize="9" fontWeight="600">하신중앙로335번길</text>
-
-                  {/* Surrounding Landmarks (North Side) */}
-                  <g transform="translate(60, 24)">
-                    <rect x="0" y="0" width="65" height="22" rx="6" fill="#ffffff" stroke="#e2e8f0" />
-                    <text x="32" y="15" textAnchor="middle" fill="#64748b" fontSize="10" fontWeight="600">스타벅스</text>
-                  </g>
-                  <g transform="translate(135, 24)">
-                    <rect x="0" y="0" width="65" height="22" rx="6" fill="#ffffff" stroke="#e2e8f0" />
-                    <text x="32" y="15" textAnchor="middle" fill="#64748b" fontSize="10" fontWeight="600">올리브영</text>
-                  </g>
-                  <g transform="translate(425, 24)">
-                    <rect x="0" y="0" width="65" height="22" rx="6" fill="#ffffff" stroke="#e2e8f0" />
-                    <text x="32" y="15" textAnchor="middle" fill="#64748b" fontSize="10" fontWeight="600">하나은행</text>
-                  </g>
-
-                  {/* Subway Exits (North) */}
-                  <circle cx="85" cy="58" r="8" fill="#f59e0b" />
-                  <text x="85" y="62" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="bold">3</text>
-                  <circle cx="160" cy="58" r="8" fill="#f59e0b" />
-                  <text x="160" y="62" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="bold">5</text>
-                  <circle cx="450" cy="58" r="8" fill="#f59e0b" />
-                  <text x="450" y="62" textAnchor="middle" fill="#ffffff" fontSize="9" fontWeight="bold">7</text>
-
-                  {/* Subway Exits (South) */}
-                  <circle cx="95" cy="120" r="9" fill="#f59e0b" />
-                  <text x="95" y="124" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="bold">4</text>
-
-                  <circle cx="185" cy="120" r="9" fill="#f59e0b" />
-                  <text x="185" y="124" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="bold">6</text>
-
-                  {/* Exit 8 (Highlighted Exit) */}
-                  <g transform="translate(320, 108)">
-                    <rect x="0" y="0" width="48" height="26" rx="13" fill="#ea580c" filter="url(#mapShadow)" />
-                    <text x="24" y="17" textAnchor="middle" fill="#ffffff" fontSize="11" fontWeight="900">8번</text>
-                  </g>
-
-                  <circle cx="485" cy="120" r="9" fill="#f59e0b" />
-                  <text x="485" y="124" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="bold">10</text>
-
-                  {/* South Landmarks */}
-                  <g transform="translate(40, 142)">
-                    <rect x="0" y="0" width="65" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="32" y="16" textAnchor="middle" fill="#475569" fontSize="10" fontWeight="600">우리은행</text>
-                  </g>
-
-                  <g transform="translate(145, 142)">
-                    <rect x="0" y="0" width="88" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="44" y="16" textAnchor="middle" fill="#475569" fontSize="10" fontWeight="600">☕ 텐퍼센트커피</text>
-                  </g>
-
-                  <g transform="translate(380, 138)">
-                    <rect x="0" y="0" width="90" height="26" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="45" y="17" textAnchor="middle" fill="#475569" fontSize="10" fontWeight="600">바바성형외과</text>
-                  </g>
-
-                  <g transform="translate(85, 275)">
-                    <rect x="0" y="0" width="105" height="24" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="52" y="16" textAnchor="middle" fill="#64748b" fontSize="9" fontWeight="600">충우드림아파트</text>
-                  </g>
-
-                  <g transform="translate(345, 235)">
-                    <rect x="0" y="0" width="70" height="22" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="35" y="15" textAnchor="middle" fill="#64748b" fontSize="9" fontWeight="600">동동국밥</text>
-                  </g>
-
-                  <g transform="translate(440, 190)">
-                    <rect x="0" y="0" width="65" height="22" rx="6" fill="#ffffff" stroke="#cbd5e1" />
-                    <text x="32" y="15" textAnchor="middle" fill="#64748b" fontSize="9" fontWeight="600">부산은행</text>
-                  </g>
-
-                  {/* Walking Route Path from Exit 8 to Clinic */}
-                  <path
-                    d="M 344 136 L 340 180 L 302 210"
-                    fill="none"
-                    stroke="#0f70b1"
-                    strokeWidth="4"
-                    strokeDasharray="6 4"
-                    strokeLinecap="round"
-                  />
-
-                  {/* Walking Time Badge */}
-                  <g transform="translate(340, 172)">
-                    <rect x="0" y="0" width="126" height="22" rx="11" fill="#0f70b1" filter="url(#mapShadow)" />
-                    <text x="63" y="15" textAnchor="middle" fill="#ffffff" fontSize="10" fontWeight="bold">
-                      8번 출구 도보 1~2분 🚶
-                    </text>
-                  </g>
-
-                  {/* Destination: Kyunghee Sarangchae Clinic 1st Floor */}
-                  <g transform="translate(125, 175)" filter="url(#clinicShadow)">
-                    <rect x="0" y="0" width="175" height="80" rx="12" fill="#ffffff" stroke="#ea4025" strokeWidth="2.5" />
-                    <rect x="12" y="12" width="42" height="20" rx="6" fill="#fff1f0" stroke="#ea4025" strokeWidth="1" />
-                    <text x="33" y="26" textAnchor="middle" fill="#ea4025" fontSize="11" fontWeight="900">1층</text>
-                    <text x="60" y="27" fill="#0f172a" fontSize="13" fontWeight="900">경희사랑채한의원</text>
-                    <text x="12" y="50" fill="#64748b" fontSize="10" fontWeight="500">사하구 하신중앙로 341</text>
-                    <text x="12" y="68" fill="#0f70b1" fontSize="10" fontWeight="bold">🅿️ 한의원 전용 주차 지원</text>
-                  </g>
-
-                  {/* Pin Pulse on Building */}
-                  <g transform="translate(290, 202)">
-                    <circle cx="10" cy="10" r="14" fill="#ea4025" opacity="0.25" />
-                    <circle cx="10" cy="10" r="8" fill="#ea4025" />
-                    <circle cx="10" cy="10" r="3.5" fill="#ffffff" />
-                  </g>
-                </svg>
+              {/* Official Clinic Route Map Graphic */}
+              <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-3xs group">
+                <img
+                  src={getAssetPath("/images/clinic-map-official.jpg")}
+                  alt="경희사랑채한의원 오시는 길 약도"
+                  className="w-full h-auto object-cover block"
+                  loading="lazy"
+                />
               </div>
 
               {/* Essential Transit & Parking Summary */}

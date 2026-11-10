@@ -76,25 +76,25 @@ export default function ClinicGrid() {
             </div>
           ))}
 
-          {/* 6th Card: Direct Contact */}
-          <div className="bg-gradient-to-br from-[#f0f7fb] via-white to-[#f0f7fb] border-2 border-[#b9ddf5] rounded-2xl p-6 sm:p-8 text-slate-900 flex flex-col justify-between shadow-3xs">
-            <div className="space-y-3">
+          {/* 6th Card: Direct Contact (Center Aligned) */}
+          <div className="bg-gradient-to-br from-[#f0f7fb] via-white to-[#f0f7fb] border-2 border-[#b9ddf5] rounded-2xl p-6 sm:p-8 text-slate-900 flex flex-col justify-between items-center text-center shadow-3xs">
+            <div className="space-y-3 flex flex-col items-center">
               <span className="text-xs font-bold text-[#0f70b1] bg-white border border-[#d0e5f5] px-2.5 py-1 rounded-md uppercase tracking-wider inline-block">
                 Direct Contact
               </span>
-              <h3 className="text-2xl font-bold text-slate-900">
+              <h3 className="text-2xl font-bold text-slate-900 text-center">
                 진료 문의 & 상담
               </h3>
-              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
+              <p className="text-slate-600 text-xs sm:text-sm leading-relaxed text-center max-w-sm">
                 궁금하신 점이나 예약 관련 문의는 언제든 편하게 전화해 주세요. 원내에서 정성껏 안내해 드립니다.
               </p>
             </div>
 
-            <div className="pt-6 space-y-3">
-              <div className="text-2xl sm:text-3xl font-black text-[#0f70b1] tracking-tight">
+            <div className="pt-6 space-y-3 w-full flex flex-col items-center">
+              <div className="text-2xl sm:text-3xl font-black text-[#0f70b1] tracking-tight text-center">
                 {CLINIC_INFO.formattedPhone}
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-2 w-full max-w-xs mx-auto">
                 <a
                   href={`tel:${CLINIC_INFO.phone}`}
                   className="w-full py-3 bg-[#0f70b1] hover:bg-[#0c5c92] text-white font-bold text-xs sm:text-sm rounded-xl transition flex items-center justify-center gap-2 shadow-2xs"

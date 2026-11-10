@@ -1,14 +1,11 @@
 "use client";
 
 import React from "react";
-import { DOCTOR_PROFILE, CLINIC_INFO } from "@/data/clinicData";
-import { useModal } from "@/context/ModalContext";
+import { CLINIC_INFO } from "@/data/clinicData";
 import { getAssetPath } from "@/utils/assetPath";
-import { Award, CheckCircle2, Phone, Calendar, ExternalLink, Heart } from "lucide-react";
+import { Award, CheckCircle2 } from "lucide-react";
 
 export default function DoctorIntro() {
-  const { openBooking } = useModal();
-
   return (
     <section id="doctor" className="py-16 sm:py-20 bg-[#f8fafc] border-b border-slate-200">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,27 +77,6 @@ export default function DoctorIntro() {
                   <span>현 경희사랑채한의원 대표원장</span>
                 </div>
               </div>
-            </div>
-
-            {/* Quick Actions */}
-            <div className="flex flex-wrap gap-3 pt-1">
-              <a
-                href={CLINIC_INFO.naverPlaceUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-5 py-3 rounded-xl bg-[#03C75A] hover:bg-[#02b14f] text-white text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-3xs"
-              >
-                <span>네이버 플레이스 보기</span>
-                <ExternalLink className="w-3.5 h-3.5" />
-              </a>
-
-              <a
-                href={`tel:${CLINIC_INFO.phone}`}
-                className="px-5 py-3 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-200 text-xs sm:text-sm font-bold transition flex items-center gap-1.5 shadow-3xs"
-              >
-                <Phone className="w-3.5 h-3.5 text-[#0f70b1]" />
-                <span>원내 전화 상담</span>
-              </a>
             </div>
           </div>
 
