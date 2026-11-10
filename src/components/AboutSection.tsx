@@ -3,6 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
+import { getAssetPath } from "@/utils/assetPath";
 import { Sparkles, Heart, Shield, CheckCircle, ArrowRight } from "lucide-react";
 
 export default function AboutSection() {
@@ -16,26 +17,37 @@ export default function AboutSection() {
           <div className="lg:col-span-5">
             <div className="relative">
               <div className="absolute -inset-3 bg-[#c5a47e]/20 rounded-3xl transform rotate-1 blur-xs" />
-              <div className="relative bg-[#123e32] text-white rounded-2xl p-8 sm:p-10 shadow-xl space-y-6">
-                <div className="inline-block px-3 py-1 bg-white/10 text-[#dfcaa7] rounded-full text-xs font-bold tracking-wider">
-                  CLINIC PHILOSOPHY
+              
+              <div className="relative bg-[#123e32] text-white rounded-2xl overflow-hidden shadow-xl">
+                {/* Photo Header */}
+                <div className="relative h-56 sm:h-64 overflow-hidden">
+                  <img
+                    src={getAssetPath("/images/hero-clinic.jpg")}
+                    alt="경희사랑채한의원 로비"
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#123e32] via-[#123e32]/40 to-transparent" />
+                  <div className="absolute top-4 left-4 inline-block px-3 py-1 bg-white/20 backdrop-blur-md text-[#dfcaa7] rounded-full text-xs font-bold tracking-wider">
+                    CLINIC PHILOSOPHY
+                  </div>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white leading-snug">
-                  “몸과 마음이 쉬어가는
-                  <br />
-                  가장 편안한 <span className="text-[#dfcaa7]">사랑채</span>가 되겠습니다”
-                </h3>
+                <div className="p-6 sm:p-8 space-y-4">
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-white leading-snug">
+                    “몸과 마음이 쉬어가는
+                    <br />
+                    가장 편안한 <span className="text-[#dfcaa7]">사랑채</span>가 되겠습니다”
+                  </h3>
 
-                <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
-                  예로부터 사랑채는 손님을 정성으로 맞이하고 따뜻한 온기를 나누던 소통의 공간이었습니다.
-                  <br /><br />
-                  경희사랑채한의원 부산점은 아픈 몸뿐만 아니라 지친 마음까지 치유받는 따뜻한 쉼터가 되고자 합니다. 경희의 검증된 의술과 온 마음을 다한 정성으로 환자분의 건강한 내일을 함께 열어가겠습니다.
-                </p>
+                  <p className="text-gray-200 text-xs sm:text-sm leading-relaxed">
+                    예로부터 사랑채는 손님을 정성으로 맞이하고 따뜻한 온기를 나누던 소통의 공간이었습니다.
+                    경희의 검증된 의술과 온 마음을 다한 정성으로 환자분의 건강한 내일을 함께 열어가겠습니다.
+                  </p>
 
-                <div className="pt-4 border-t border-white/20 flex items-center justify-between text-xs text-[#dfcaa7] font-semibold">
-                  <span>경희사랑채한의원 부산점</span>
-                  <span>대표원장 김경희 배상</span>
+                  <div className="pt-3 border-t border-white/20 flex items-center justify-between text-xs text-[#dfcaa7] font-semibold">
+                    <span>경희사랑채한의원 부산점</span>
+                    <span>대표원장 김경희 배상</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -74,7 +86,7 @@ export default function AboutSection() {
                   <span>위생과 안전 최우선 원칙</span>
                 </div>
                 <p className="text-xs text-gray-500 leading-relaxed">
-                  1회용 멸균 침과 부항컵 전원 사용, 매일 철저한 원내 소독으로 감염 걱정 없는 치료 환경을 유지합니다.
+                  1회용 멸균 침과 부항컵 전원 사용, 매일 철저한 원내 소독으로 안심 치료 환경을 유지합니다.
                 </p>
               </div>
 

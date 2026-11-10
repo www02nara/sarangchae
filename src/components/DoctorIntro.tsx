@@ -3,6 +3,7 @@
 import React from "react";
 import { DOCTOR_PROFILE, CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
+import { getAssetPath } from "@/utils/assetPath";
 import { Award, BookOpen, HeartHandshake, CheckCircle2, UserCheck, Calendar } from "lucide-react";
 
 export default function DoctorIntro() {
@@ -12,29 +13,32 @@ export default function DoctorIntro() {
     <section id="doctor" className="py-16 sm:py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Doctor Visual & Badge Card */}
+          {/* Left Column: Doctor Photo & Badge Card */}
           <div className="lg:col-span-5 flex flex-col items-center">
             <div className="relative w-full max-w-md">
               {/* Decorative Frame */}
-              <div className="absolute -inset-4 bg-gradient-to-tr from-[#123e32]/10 to-[#c5a47e]/20 rounded-3xl transform -rotate-1 blur-xs" />
+              <div className="absolute -inset-4 bg-gradient-to-tr from-[#123e32]/10 to-[#c5a47e]/25 rounded-3xl transform -rotate-1 blur-xs" />
               
               <div className="relative bg-[#f4efe6] rounded-2xl overflow-hidden border border-[#dfcaa7] shadow-xl">
-                {/* Doctor Portrait Illustration/Graphic Box */}
-                <div className="h-84 sm:h-96 bg-gradient-to-b from-[#e8e2d4] to-[#f4efe6] flex flex-col items-center justify-end p-6 text-center">
-                  {/* Doctor Silhouette / Medical Badge Graphic */}
-                  <div className="w-36 h-36 rounded-full bg-white border-4 border-[#123e32]/20 flex items-center justify-center shadow-lg mb-4">
-                    <UserCheck className="w-20 h-20 text-[#123e32]" />
+                {/* Doctor Portrait Photo */}
+                <div className="relative h-96 sm:h-[420px] overflow-hidden">
+                  <img
+                    src={getAssetPath("/images/doctor.jpg")}
+                    alt="경희사랑채한의원 김경희 대표원장"
+                    className="w-full h-full object-cover object-top"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+                    <div className="inline-block px-3 py-1 bg-[#123e32] text-[#dfcaa7] text-xs font-bold rounded-full mb-1 w-fit">
+                      대표원장 한의학석사
+                    </div>
+                    <h3 className="text-2xl font-extrabold text-white">
+                      {DOCTOR_PROFILE.name}{" "}
+                      <span className="text-sm font-semibold text-gray-300">대표원장</span>
+                    </h3>
+                    <p className="text-xs text-gray-300 mt-1">
+                      경희대학교 한의과대학 졸업 · 척추신경추나의학회 인증의
+                    </p>
                   </div>
-                  <div className="inline-block px-3 py-1 bg-[#123e32] text-[#dfcaa7] text-xs font-bold rounded-full mb-1">
-                    대표원장 한의학석사
-                  </div>
-                  <h3 className="text-2xl font-extrabold text-gray-900">
-                    {DOCTOR_PROFILE.name}{" "}
-                    <span className="text-sm font-semibold text-gray-600">대표원장</span>
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1">
-                    경희대학교 한의과대학 출신 · 척추신경추나의학회 인증의
-                  </p>
                 </div>
 
                 {/* Bottom Trust Highlight */}

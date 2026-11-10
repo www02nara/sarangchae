@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { CLINIC_SERVICES, CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
+import { getAssetPath } from "@/utils/assetPath";
 import {
   Activity,
   Car,
@@ -38,6 +39,23 @@ export default function ClinicTabs() {
         return <HeartPulse className="w-5 h-5" />;
       default:
         return <Activity className="w-5 h-5" />;
+    }
+  };
+
+  const getClinicImage = (id: string) => {
+    switch (id) {
+      case "spine-joint":
+        return "/images/spine.jpg";
+      case "traffic-accident":
+        return "/images/traffic.jpg";
+      case "herbal-medicine":
+        return "/images/herbal.jpg";
+      case "diet":
+        return "/images/diet.jpg";
+      case "womens-health":
+        return "/images/facility1.jpg";
+      default:
+        return "/images/spine.jpg";
     }
   };
 
@@ -98,8 +116,9 @@ export default function ClinicTabs() {
 
         {/* Detailed Clinic Card */}
         <div className="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 sm:p-10 lg:p-12">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 border-b border-gray-100 pb-8 mb-8">
-            <div className="space-y-2">
+          {/* Header row with Clinic Photo */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-gray-100 pb-8 mb-8">
+            <div className="lg:col-span-8 space-y-3">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 {selectedClinic.tag}
@@ -107,18 +126,33 @@ export default function ClinicTabs() {
               <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
                 {selectedClinic.title}
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base max-w-3xl leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
                 {selectedClinic.fullDesc}
               </p>
+              <div className="pt-2">
+                <button
+                  onClick={() => openBooking(selectedClinic.title)}
+                  className="px-6 py-3 bg-[#123e32] hover:bg-[#1b5344] text-white font-bold rounded-xl transition shadow flex items-center gap-2 text-sm"
+                >
+                  <Calendar className="w-4 h-4 text-[#dfcaa7]" />
+                  <span>{selectedClinic.title} 1:1 상담 예약</span>
+                </button>
+              </div>
             </div>
 
-            <button
-              onClick={() => openBooking(selectedClinic.title)}
-              className="shrink-0 px-6 py-3.5 bg-[#123e32] hover:bg-[#1b5344] text-white font-bold rounded-xl transition shadow flex items-center justify-center gap-2 text-sm"
-            >
-              <Calendar className="w-4 h-4 text-[#dfcaa7]" />
-              <span>{selectedClinic.title} 진료 예약</span>
-            </button>
+            {/* Clinic Visual Photo */}
+            <div className="lg:col-span-4">
+              <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-200 aspect-[4/3]">
+                <img
+                  src={getAssetPath(getClinicImage(selectedClinic.id))}
+                  alt={selectedClinic.title}
+                  className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute top-3 left-3 bg-[#123e32]/90 backdrop-blur-xs text-[#dfcaa7] text-xs font-bold px-2.5 py-1 rounded-lg">
+                  {selectedClinic.tag}
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* 3-Column Detailed Information */}
