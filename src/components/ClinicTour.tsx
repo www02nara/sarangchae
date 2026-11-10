@@ -7,13 +7,13 @@ export default function ClinicTour() {
   const tourItems = [
     {
       title: "1인 프라이빗 치료실",
-      desc: "위생적인 1회용 침구와 멸균 시트를 갖춘 독립 치료 공간",
+      desc: "위생적인 1회용 침구와 멸균 시트를 갖춘 아늑한 치료 공간",
       image: "/images/facility1.jpg",
     },
     {
-      title: "척추 추나 전용실",
-      desc: "척추·관절 교정을 위한 인체공학적 추나 전용 베드",
-      image: "/images/spine.jpg",
+      title: "소아·가족 진료실",
+      desc: "아이들과 부모님이 긴장하지 않고 편안하게 머무는 진료실",
+      image: "/images/pediatric.jpg",
     },
     {
       title: "원내 청정 탕전실",
@@ -28,17 +28,17 @@ export default function ClinicTour() {
   ];
 
   return (
-    <section id="tour" className="py-16 sm:py-20 bg-white border-b border-gray-100">
+    <section id="tour" className="py-16 sm:py-20 bg-white border-b border-[#fce7ea]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <span className="text-xs font-bold text-[#123e32] bg-[#123e32]/10 px-3 py-1 rounded-full uppercase tracking-wider">
+          <span className="text-xs font-bold text-[#d97581] bg-[#fce7ea] px-3 py-1 rounded-full uppercase tracking-wider">
             Clinic Facility
           </span>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 mt-2 mb-2">
+          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#382427] mt-2 mb-2">
             원내 시설 안내
           </h2>
-          <p className="text-gray-500 text-xs sm:text-sm">
+          <p className="text-[#6d5457] text-xs sm:text-sm">
             쾌적함과 위생을 최우선으로 관리하는 경희사랑채한의원 공간입니다.
           </p>
         </div>
@@ -47,7 +47,7 @@ export default function ClinicTour() {
           {tourItems.map((item, idx) => (
             <div
               key={idx}
-              className="group rounded-2xl overflow-hidden border border-gray-200 bg-[#fbf9f5] shadow-2xs hover:shadow-md transition-all"
+              className="group rounded-2xl overflow-hidden border border-[#fce7ea] bg-[#fff9fa] shadow-2xs hover:shadow-md transition-all"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -57,10 +57,10 @@ export default function ClinicTour() {
                 />
               </div>
               <div className="p-4 space-y-1">
-                <h3 className="font-bold text-base text-gray-900">
+                <h3 className="font-bold text-base text-[#382427]">
                   {item.title}
                 </h3>
-                <p className="text-xs text-gray-500 leading-relaxed">
+                <p className="text-xs text-[#73585c] leading-relaxed">
                   {item.desc}
                 </p>
               </div>

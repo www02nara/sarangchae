@@ -1,213 +1,173 @@
 "use client";
 
 import React from "react";
-import { CLINIC_INFO, OPERATING_HOURS } from "@/data/clinicData";
+import { CLINIC_INFO, OPERATING_HOURS_TABLE } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
-import {
-  Clock,
-  MapPin,
-  Car,
-  Navigation,
-  Phone,
-  Calendar,
-  ExternalLink,
-  Train,
-  CheckCircle2,
-} from "lucide-react";
+import { Clock, MapPin, Phone, ExternalLink, Train, CheckCircle2, Heart } from "lucide-react";
 
 export default function LocationHours() {
   const { openBooking } = useModal();
 
   return (
-    <section id="location" className="py-16 sm:py-24 bg-[#faf8f4] border-t border-gray-200/60">
+    <section id="location" className="py-16 sm:py-20 bg-[#fff5f6] border-b border-[#fce7ea]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <span className="text-xs font-bold uppercase tracking-widest text-[#123e32] bg-[#123e32]/10 px-3 py-1 rounded-full">
-            Directions & Hours
+        
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <span className="text-xs font-bold text-[#d97581] bg-white px-3 py-1 rounded-full uppercase tracking-wider border border-[#fce7ea]">
+            Hours & Location
           </span>
-          <h2 className="text-2xl sm:text-4xl font-extrabold text-gray-900 mt-3 mb-4">
+          <h2 className="text-2xl sm:text-4xl font-extrabold text-[#382427] mt-3 mb-2">
             진료시간 & 오시는 길
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-            부산 사하구 하신중앙로 341, 1층에 위치하고 있습니다.
-            <br className="hidden sm:inline" />
-            화·목 저녁 8시 야간진료 및 토요일 점심시간 없는 진료로 편안하게 내원하실 수 있습니다.
+          <p className="text-[#695155] text-sm sm:text-base">
+            부산 사하구 하신중앙로 341 1층 (하단동 589-18)
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
           {/* Left Column: Operating Hours Card */}
-          <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
-            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#123e32] text-[#dfcaa7] flex items-center justify-center">
-                <Clock className="w-5 h-5" />
+          <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-[#fce7ea] shadow-xs space-y-5">
+            <div className="flex items-center justify-between border-b border-[#fce7ea] pb-4">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-[#fce7ea] text-[#d97581] flex items-center justify-center">
+                  <Clock className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg text-[#382427]">진료 시간표</h3>
+                  <p className="text-xs text-[#d97581] font-semibold">화·목 야간진료 (저녁 8시까지)</p>
+                </div>
               </div>
-              <div>
-                <h3 className="font-extrabold text-xl text-gray-900">진료시간 안내</h3>
-                <span className="text-xs text-emerald-700 font-semibold">
-                  화 · 목 저녁 8시 야간진료
+
+              <div className="text-right text-xs text-[#705458]">
+                <span className="inline-block px-2 py-0.5 bg-[#fff0f2] text-[#c9626e] rounded font-bold text-[11px]">
+                  휴게시간 12:30~14:00 (14시 진료 시작)
                 </span>
               </div>
             </div>
 
-            {/* Hours list */}
-            <div className="space-y-3 text-xs sm:text-sm">
-              <div className="p-3.5 bg-emerald-50/70 border border-emerald-200/60 rounded-xl">
-                <div className="flex items-center justify-between font-bold text-gray-900 mb-0.5">
-                  <span className="text-emerald-900">화 · 목 (야간진료)</span>
-                  <span className="text-emerald-800">09:30 ~ 20:00</span>
+            {/* Timetable Table */}
+            <div className="divide-y divide-[#fce7ea]/70 text-xs sm:text-sm">
+              {OPERATING_HOURS_TABLE.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`py-2.5 px-3 flex items-center justify-between rounded-lg transition ${
+                    item.isNight
+                      ? "bg-[#fff0f2] font-bold text-[#c9626e]"
+                      : item.isClosed
+                      ? "text-red-500 font-semibold"
+                      : "text-[#473437]"
+                  }`}
+                >
+                  <div className="flex items-center gap-2 w-20">
+                    <span>{item.day}</span>
+                    {item.isNight && (
+                      <span className="text-[10px] bg-[#d97581] text-white px-1.5 py-0.2 rounded font-bold">
+                        야간
+                      </span>
+                    )}
+                  </div>
+                  <div className="font-semibold">{item.hours}</div>
+                  <div className="text-[11px] text-gray-500 hidden sm:block">
+                    {item.breakTime}
+                  </div>
                 </div>
-                <p className="text-[11px] text-emerald-700">
-                  퇴근 후에도 여유로운 저녁 야간진료 (접수 마감 19:20)
-                </p>
-              </div>
-
-              <div className="p-3.5 bg-gray-50 rounded-xl border border-gray-100 flex items-center justify-between font-semibold text-gray-800">
-                <span>월 · 수 · 금</span>
-                <span>09:30 ~ 18:30</span>
-              </div>
-
-              <div className="p-3.5 bg-amber-50/80 rounded-xl border border-amber-200/60 flex items-center justify-between font-bold text-gray-900">
-                <span className="text-amber-900">토 요 일</span>
-                <span className="text-amber-800">09:30 ~ 14:30</span>
-              </div>
-              <p className="text-[11px] text-gray-500 pl-1">
-                ※ 토요일은 환자분들의 편의를 위해 <strong className="text-gray-800">점심시간 없이 연속 진료</strong>합니다.
-              </p>
-
-              <div className="p-3 bg-gray-50 rounded-xl text-gray-600 space-y-1 text-xs">
-                <div className="flex justify-between">
-                  <span>평일 점심시간</span>
-                  <span className="font-semibold text-gray-800">13:00 ~ 14:00</span>
-                </div>
-                <div className="flex justify-between text-red-600 font-semibold">
-                  <span>일요일 · 공휴일</span>
-                  <span>휴진</span>
-                </div>
-              </div>
+              ))}
             </div>
 
-            {/* Quick Call & Reserve buttons */}
-            <div className="space-y-2 pt-2">
+            <div className="bg-[#fff9fa] border border-[#fce7ea] rounded-xl p-3 text-xs text-[#73585c] space-y-1">
+              <p>• <strong>휴게시간(점심시간)</strong> : 12:30 ~ 14:00 (<strong>오후 14시 정각에 진료 시작</strong>)</p>
+              <p>• <strong>토요일</strong> : 점심시간 없이 오후 14:30까지 연속 진료합니다.</p>
+              <p>• <strong>일요일</strong> : 정기휴무</p>
+            </div>
+
+            <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
               <a
                 href={CLINIC_INFO.naverPlaceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 bg-[#03C75A] hover:bg-[#02b14f] text-white font-bold rounded-xl transition flex items-center justify-center gap-2 shadow text-sm"
+                className="flex-1 py-3 bg-[#03C75A] hover:bg-[#02b14f] text-white font-bold rounded-xl text-center text-xs sm:text-sm shadow-2xs flex items-center justify-center gap-1.5 transition"
               >
-                <ExternalLink className="w-4 h-4" />
-                <span>네이버 플레이스 바로가기 (리뷰 120+)</span>
+                <span>네이버 플레이스 정보</span>
+                <ExternalLink className="w-3.5 h-3.5" />
               </a>
 
               <a
                 href={`tel:${CLINIC_INFO.phone}`}
-                className="w-full py-3 bg-white border border-gray-300 hover:bg-gray-50 text-gray-800 font-bold rounded-xl transition flex items-center justify-center gap-2 text-sm"
+                className="flex-1 py-3 bg-[#d97581] hover:bg-[#c9626e] text-white font-bold rounded-xl text-center text-xs sm:text-sm shadow-2xs flex items-center justify-center gap-1.5 transition"
               >
-                <Phone className="w-4 h-4 text-[#123e32]" />
-                <span>전화 문의 ({CLINIC_INFO.formattedPhone})</span>
+                <Phone className="w-3.5 h-3.5" />
+                <span>{CLINIC_INFO.formattedPhone}</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Location, Subway, Parking & Map */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-sm space-y-6">
-            <div className="flex items-center gap-3 border-b border-gray-100 pb-4">
-              <div className="w-10 h-10 rounded-xl bg-[#123e32] text-[#dfcaa7] flex items-center justify-center">
+          {/* Right Column: Location & 1st Floor Accessibility */}
+          <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-8 border border-[#fce7ea] shadow-xs space-y-5">
+            <div className="flex items-center gap-2.5 border-b border-[#fce7ea] pb-4">
+              <div className="w-9 h-9 rounded-xl bg-[#fce7ea] text-[#d97581] flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <h3 className="font-extrabold text-xl text-gray-900">오시는 길 안내</h3>
-                <span className="text-xs text-gray-500 font-medium">
-                  {CLINIC_INFO.addressDetail}
-                </span>
+                <h3 className="font-bold text-lg text-[#382427]">오시는 길 안내</h3>
+                <p className="text-xs text-gray-500">{CLINIC_INFO.addressDetail}</p>
               </div>
             </div>
 
             {/* Address Box */}
-            <div className="bg-[#fbf9f5] border border-[#e9e3d5] rounded-2xl p-4 sm:p-5">
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <span className="text-xs font-bold text-[#123e32] uppercase">
-                    Clinic Address
-                  </span>
-                  <div className="text-base sm:text-lg font-bold text-gray-900 mt-1">
-                    {CLINIC_INFO.address}
-                  </div>
-                  <p className="text-xs sm:text-sm text-gray-600 mt-1">
-                    {CLINIC_INFO.addressDetail}
-                  </p>
-                </div>
+            <div className="bg-[#fff9fa] border border-[#fce7ea] rounded-2xl p-4">
+              <span className="text-xs font-bold text-[#d97581] uppercase">Clinic Location</span>
+              <div className="text-base sm:text-lg font-bold text-[#382427] mt-1">
+                {CLINIC_INFO.address}
               </div>
+              <p className="text-xs text-[#705458] mt-0.5">
+                {CLINIC_INFO.addressDetail}
+              </p>
             </div>
 
-            {/* Transit & Floor Details */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
-              {/* Floor Accessibility */}
-              <div className="p-4 rounded-2xl bg-emerald-50/60 border border-emerald-200/80 space-y-2">
-                <div className="font-bold text-gray-900 flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-700" />
-                  <span>편안한 1층 단독 진료</span>
+            {/* Accessibility & Transit Highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+              <div className="p-3.5 rounded-xl bg-[#fff0f2] border border-[#fce7ea] space-y-1">
+                <div className="font-bold text-[#b84e5b] flex items-center gap-1.5">
+                  <CheckCircle2 className="w-3.5 h-3.5" />
+                  <span>1층 단독 편안한 진료</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-xs">
-                  • 계단이나 엘리베이터를 이용할 필요 없이 <strong>1층에서 바로 진료</strong>받으실 수 있어 어르신과 통증 환자분들이 편안하게 방문하실 수 있습니다.
+                <p className="text-[#6b5256] text-[11px] leading-relaxed">
+                  계단이나 엘리베이터 없이 1층에서 바로 진료받으실 수 있어 어르신과 유모차 동반 가족도 편안합니다.
                 </p>
               </div>
 
-              {/* Transit & Location */}
-              <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200/80 space-y-2">
-                <div className="font-bold text-gray-900 flex items-center gap-2">
-                  <Train className="w-4 h-4 text-orange-600" />
-                  <span>대중교통 / 주차 안내</span>
+              <div className="p-3.5 rounded-xl bg-[#fff9fa] border border-[#fce7ea] space-y-1">
+                <div className="font-bold text-[#4a3538] flex items-center gap-1.5">
+                  <Train className="w-3.5 h-3.5 text-[#d97581]" />
+                  <span>대중교통 & 주차</span>
                 </div>
-                <p className="text-gray-600 leading-relaxed text-xs">
-                  • <strong>부산 1호선 하단역 인근</strong> 하신중앙로 방면
-                  <br />
-                  • 한의원 전용 주차 및 인근 주차 공간 지원 (내원 시 원내 안내)
+                <p className="text-[#6b5256] text-[11px] leading-relaxed">
+                  부산 1호선 하단역 인근 하신중앙로 방면, 한의원 전용 및 인근 주차 공간 지원.
                 </p>
               </div>
             </div>
 
-            {/* Map Visual & Navigation Link Buttons */}
-            <div className="space-y-3">
-              {/* Interactive Visual Map Representation */}
-              <div className="relative w-full h-56 sm:h-64 rounded-2xl overflow-hidden border border-gray-200 bg-[#e8ece9] flex items-center justify-center p-6 text-center">
-                <div className="space-y-3">
-                  <div className="w-12 h-12 rounded-full bg-[#123e32] text-white flex items-center justify-center mx-auto shadow-md">
-                    <MapPin className="w-6 h-6 text-[#dfcaa7]" />
-                  </div>
-                  <div>
-                    <h4 className="font-extrabold text-base text-gray-900">
-                      {CLINIC_INFO.name}
-                    </h4>
-                    <p className="text-xs text-gray-600 mt-0.5">
-                      {CLINIC_INFO.address} (정병준 대표원장)
-                    </p>
-                  </div>
-                  <div className="flex flex-wrap items-center justify-center gap-2">
-                    <a
-                      href={CLINIC_INFO.naverPlaceUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#03C75A] hover:bg-[#02b14f] text-white text-xs font-bold rounded-lg shadow-xs flex items-center gap-1.5 transition"
-                    >
-                      <span>네이버 지도 길찾기 (naver.me)</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                    <a
-                      href={CLINIC_INFO.kakaoMapUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="px-4 py-2 bg-[#FEE500] hover:bg-[#FADA0A] text-[#191919] text-xs font-bold rounded-lg shadow-xs flex items-center gap-1.5 transition"
-                    >
-                      <span>카카오맵 길찾기</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  </div>
-                </div>
+            {/* Map Link Action Box */}
+            <div className="p-4 rounded-2xl bg-gradient-to-r from-[#fff0f2] to-[#fff9fa] border border-[#fce7ea] flex items-center justify-between gap-3">
+              <div>
+                <div className="font-bold text-sm text-[#382427]">네이버 지도에서 길찾기</div>
+                <div className="text-xs text-[#805e63]">스마트폰 네비게이션으로 바로 연결됩니다</div>
               </div>
+              <a
+                href={CLINIC_INFO.naverPlaceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2.5 bg-[#03C75A] hover:bg-[#02b14f] text-white font-bold text-xs rounded-xl shadow-2xs flex items-center gap-1 transition shrink-0"
+              >
+                <span>길찾기</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
             </div>
           </div>
+
         </div>
+
       </div>
     </section>
   );
