@@ -49,10 +49,10 @@ export const metadata: Metadata = {
     description: "하단역 8번 출구 1층. 경희대 출신 1:1 책임진료, 화·목 저녁 8시 야간진료.",
     images: [
       {
-        url: "https://www02nara.github.io/sarangchae/images/hero-clinic.jpg",
+        url: "https://www02nara.github.io/sarangchae/images/og-share.png",
         width: 1200,
         height: 630,
-        alt: "하단 한의원 경희사랑채한의원 원내 전경",
+        alt: "하단 한의원 경희사랑채한의원 공식 로고",
       },
       {
         url: "https://www02nara.github.io/sarangchae/images/logo-full.png",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "하단 한의원 | 경희사랑채한의원",
     description: "하단역 8번 출구 1층. 경희대 출신 1:1 책임진료, 화·목 저녁 8시 야간진료.",
-    images: ["https://www02nara.github.io/sarangchae/images/hero-clinic.jpg"],
+    images: ["https://www02nara.github.io/sarangchae/images/og-share.png"],
   },
   robots: {
     index: true,
