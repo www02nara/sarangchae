@@ -7,8 +7,8 @@ import { Phone, ExternalLink } from "lucide-react";
 
 export default function ClinicGrid() {
   const clinicImages: { [key: string]: string } = {
-    "pain-joint": "/images/acupuncture-clinic.jpg",
-    "pediatrics": "/images/pediatric-hanbang.jpg",
+    "pain-joint": "/images/acupuncture-noface.jpg",
+    "pediatrics": "/images/pediatric-noface.jpg",
     "traffic-accident": "/images/cupping-therapy.jpg",
     "herbal-medicine": "/images/herbal-remedy.jpg",
     "diet-women": "/images/women-diet-herbal.jpg",
