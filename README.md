@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 경희사랑채한의원 부산점 공식 웹사이트
 
-## Getting Started
+> **"몸과 마음이 편안하게 머무는 곳, 경희사랑채한의원 부산점"**  
+> 경희대학교 한의과대학 출신 전문 의료진의 1:1 정밀 맞춤 책임 진료
 
-First, run the development server:
+- **공식 사이트**: [https://www02nara.github.io/sarangchae/](https://www02nara.github.io/sarangchae/)
+- **위치**: 부산광역시 사하구 낙동남로 1423 (하단동) 한서메디컬빌딩 3층 (하단역 1번 출구 도보 1분)
+- **대표전화**: 051-291-8875
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌟 주요 특화 클리닉
+1. **척추·관절 통증클리닉** - 비수술 디스크·협착증 추나요법(건강보험 적용), 정밀 봉약침
+2. **교통사고 후유증 클리닉** - 자동차보험 100% 적용 (본인부담금 0원), 어혈 배출 맞춤한약
+3. **맞춤한약 & 보약클리닉** - 식약처 GMP 인증 규격 약재, 원내 안심 탕전, 원방 공진단, 경옥고
+4. **한방 다이어트 클리닉** - 1:1 맞춤 감비환, 굶지 않는 체질 개선 및 요요 방지
+5. **여성·산후 클리닉** - 국민행복카드 바우처 사용, 산후풍 예방 및 갱년기 케어
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🕒 진료시간 안내
+- **월 · 수 · 금 (야간진료)** : 09:30 ~ 20:00
+- **화 · 목** : 09:30 ~ 19:00
+- **토 요 일** : 09:30 ~ 14:30 (점심시간 없이 연속 진료)
+- **평일 점심시간** : 13:00 ~ 14:00
+- **일요일 / 공휴일** : 휴진
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 💻 기술 스택
+- **Framework**: Next.js 16 (App Router, Static Export)
+- **Styling**: Tailwind CSS v4, Pretendard Font
+- **Deployment**: GitHub Pages (GitHub Actions 자동 배포)
+- **Icons**: Lucide React
