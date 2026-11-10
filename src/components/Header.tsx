@@ -38,10 +38,10 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Official Brand Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0" title="하단 한의원 경희사랑채한의원">
             <img
               src={getAssetPath("/images/logo-full.png")}
-              alt="경희사랑채한의원 부산 하단점"
+              alt="하단 한의원 경희사랑채한의원 (부산 사하구 하단역 8번 출구)"
               className="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
             <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 bg-[#f0f7fb] text-[#0f70b1] border border-[#d0e5f5] rounded-md shrink-0 self-center">

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
-import { CLINIC_INFO, OPERATING_HOURS } from "@/data/clinicData";
+import { CLINIC_INFO, OPERATING_HOURS, FAQ_LIST } from "@/data/clinicData";
 import { ModalProvider } from "@/context/ModalContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -8,22 +8,27 @@ import MobileQuickBar from "@/components/MobileQuickBar";
 import OnlineReservationModal from "@/components/OnlineReservationModal";
 
 export const metadata: Metadata = {
-  title: `${CLINIC_INFO.name} | 부산 사하구 하단 한방소아과·통증·교통사고·맞춤한약 (정병준 대표원장)`,
-  description: `${CLINIC_INFO.name} - 부산 사하구 하신중앙로 341 1층(하단동 589-18). 경희대 출신 정병준 대표원장 1:1 책임진료. 한방소아과(성장·비염·면역), 통증·관절 클리닉, 교통사고 후유증(본인부담금 0원), 식약처 GMP 인증 한약. 화·목 야간진료(20시까지). 문의 ${CLINIC_INFO.phone}`,
+  metadataBase: new URL("https://www02nara.github.io/sarangchae/"),
+  title: "하단 한의원 | 경희사랑채한의원 (부산 사하구 하단역 8번출구 야간진료)",
+  description:
+    "부산 사하구 하단 한의원 경희사랑채한의원입니다. 하단역 8번 출구 도보 1분 1층 위치. 경희대 출신 정병준 대표원장 1:1 책임진료. 통증·관절·경락 침구치료, 소아성장·비염, 교통사고 후유증(본인부담금 0원), 식약처 GMP 인증 맞춤한약. 화·목 저녁 8시 야간진료. 문의 051-207-1075",
   keywords: [
-    "경희사랑채한의원",
-    "정병준",
-    "정병준 한의사",
-    "부산 한방소아과",
-    "사하구 소아한의원",
+    "하단 한의원",
+    "하단역 한의원",
     "부산 하단 한의원",
     "사하구 한의원",
+    "하단동 한의원",
+    "하단 야간진료 한의원",
+    "하단 교통사고 한의원",
+    "하단 소아 한의원",
+    "하단 통증 한의원",
+    "하단 경락 한의원",
+    "경희사랑채한의원",
+    "정병준 한의사",
+    "부산 사하구 한의원",
     "하신중앙로 한의원",
-    "부산 교통사고 한의원",
-    "부산 야간진료 한의원",
-    "부산 소아성장",
-    "부산 공진단",
-    "부산 경옥고",
+    "하단 한약",
+    "하단 침 잘놓는 한의원",
   ],
   authors: [{ name: `${CLINIC_INFO.name} 정병준 대표원장` }],
   creator: CLINIC_INFO.name,
@@ -32,23 +37,52 @@ export const metadata: Metadata = {
     telephone: true,
     address: true,
   },
+  alternates: {
+    canonical: "https://www02nara.github.io/sarangchae/",
+  },
   openGraph: {
     type: "website",
     locale: "ko_KR",
     url: "https://www02nara.github.io/sarangchae/",
-    siteName: CLINIC_INFO.name,
-    title: `${CLINIC_INFO.name} 부산 하단점 | 한방소아과·통증·교통사고·야간진료 한의원`,
+    siteName: "하단 한의원 경희사랑채한의원",
+    title: "하단 한의원 | 경희사랑채한의원 (부산 사하구 하단역 야간진료)",
     description:
-      "몸과 마음이 편안하게 머무는 곳, 언제나 곁에서 든든하게 나만의 주치 한의사가 되어 드리겠습니다. 정병준 대표원장 1:1 맞춤 진료. 한방소아과, 통증관절, 교통사고, 화·목 야간진료.",
+      "하단역 8번 출구 1층. 경희대 출신 정병준 대표원장 1:1 진료. 통증·관절·경락, 한방소아과, 교통사고 후유증(본인부담 0원), 식약처 GMP 인증 한약, 화·목 저녁 8시 야간진료.",
+    images: [
+      {
+        url: "https://www02nara.github.io/sarangchae/images/hero-clinic.jpg",
+        width: 1200,
+        height: 630,
+        alt: "하단 한의원 경희사랑채한의원 원내 전경",
+      },
+      {
+        url: "https://www02nara.github.io/sarangchae/images/logo-full.png",
+        width: 800,
+        height: 400,
+        alt: "하단 한의원 경희사랑채한의원 로고",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: CLINIC_INFO.name,
-    description: CLINIC_INFO.slogan,
+    title: "하단 한의원 | 경희사랑채한의원",
+    description:
+      "부산 사하구 하단역 8번 출구 1층. 경희대 출신 정병준 대표원장 1:1 책임진료. 화·목 저녁 8시 야간진료.",
+    images: ["https://www02nara.github.io/sarangchae/images/hero-clinic.jpg"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "naver-site-verification": "",
   },
 };
 
@@ -66,45 +100,98 @@ export default function RootLayout({
 }) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
-    name: CLINIC_INFO.name,
-    description: CLINIC_INFO.subSlogan,
-    url: "https://www02nara.github.io/sarangchae/",
-    telephone: CLINIC_INFO.phone,
-    hasMap: CLINIC_INFO.naverPlaceUrl,
-    address: {
-      "@type": "PostalAddress",
-      streetAddress: CLINIC_INFO.address,
-      addressLocality: "부산광역시",
-      addressRegion: "사하구",
-      addressCountry: "KR",
-    },
-    openingHoursSpecification: [
+    "@graph": [
       {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Tuesday", "Thursday"],
-        opens: "09:30",
-        closes: "20:00",
+        "@type": ["MedicalBusiness", "Physician", "LocalBusiness"],
+        "@id": "https://www02nara.github.io/sarangchae/#clinic",
+        name: CLINIC_INFO.name,
+        alternateName: [
+          "하단 한의원",
+          "부산 하단 한의원",
+          "하단역 한의원",
+          "사하구 하단 한의원",
+          "하단 경희사랑채한의원",
+        ],
+        description:
+          "부산 사하구 하단역 8번 출구 1층에 위치한 하단 한의원 경희사랑채한의원입니다. 경희대학교 한의과대학 출신 정병준 대표원장이 1:1 정밀 맞춤 책임 진료를 제공합니다. 통증·관절·경락 치료, 한방소아과, 교통사고 후유증, 식약처 GMP 인증 한약, 화·목 저녁 8시 야간진료.",
+        url: "https://www02nara.github.io/sarangchae/",
+        logo: "https://www02nara.github.io/sarangchae/images/logo-full.png",
+        image: [
+          "https://www02nara.github.io/sarangchae/images/hero-clinic.jpg",
+          "https://www02nara.github.io/sarangchae/images/facility-treatment-room.jpg",
+          "https://www02nara.github.io/sarangchae/images/facility-lounge.jpg",
+        ],
+        telephone: CLINIC_INFO.phone,
+        hasMap: CLINIC_INFO.naverPlaceUrl,
+        sameAs: [
+          "https://naver.me/x9Bkj6Al",
+          "https://map.kakao.com/?q=부산 사하구 하신중앙로 341 경희사랑채한의원",
+        ],
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: CLINIC_INFO.address,
+          addressLocality: "부산광역시",
+          addressRegion: "사하구",
+          postalCode: "49313",
+          addressCountry: "KR",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: 35.1065,
+          longitude: 128.9667,
+        },
+        areaServed: [
+          "부산광역시 사하구",
+          "하단동",
+          "당리동",
+          "신평동",
+          "괴정동",
+          "명지동",
+          "엄궁동",
+        ],
+        openingHoursSpecification: [
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Tuesday", "Thursday"],
+            opens: "09:30",
+            closes: "20:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Monday", "Wednesday", "Friday"],
+            opens: "09:30",
+            closes: "18:00",
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            dayOfWeek: ["Saturday"],
+            opens: "09:30",
+            closes: "14:30",
+          },
+        ],
+        priceRange: "₩₩",
+        currenciesAccepted: "KRW",
+        paymentAccepted: "Cash, Credit Card, 동백전(부산지역화폐), 제로페이",
+        medicalSpecialty: [
+          "TraditionalChineseMedicine",
+          "Pediatrics",
+          "Acupuncture",
+          "Rehabilitation",
+          "Musculoskeletal",
+        ],
       },
       {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Wednesday", "Friday"],
-        opens: "09:30",
-        closes: "18:00",
+        "@type": "FAQPage",
+        "@id": "https://www02nara.github.io/sarangchae/#faq",
+        mainEntity: FAQ_LIST.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
       },
-      {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Saturday"],
-        opens: "09:30",
-        closes: "14:30",
-      },
-    ],
-    priceRange: "₩₩",
-    medicalSpecialty: [
-      "TraditionalChineseMedicine",
-      "Pediatrics",
-      "Acupuncture",
-      "Rehabilitation",
     ],
   };
 

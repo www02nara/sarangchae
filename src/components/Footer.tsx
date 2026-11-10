@@ -28,7 +28,7 @@ export default function Footer() {
             <p className="text-slate-600 text-xs leading-relaxed max-w-sm">
               {CLINIC_INFO.slogan}
               <br />
-              언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다
+              부산 사하구 하단 한의원 경희사랑채 · 언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다.
             </p>
           </div>
 
@@ -86,14 +86,14 @@ export default function Footer() {
             <span>대표자: {CLINIC_INFO.representative}</span>
             <span>전화번호: {CLINIC_INFO.phone}</span>
             <span>사업자등록번호: {CLINIC_INFO.registrationNumber}</span>
-            <span>소재지: {CLINIC_INFO.address}</span>
+            <span>소재지: {CLINIC_INFO.address} (하단동 589-18, 1층)</span>
           </div>
 
           <div className="flex items-center justify-between pt-2 text-[10px] text-slate-400">
-            <div>&copy; 2025 {CLINIC_INFO.name}. All Rights Reserved.</div>
+            <div>&copy; {new Date().getFullYear()} {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
               <a href="#location" className="hover:text-slate-700 transition">
-                오시는 길
+                하단 한의원 오시는 길
               </a>
             </div>
           </div>

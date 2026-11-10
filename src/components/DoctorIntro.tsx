@@ -40,7 +40,7 @@ export default function DoctorIntro() {
                 <span className="text-[#0f70b1]">정직하고 바른 진료</span>를 약속합니다.”
               </h2>
               <p className="text-slate-600 text-sm leading-relaxed">
-                환자 한 분 한 분의 체질과 막힌 경락의 기혈 흐름을 깊이 헤아려 아픔의 뿌리를 치료합니다.
+                부산 사하구 <strong>하단 한의원</strong> 경희사랑채는 환자 한 분 한 분의 체질과 막힌 경락의 기혈 흐름을 깊이 헤아려 아픔의 뿌리를 치료합니다.
                 과잉 진료 없이 꼭 필요한 정직한 한방 치료만을 시행합니다.
               </p>
             </div>
@@ -78,7 +78,7 @@ export default function DoctorIntro() {
                 </div>
                 <div className="flex items-center gap-1.5 sm:col-span-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
-                  <span>현 경희사랑채한의원 대표원장</span>
+                  <span>현 경희사랑채한의원 대표원장 (부산 사하구 하단)</span>
                 </div>
               </div>
             </div>

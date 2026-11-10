@@ -19,7 +19,7 @@ export default function LocationHours() {
             진료시간 & 오시는 길
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            부산 사하구 하신중앙로 341, 1층 (하단역 8번 출구 도보 1~2분)
+            <strong>부산 사하구 하단 한의원</strong> 경희사랑채 · 하신중앙로 341, 1층 (하단역 8번 출구 도보 1~2분)
           </p>
         </div>
 
@@ -119,7 +119,7 @@ export default function LocationHours() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-slate-900">오시는 길 & 약도</h3>
+                    <h3 className="font-bold text-lg text-slate-900">하단 한의원 오시는 길 & 약도</h3>
                     <p className="text-xs text-slate-500">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
                   </div>
                 </div>
@@ -133,7 +133,7 @@ export default function LocationHours() {
               <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-3xs group">
                 <img
                   src={getAssetPath("/images/clinic-map-official.jpg")}
-                  alt="경희사랑채한의원 오시는 길 약도"
+                  alt="부산 사하구 하단 한의원 경희사랑채 오시는 길 약도 (하단역 8번 출구)"
                   className="w-full h-auto object-cover block"
                   loading="lazy"
                 />

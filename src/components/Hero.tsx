@@ -19,7 +19,7 @@ export default function Hero() {
             <div className="space-y-4 sm:space-y-5">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
                 <Heart className="w-3.5 h-3.5 text-[#ed5f21] fill-[#ed5f21] shrink-0" />
-                <span className="truncate">언제나 곁에서 든든하게, 나만의 주치 한의사가 되어 드리겠습니다</span>
+                <span className="truncate">부산 사하구 하단 한의원 · 언제나 곁에서 든든한 주치의</span>
               </div>
 
               <h1 className="tracking-tight leading-[1.25]">
@@ -32,9 +32,9 @@ export default function Hero() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-                증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다.
+                부산 사하구 <strong>하단 한의원</strong> 경희사랑채는 증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다.
                 <br className="hidden sm:inline" />
-                내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
+                하단역 8번 출구 앞, 내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
               </p>
             </div>
 
@@ -84,7 +84,7 @@ export default function Hero() {
             <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
                 src={getAssetPath("/images/hero-clinic.jpg")}
-                alt="경희사랑채한의원"
+                alt="부산 사하구 하단 한의원 경희사랑채한의원 대표원장 진료"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">

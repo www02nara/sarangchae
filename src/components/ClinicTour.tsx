@@ -39,7 +39,7 @@ export default function ClinicTour() {
             원내 시설 안내
           </h2>
           <p className="text-slate-600 text-xs sm:text-sm">
-            쾌적함과 위생을 최우선으로 관리하는 경희사랑채한의원 공간입니다.
+            쾌적함과 위생을 최우선으로 관리하는 <strong>하단 한의원</strong> 경희사랑채 원내 공간입니다.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ export default function ClinicTour() {
               <div className="h-48 overflow-hidden">
                 <img
                   src={getAssetPath(item.image)}
-                  alt={item.title}
+                  alt={`하단 한의원 경희사랑채 - ${item.title}`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>

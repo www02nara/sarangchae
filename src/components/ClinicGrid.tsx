@@ -27,7 +27,7 @@ export default function ClinicGrid() {
             주요 진료 과목
           </h2>
           <p className="text-slate-600 text-sm sm:text-base">
-            환자의 상태와 체질에 맞춰 막힌 경락을 소통시키고 근본 원인을 다스리는 1:1 정밀 한방 치료 프로그램을 운영합니다.
+            <strong>하단 한의원</strong> 경희사랑채는 환자의 체질과 상태에 맞춰 막힌 경락을 소통시키고 근본 원인을 다스리는 1:1 맞춤 정밀 한방 치료 프로그램을 운영합니다.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function ClinicGrid() {
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={getAssetPath(clinicImages[clinic.id] || "/images/spine.jpg")}
-                    alt={clinic.title}
+                    alt={`하단 한의원 ${clinic.title} - 경희사랑채한의원`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-[#0f70b1] border border-slate-200 text-xs font-bold px-2.5 py-1 rounded-lg shadow-3xs">
