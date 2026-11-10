@@ -23,18 +23,19 @@ export default function Hero() {
               </div>
 
               <h1 className="tracking-tight leading-[1.25]">
-                <span className="block text-lg sm:text-2xl lg:text-3xl font-bold text-[#0f70b1] mb-1.5 sm:mb-2.5">
+                <span className="block text-lg sm:text-2xl lg:text-3xl font-bold text-[#0f70b1] mb-1 sm:mb-2">
                   몸과 마음이 편안한
                 </span>
-                <span className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900">경희</span>
-                <span className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#ea4025]">사랑채</span>
-                <span className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900">한의원</span>
+                <span className="sr-only">경희사랑채한의원</span>
+                <img
+                  src={getAssetPath("/images/logo-text.png")}
+                  alt="부산 사하구 하단 한의원 경희사랑채한의원"
+                  className="h-12 sm:h-16 lg:h-20 w-auto object-contain block max-w-full my-1"
+                />
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-                부산 사하구 <strong>하단 한의원</strong> 경희사랑채는 증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다.
-                <br className="hidden sm:inline" />
-                하단역 8번 출구 앞, 내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
+                부산 사하구 <strong>하단 한의원</strong> 경희사랑채는 증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다. 하단역 8번 출구 앞, 내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
               </p>
             </div>
 
