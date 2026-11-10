@@ -16,8 +16,12 @@ export default function DoctorIntro() {
             <div className="relative w-full max-w-sm rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white">
               <div className="h-80 sm:h-96 overflow-hidden">
                 <img
-                  src={getAssetPath("/images/doctor.jpg")}
+                  src={getAssetPath("/images/doctor.webp")}
                   alt="경희사랑채한의원 정병준 대표원장"
+                  width={384}
+                  height={384}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover object-top"
                 />
               </div>

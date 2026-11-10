@@ -29,7 +29,7 @@ export default function MobileQuickBar() {
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#03C75A]/15 flex items-center justify-center text-[#03C75A] mb-0.5 font-bold text-xs">
+          <div className="w-8 h-8 rounded-full bg-[#027a37]/10 flex items-center justify-center text-[#027a37] mb-0.5 font-bold text-xs">
             N
           </div>
           <span className="text-[11px] font-semibold">플레이스</span>

@@ -75,9 +75,9 @@ export default function OnlineReservationModal() {
               <div className="w-14 h-14 bg-[#f0f7fb] text-[#0f70b1] rounded-full flex items-center justify-center mx-auto border border-[#d0e5f5]">
                 <CheckCircle className="w-8 h-8" />
               </div>
-              <h4 className="text-xl font-bold text-gray-900">
+              <h3 className="text-xl font-bold text-gray-900">
                 진료 예약 신청이 완료되었습니다!
-              </h4>
+              </h3>
               <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto">
                 <strong className="text-gray-900">{name}</strong>님, 접수해 주셔서 감사합니다.
                 <br />

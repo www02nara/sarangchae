@@ -1,3 +1,4 @@
-:HL["/sarangchae/_next/static/chunks/2c9bcltonswg1.css","style"]
+:HL["/sarangchae/_next/static/chunks/0mu0szwtpedbv.css","style"]
+:HL["/sarangchae/images/hero-clinic.webp","image",{"type":"image/webp"}]
 1:[["children",{"s":"__PAGE__","h":128}]]
-0:{"b":"NUxXye3AN5CtYDhMQ5xE5","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"LjL1WHBV_2exSGYDA2P7R","t":{"t":{"s":"","h":16,"c":"$Q1"}}}

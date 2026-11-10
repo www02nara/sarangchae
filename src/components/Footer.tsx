@@ -16,8 +16,12 @@ export default function Footer() {
           <div className="lg:col-span-5 space-y-3">
             <div className="flex items-center gap-2">
               <img
-                src={getAssetPath("/images/logo-full.png")}
+                src={getAssetPath("/images/logo-full.webp")}
                 alt={`${CLINIC_INFO.name} ${CLINIC_INFO.branchName}`}
+                width={144}
+                height={32}
+                loading="lazy"
+                decoding="async"
                 className="h-8 w-auto object-contain"
               />
               <span className="text-[10px] font-bold px-2 py-0.5 bg-white text-[#0f70b1] border border-[#d0e5f5] rounded-md shrink-0 self-center">
@@ -34,10 +38,10 @@ export default function Footer() {
 
           {/* Operating Hours Summary */}
           <div className="lg:col-span-4 space-y-2">
-            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+            <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5 text-[#0f70b1]" />
               진료시간 안내
-            </h4>
+            </h3>
             <ul className="space-y-1 text-slate-600 text-[11px]">
               <li className="flex justify-between">
                 <span className="text-[#0f70b1] font-bold">화 · 목 (야간진료)</span>
@@ -64,10 +68,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-3 space-y-2">
-            <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
+            <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
               <Phone className="w-3.5 h-3.5 text-[#0f70b1]" />
               대표 문의
-            </h4>
+            </h3>
             <div className="text-xl font-black text-slate-900 tracking-tight">
               {CLINIC_INFO.formattedPhone}
             </div>
@@ -89,7 +93,7 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address} (하단동 589-18, 1층)</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-400">
+          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-500">
             <div>&copy; {new Date().getFullYear()} {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
               <a href="#location" className="hover:text-slate-700 transition">

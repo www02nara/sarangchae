@@ -7,11 +7,11 @@ import { Phone, ExternalLink } from "lucide-react";
 
 export default function ClinicGrid() {
   const clinicImages: { [key: string]: string } = {
-    "pain-joint": "/images/acupuncture-noface.jpg",
-    "pediatrics": "/images/pediatric-noface.jpg",
-    "traffic-accident": "/images/cupping-therapy.jpg",
-    "herbal-medicine": "/images/herbal-remedy.jpg",
-    "diet-women": "/images/women-diet-herbal.jpg",
+    "pain-joint": "/images/acupuncture-noface.webp",
+    "pediatrics": "/images/pediatric-noface.webp",
+    "traffic-accident": "/images/cupping-therapy.webp",
+    "herbal-medicine": "/images/herbal-remedy.webp",
+    "diet-women": "/images/women-diet-herbal.webp",
   };
 
   return (
@@ -42,8 +42,12 @@ export default function ClinicGrid() {
                 {/* Photo Header */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={getAssetPath(clinicImages[clinic.id] || "/images/spine.jpg")}
+                    src={getAssetPath(clinicImages[clinic.id] || "/images/acupuncture-noface.webp")}
                     alt={`하단 한의원 ${clinic.title} - 경희사랑채한의원`}
+                    width={400}
+                    height={192}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-[#0f70b1] border border-slate-200 text-xs font-bold px-2.5 py-1 rounded-lg shadow-3xs">

@@ -28,8 +28,11 @@ export default function Hero() {
                 </span>
                 <span className="sr-only">경희사랑채한의원</span>
                 <img
-                  src={getAssetPath("/images/logo-text.png")}
+                  src={getAssetPath("/images/logo-text.webp")}
                   alt="부산 사하구 하단 한의원 경희사랑채한의원"
+                  width={400}
+                  height={90}
+                  fetchPriority="high"
                   className="h-12 sm:h-16 lg:h-20 w-auto object-contain block max-w-full my-1"
                 />
               </h1>
@@ -84,14 +87,18 @@ export default function Hero() {
           <div className="lg:col-span-5 flex flex-col">
             <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
-                src={getAssetPath("/images/hero-clinic.jpg")}
+                src={getAssetPath("/images/hero-clinic.webp")}
                 alt="부산 사하구 하단 한의원 경희사랑채한의원 대표원장 진료"
+                width={640}
+                height={520}
+                fetchPriority="high"
+                decoding="async"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
                 <div className="text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
                 <div className="text-xl font-bold">{CLINIC_INFO.name}</div>
-                <div className="text-xs text-slate-300 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
+                <div className="text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
               </div>
             </div>
           </div>

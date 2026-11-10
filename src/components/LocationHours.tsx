@@ -90,8 +90,8 @@ export default function LocationHours() {
                       </div>
 
                       {/* Column 3: Break Time */}
-                      <div className={`sm:col-span-5 text-[11px] sm:text-xs flex items-center justify-between sm:justify-start gap-1.5 ${item.isClosed ? "text-rose-400 font-medium" : "text-slate-500"}`}>
-                        <span className="sm:hidden text-slate-400 font-medium">휴게:</span>
+                      <div className={`sm:col-span-5 text-[11px] sm:text-xs flex items-center justify-between sm:justify-start gap-1.5 ${item.isClosed ? "text-rose-500 font-medium" : "text-slate-600"}`}>
+                        <span className="sm:hidden text-slate-500 font-medium">휴게:</span>
                         <span className="font-medium">{item.breakTime}</span>
                       </div>
                     </div>
@@ -124,7 +124,7 @@ export default function LocationHours() {
                   </div>
                 </div>
 
-                <span className="px-3 py-1 bg-[#fff1f0] text-[#ea4025] border border-[#fecdd3] rounded-full font-bold text-[11px] self-start sm:self-center">
+                <span className="px-3 py-1 bg-[#fff1f0] text-[#b91c1c] border border-[#fecdd3] rounded-full font-bold text-[11px] self-start sm:self-center">
                   하단역 8번 출구 도보 1~2분
                 </span>
               </div>
@@ -132,10 +132,13 @@ export default function LocationHours() {
               {/* Official Clinic Route Map Graphic */}
               <div className="rounded-2xl bg-white border border-slate-200 overflow-hidden shadow-3xs group">
                 <img
-                  src={getAssetPath("/images/clinic-map-official.jpg")}
+                  src={getAssetPath("/images/clinic-map-official.webp")}
                   alt="부산 사하구 하단 한의원 경희사랑채 오시는 길 약도 (하단역 8번 출구)"
-                  className="w-full h-auto object-cover block"
+                  width={640}
+                  height={360}
                   loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto object-cover block"
                 />
               </div>
 
