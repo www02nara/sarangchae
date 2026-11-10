@@ -6,8 +6,6 @@ import { useModal } from "@/context/ModalContext";
 import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
 
 export default function Footer() {
-  const { openNonCovered } = useModal();
-
   return (
     <footer className="bg-[#fefbfc] text-[#6e585c] text-xs pt-12 pb-20 sm:pb-12 border-t border-[#f5e6e8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -29,16 +27,6 @@ export default function Footer() {
               <br />
               경희대학교 한의과대학 출신 정병준 대표원장의 1:1 맞춤 진료
             </p>
-
-            <div>
-              <button
-                onClick={openNonCovered}
-                className="px-3 py-1.5 bg-white hover:bg-[#fef7f9] text-[#7d3543] border border-[#f0d8dd] rounded-lg transition font-semibold text-[11px] flex items-center gap-1 shadow-3xs"
-              >
-                <span>비급여 진료비용 안내</span>
-                <ChevronRight className="w-3 h-3 text-[#a34c5b]" />
-              </button>
-            </div>
           </div>
 
           {/* Operating Hours Summary */}
@@ -101,10 +89,6 @@ export default function Footer() {
           <div className="flex items-center justify-between pt-2 text-[10px] text-[#9e878b]">
             <div>&copy; 2025 {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
-              <button onClick={openNonCovered} className="hover:text-[#261d1f] transition">
-                비급여 수가표
-              </button>
-              <span>|</span>
               <a href="#location" className="hover:text-[#261d1f] transition">
                 오시는 길
               </a>

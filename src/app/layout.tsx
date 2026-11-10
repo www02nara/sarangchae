@@ -6,7 +6,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileQuickBar from "@/components/MobileQuickBar";
 import OnlineReservationModal from "@/components/OnlineReservationModal";
-import NonCoveredModal from "@/components/NonCoveredModal";
 
 export const metadata: Metadata = {
   title: `${CLINIC_INFO.name} | 부산 사하구 하단 한방소아과·통증·교통사고·맞춤한약 (정병준 대표원장)`,
@@ -124,7 +123,6 @@ export default function RootLayout({
           <Footer />
           <MobileQuickBar />
           <OnlineReservationModal />
-          <NonCoveredModal />
         </ModalProvider>
       </body>
     </html>

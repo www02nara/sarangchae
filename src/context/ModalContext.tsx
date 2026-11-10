@@ -7,9 +7,6 @@ interface ModalContextType {
   openBooking: (serviceTitle?: string) => void;
   closeBooking: () => void;
   selectedService: string;
-  isNonCoveredOpen: boolean;
-  openNonCovered: () => void;
-  closeNonCovered: () => void;
 }
 
 const ModalContext = createContext<ModalContextType | undefined>(undefined);
@@ -17,23 +14,14 @@ const ModalContext = createContext<ModalContextType | undefined>(undefined);
 export function ModalProvider({ children }: { children: ReactNode }) {
   const [isBookingOpen, setIsBookingOpen] = useState(false);
   const [selectedService, setSelectedService] = useState("");
-  const [isNonCoveredOpen, setIsNonCoveredOpen] = useState(false);
 
   const openBooking = (serviceTitle?: string) => {
-    setSelectedService(serviceTitle || "척추·관절 통증클리닉");
+    setSelectedService(serviceTitle || "통증·관절 클리닉");
     setIsBookingOpen(true);
   };
 
   const closeBooking = () => {
     setIsBookingOpen(false);
-  };
-
-  const openNonCovered = () => {
-    setIsNonCoveredOpen(true);
-  };
-
-  const closeNonCovered = () => {
-    setIsNonCoveredOpen(false);
   };
 
   return (
@@ -43,9 +31,6 @@ export function ModalProvider({ children }: { children: ReactNode }) {
         openBooking,
         closeBooking,
         selectedService,
-        isNonCoveredOpen,
-        openNonCovered,
-        closeNonCovered,
       }}
     >
       {children}

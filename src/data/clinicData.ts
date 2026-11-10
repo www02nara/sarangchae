@@ -28,14 +28,6 @@ export interface OperatingHours {
   notice: string;
 }
 
-export interface NonCoveredItem {
-  category: string;
-  name: string;
-  unit: string;
-  price: string;
-  note?: string;
-}
-
 export interface FaqItem {
   question: string;
   answer: string;
@@ -171,58 +163,6 @@ export const DOCTOR_PROFILE: DoctorProfile = {
     "체질별 맞춤 한약 처방 및 만성피로 개선 연구",
   ],
 };
-
-export const NON_COVERED_ITEMS: NonCoveredItem[] = [
-  {
-    category: "한약 (보약/특화처방)",
-    name: "원방 사향 공진단 (10환/30환/50환)",
-    unit: "1환",
-    price: "50,000원 ~ 60,000원",
-    note: "러시아산 최상급 원용 및 정품 식약처 인증 사향 함량에 따라 상이",
-  },
-  {
-    category: "한약 (보약/특화처방)",
-    name: "프리미엄 경옥고 (단지형 1kg / 스틱 30포)",
-    unit: "1박스",
-    price: "150,000원 ~ 200,000원",
-    note: "전통 옹기 3일 밤낮 중탕 탕전",
-  },
-  {
-    category: "한약 (보약/특화처방)",
-    name: "체질 맞춤 녹용한약 (러시아 원용 분골/중대)",
-    unit: "1제 (15일분)",
-    price: "350,000원 ~ 500,000원",
-    note: "환자 체질 및 녹용 부위 등급에 따른 1:1 맞춤 조제",
-  },
-  {
-    category: "소아 / 성장",
-    name: "우리아이 맞춤 성장보약 / 면역한약",
-    unit: "1제 (15일분)",
-    price: "200,000원 ~ 350,000원",
-    note: "소아 연령 및 체질에 맞춘 순하고 부드러운 안심 탕전",
-  },
-  {
-    category: "다이어트",
-    name: "사랑채 감비환 (고농축 비만환)",
-    unit: "1개월분",
-    price: "150,000원 ~ 180,000원",
-    note: "체질 측정 및 식단 밀착 가이드 포함",
-  },
-  {
-    category: "약침 / 특수시술",
-    name: "봉약침 / 중성어혈약침 (소염·진통)",
-    unit: "1회",
-    price: "15,000원 ~ 30,000원",
-    note: "시술 부위 및 약침 용량에 따름",
-  },
-  {
-    category: "제증명 서류",
-    name: "일반 진단서",
-    unit: "1통",
-    price: "20,000원",
-    note: "의료법 기준 상한액 준수",
-  },
-];
 
 export const FAQ_LIST: FaqItem[] = [
   {

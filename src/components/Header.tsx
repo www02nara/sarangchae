@@ -9,7 +9,7 @@ import { Phone, Calendar, Clock, Menu, X, ExternalLink } from "lucide-react";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { openBooking, openNonCovered } = useModal();
+  const { openBooking } = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,12 +50,6 @@ export default function Header() {
               <Phone className="w-3 h-3 text-[#a34c5b]" />
               <span>{CLINIC_INFO.formattedPhone}</span>
             </a>
-            <button
-              onClick={openNonCovered}
-              className="text-[#6e555a] hover:text-[#2b2022] transition text-[10px] sm:text-[11px] underline underline-offset-2 hidden sm:inline"
-            >
-              비급여 안내
-            </button>
           </div>
         </div>
       </div>
@@ -158,15 +152,6 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                openNonCovered();
-              }}
-              className="block w-full text-left py-3 px-2 text-gray-600 hover:bg-[#fdf5f7] rounded-lg text-xs font-medium"
-            >
-              비급여 진료비용 안내
-            </button>
           </div>
 
           <div className="pt-2 flex flex-col gap-2">
