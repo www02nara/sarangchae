@@ -3,14 +3,12 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { CLINIC_INFO } from "@/data/clinicData";
-import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
-import { Calendar, Menu, X, ExternalLink } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { openBooking } = useModal();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +50,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-7 text-sm font-semibold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -64,35 +62,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right Action CTA Buttons */}
-          <div className="hidden sm:flex items-center gap-2.5">
-            <a
-              href={CLINIC_INFO.naverPlaceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3.5 py-2 rounded-xl text-xs font-bold text-white bg-[#03C75A] hover:bg-[#02b14f] transition flex items-center gap-1.5 shadow-2xs"
-            >
-              <span>네이버 플레이스</span>
-              <ExternalLink className="w-3.5 h-3.5" />
-            </a>
-
-            <button
-              onClick={() => openBooking()}
-              className="px-4 py-2 rounded-xl text-xs font-bold text-[#0f70b1] bg-[#f0f7fb] hover:bg-[#e0f0fa] border border-[#d0e5f5] transition flex items-center gap-1.5 shadow-3xs"
-            >
-              <Calendar className="w-3.5 h-3.5 text-[#0f70b1]" />
-              <span>간편 예약</span>
-            </button>
-          </div>
-
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
-            <button
-              onClick={() => openBooking()}
-              className="px-2.5 py-1.5 rounded-lg text-xs font-bold text-[#0f70b1] bg-[#f0f7fb] hover:bg-[#e0f0fa] border border-[#d0e5f5] sm:hidden"
-            >
-              예약
-            </button>
+          <div className="flex items-center lg:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="메뉴 토글"
@@ -118,28 +89,6 @@ export default function Header() {
                 {link.name}
               </a>
             ))}
-          </div>
-
-          <div className="pt-2 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                openBooking();
-              }}
-              className="w-full py-3 bg-[#0f70b1] hover:bg-[#0c5c92] text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 shadow-2xs"
-            >
-              <Calendar className="w-4 h-4 text-white" />
-              간편 진료 예약
-            </button>
-            <a
-              href={CLINIC_INFO.naverPlaceUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full py-3 bg-[#03C75A] text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 shadow-2xs"
-            >
-              <ExternalLink className="w-4 h-4" />
-              네이버 플레이스
-            </a>
           </div>
         </div>
       )}

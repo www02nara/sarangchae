@@ -7,7 +7,7 @@ import { ChevronDown, Phone } from "lucide-react";
 export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const topFaqs = FAQ_LIST.slice(0, 4);
+  const topFaqs = FAQ_LIST;
 
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
