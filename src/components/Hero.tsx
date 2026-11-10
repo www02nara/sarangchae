@@ -3,7 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart } from "lucide-react";
+import { Heart, Clock, MapPin, Sparkles } from "lucide-react";
 
 export default function Hero() {
   return (
@@ -11,8 +11,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
-          {/* Left Text */}
-          <div className="lg:col-span-7 space-y-5 sm:space-y-6 text-left flex flex-col justify-between">
+          {/* Left Text Column */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-4 sm:space-y-5">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
                 <Heart className="w-3.5 h-3.5 text-[#ed5f21] fill-[#ed5f21] shrink-0" />
@@ -32,19 +32,36 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* 3 Simple Badges Echoing Logo Colors */}
-            <div className="grid grid-cols-3 gap-2.5 sm:gap-4 pt-1 max-w-xl text-center">
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-slate-200 shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#0f70b1]">화 · 목 야간</div>
-                <div className="text-[10px] sm:text-xs text-slate-500 mt-1">저녁 8시까지</div>
+            {/* Core Info Highlights (자연스럽고 꼭 필요한 정보만 정돈된 카드) */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+              <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
+                <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="font-bold text-xs sm:text-sm text-slate-900">화 · 목 야간진료</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">저녁 8시까지 진료</div>
+                </div>
               </div>
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-slate-200 shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#72b033]">한방소아과</div>
-                <div className="text-[10px] sm:text-xs text-slate-500 mt-1">성장 · 면역</div>
+
+              <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
+                <div className="w-7 h-7 rounded-lg bg-[#f2f9ec] text-[#72b033] flex items-center justify-center shrink-0">
+                  <Sparkles className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="font-bold text-xs sm:text-sm text-slate-900">한방소아과</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">성장 · 비염 · 면역</div>
+                </div>
               </div>
-              <div className="bg-white p-3 sm:p-4 rounded-2xl border border-slate-200 shadow-3xs">
-                <div className="font-extrabold text-xs sm:text-sm text-[#ed5f21]">1층 단독</div>
-                <div className="text-[10px] sm:text-xs text-slate-500 mt-1">편안한 방문</div>
+
+              <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
+                <div className="w-7 h-7 rounded-lg bg-[#fff7ed] text-[#ed5f21] flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div>
+                  <div className="font-bold text-xs sm:text-sm text-slate-900">1층 위치</div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">계단 없는 편안한 내원</div>
+                </div>
               </div>
             </div>
           </div>

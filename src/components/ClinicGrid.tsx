@@ -73,11 +73,6 @@ export default function ClinicGrid() {
                   </div>
                 </div>
               </div>
-
-              {/* Bottom Subtle Bar */}
-              <div className="px-5 pb-5 sm:px-6 sm:pb-6 pt-1 text-[11px] text-slate-500">
-                <span>1:1 정밀 맞춤 처방 및 집중 케어</span>
-              </div>
             </div>
           ))}
 
