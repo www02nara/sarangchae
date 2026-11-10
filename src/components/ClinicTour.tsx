@@ -8,22 +8,22 @@ export default function ClinicTour() {
     {
       title: "1인 프라이빗 경락·치료실",
       desc: "위생적인 1회용 침구와 멸균 시트를 갖춘 아늑한 경락·침구 치료 공간",
-      image: "/images/facility1.jpg",
+      image: "/images/facility-treatment-room.jpg",
     },
     {
       title: "소아·가족 진료실",
       desc: "아이들과 부모님이 긴장하지 않고 편안하게 머무는 진료실",
-      image: "/images/pediatric.jpg",
+      image: "/images/facility-pediatric-consult.jpg",
     },
     {
       title: "원내 청정 탕전실",
       desc: "식약처 GMP 인증 규격 한약재를 정성껏 달이는 탕전 시스템",
-      image: "/images/herbal.jpg",
+      image: "/images/facility-herbal-decoction.jpg",
     },
     {
       title: "대기 라운지 & 검진실",
       desc: "따뜻하고 쾌적하게 쉴 수 있는 편안한 사랑채 공간",
-      image: "/images/facility2.jpg",
+      image: "/images/facility-lounge.jpg",
     },
   ];
 
