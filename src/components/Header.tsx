@@ -29,30 +29,30 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-40 w-full transition-all duration-300">
-      {/* Top Notification Bar (Pastel Rose) */}
-      <div className="bg-[#d97581] text-white text-xs py-2 px-4 shadow-2xs">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-3">
-            <span className="inline-flex items-center gap-1 font-semibold bg-white/20 px-2.5 py-0.5 rounded-full text-white text-[11px]">
-              <Clock className="w-3 h-3" />
-              화 · 목 야간진료 (저녁 8시까지)
+      {/* Top Notification Bar (Light Airy Pastel Pink) */}
+      <div className="bg-[#fff2f4] border-b border-[#fde5ea] text-[#9c4552] text-xs py-1.5 px-3 sm:px-4 shadow-3xs">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="inline-flex items-center gap-1 font-bold bg-white text-[#d66576] px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] border border-[#fcd3db] shadow-3xs shrink-0">
+              <Clock className="w-3 h-3 text-[#f08998]" />
+              화 · 목 야간진료
             </span>
-            <span className="hidden sm:inline text-white/90">
-              부산 사하구 하신중앙로 341, 1층 · 휴게시간 12:30~14:00 (14시 진료 시작)
+            <span className="hidden md:inline text-[#7a4850] text-[11px] truncate">
+              부산 사하구 하신중앙로 341, 1층 · 점심 12:30~14:00 (14시 진료 시작)
             </span>
           </div>
 
-          <div className="flex items-center gap-4 ml-auto sm:ml-0">
+          <div className="flex items-center gap-2.5 sm:gap-4 font-medium shrink-0">
             <a
               href={`tel:${CLINIC_INFO.phone}`}
-              className="flex items-center gap-1 font-bold text-white hover:text-white/80 transition"
+              className="flex items-center gap-1 font-bold text-[#b54b5a] hover:text-[#e06d7d] transition text-[11px] sm:text-xs"
             >
-              <Phone className="w-3 h-3 text-white/90" />
+              <Phone className="w-3 h-3 text-[#f08998]" />
               <span>{CLINIC_INFO.formattedPhone}</span>
             </a>
             <button
               onClick={openNonCovered}
-              className="text-white/80 hover:text-white transition text-[11px] underline underline-offset-2"
+              className="text-[#9c5963] hover:text-[#362427] transition text-[10px] sm:text-[11px] underline underline-offset-2 hidden sm:inline"
             >
               비급여 안내
             </button>
@@ -64,24 +64,24 @@ export default function Header() {
       <div
         className={`w-full transition-all duration-200 ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-md shadow-xs py-3 border-b border-[#fce7ea]"
-            : "bg-white py-4 shadow-2xs border-b border-[#fce7ea]/60"
+            ? "bg-white/95 backdrop-blur-md shadow-xs py-3 border-b border-[#fde2e7]"
+            : "bg-white py-4 shadow-3xs border-b border-[#fde2e7]/60"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#d97581] to-[#e88d98] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#f8abb7] to-[#f493a2] flex items-center justify-center text-white shadow-xs group-hover:scale-105 transition-transform">
               <span className="font-serif text-lg font-bold text-white">
                 愛
               </span>
             </div>
             <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-xl sm:text-2xl tracking-tight text-[#3d2428]">
-                  경희사랑채<span className="font-normal text-[#9e636b]">한의원</span>
+                <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-[#362427]">
+                  경희사랑채<span className="font-light text-[#b8707c]">한의원</span>
                 </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fce7ea] text-[#d97581] rounded">
+                <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fff0f3] text-[#d66576] border border-[#fcd5dc] rounded">
                   부산 하단
                 </span>
               </div>
@@ -97,7 +97,7 @@ export default function Header() {
               <a
                 key={link.name}
                 href={link.href}
-                className="hover:text-[#d97581] transition-colors py-1"
+                className="hover:text-[#f08998] transition-colors py-1"
               >
                 {link.name}
               </a>
@@ -118,7 +118,7 @@ export default function Header() {
 
             <button
               onClick={() => openBooking()}
-              className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#d97581] hover:bg-[#c9626e] transition flex items-center gap-1.5 shadow-2xs"
+              className="px-4 py-2 rounded-xl text-xs font-bold text-white bg-[#f08998] hover:bg-[#e87787] transition flex items-center gap-1.5 shadow-2xs"
             >
               <Calendar className="w-3.5 h-3.5" />
               <span>간편 예약</span>
@@ -126,19 +126,19 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:hidden">
             <button
               onClick={() => openBooking()}
-              className="px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#d97581] sm:hidden"
+              className="px-2.5 py-1.5 rounded-lg text-xs font-bold text-white bg-[#f08998] hover:bg-[#e87787] sm:hidden"
             >
               예약
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="메뉴 토글"
-              className="p-2 text-gray-700 hover:text-gray-900 rounded-lg hover:bg-[#fce7ea]/50 transition"
+              className="p-1.5 sm:p-2 text-gray-700 hover:text-gray-900 rounded-lg hover:bg-[#fff2f4] transition"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-[#9c5963]" />}
             </button>
           </div>
         </div>
@@ -146,14 +146,14 @@ export default function Header() {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-white border-b border-[#fce7ea] shadow-xl px-5 py-6 space-y-4 animate-fade-in">
-          <div className="space-y-1 divide-y divide-gray-100 text-sm font-semibold text-gray-800">
+        <div className="lg:hidden bg-white border-b border-[#fde2e7] shadow-xl px-5 py-6 space-y-4 animate-fade-in">
+          <div className="space-y-1 divide-y divide-[#fff0f3] text-sm font-semibold text-gray-800">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="block py-3 px-2 hover:bg-[#fff0f2] rounded-lg hover:text-[#d97581] transition"
+                className="block py-3 px-2 hover:bg-[#fff5f7] rounded-lg hover:text-[#f08998] transition"
               >
                 {link.name}
               </a>
@@ -163,7 +163,7 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 openNonCovered();
               }}
-              className="block w-full text-left py-3 px-2 text-gray-600 hover:bg-[#fff0f2] rounded-lg text-xs font-medium"
+              className="block w-full text-left py-3 px-2 text-gray-600 hover:bg-[#fff5f7] rounded-lg text-xs font-medium"
             >
               비급여 진료비용 안내
             </button>
@@ -175,7 +175,7 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 openBooking();
               }}
-              className="w-full py-3 bg-[#d97581] text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 shadow-2xs"
+              className="w-full py-3 bg-[#f08998] hover:bg-[#e87787] text-white font-bold rounded-xl text-center flex items-center justify-center gap-2 shadow-2xs"
             >
               <Calendar className="w-4 h-4" />
               간편 진료 예약

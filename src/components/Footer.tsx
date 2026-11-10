@@ -3,28 +3,28 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
-import { Phone, Clock, ChevronRight } from "lucide-react";
+import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
 
 export default function Footer() {
   const { openNonCovered } = useModal();
 
   return (
-    <footer className="bg-[#423135] text-[#d6c7ca] text-xs pt-12 pb-20 sm:pb-12 border-t border-[#544044]">
+    <footer className="bg-[#fff3f5] text-[#6b4e53] text-xs pt-12 pb-20 sm:pb-12 border-t border-[#fce0e6]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8 border-b border-[#594448]">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 pb-8 border-b border-[#fcd5dc]">
           
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#d97581] flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-[#f08998] flex items-center justify-center text-white font-bold text-sm shadow-3xs">
                 愛
               </div>
-              <span className="text-xl font-bold text-white tracking-tight">
+              <span className="text-xl font-bold text-[#362427] tracking-tight">
                 {CLINIC_INFO.name}
               </span>
             </div>
 
-            <p className="text-[#bfaeb1] text-xs leading-relaxed max-w-sm">
+            <p className="text-[#7d5d62] text-xs leading-relaxed max-w-sm">
               {CLINIC_INFO.slogan}
               <br />
               경희대학교 한의과대학 출신 정병준 대표원장의 1:1 맞춤 진료
@@ -33,24 +33,24 @@ export default function Footer() {
             <div>
               <button
                 onClick={openNonCovered}
-                className="px-3 py-1.5 bg-[#543f43] hover:bg-[#634c51] text-[#fce7ea] rounded-lg transition font-semibold text-[11px] flex items-center gap-1"
+                className="px-3 py-1.5 bg-white hover:bg-[#fff9fa] text-[#c9596b] border border-[#fcd3db] rounded-lg transition font-semibold text-[11px] flex items-center gap-1 shadow-3xs"
               >
-                <span>비급여 진료비용 고지</span>
-                <ChevronRight className="w-3 h-3" />
+                <span>비급여 진료비용 안내</span>
+                <ChevronRight className="w-3 h-3 text-[#f08998]" />
               </button>
             </div>
           </div>
 
           {/* Operating Hours Summary */}
           <div className="lg:col-span-4 space-y-2">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#fce7ea]" />
+            <h4 className="text-xs font-bold text-[#362427] uppercase tracking-wider flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5 text-[#f08998]" />
               진료시간 안내
             </h4>
-            <ul className="space-y-1 text-[#bfaeb1] text-[11px]">
+            <ul className="space-y-1 text-[#6b4e53] text-[11px]">
               <li className="flex justify-between">
-                <span className="text-white font-semibold">화 · 목 (야간진료)</span>
-                <span>09:30 ~ 20:00</span>
+                <span className="text-[#d66576] font-bold">화 · 목 (야간진료)</span>
+                <span className="font-semibold text-[#362427]">09:30 ~ 20:00</span>
               </li>
               <li className="flex justify-between">
                 <span>월 · 수 · 금</span>
@@ -60,11 +60,11 @@ export default function Footer() {
                 <span>토 요 일 (연속진료)</span>
                 <span>09:30 ~ 14:30</span>
               </li>
-              <li className="flex justify-between text-[#e0a8b0]">
+              <li className="flex justify-between text-[#a85865]">
                 <span>휴게시간(점심)</span>
                 <span>12:30 ~ 14:00 (14시 진료 시작)</span>
               </li>
-              <li className="flex justify-between text-[#f59ea8]">
+              <li className="flex justify-between text-red-500 font-semibold">
                 <span>일요일 (정기휴무)</span>
                 <span>휴진</span>
               </li>
@@ -73,14 +73,14 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="lg:col-span-3 space-y-2">
-            <h4 className="text-xs font-bold text-white uppercase tracking-wider flex items-center gap-1.5">
-              <Phone className="w-3.5 h-3.5 text-[#fce7ea]" />
+            <h4 className="text-xs font-bold text-[#362427] uppercase tracking-wider flex items-center gap-1.5">
+              <Phone className="w-3.5 h-3.5 text-[#f08998]" />
               대표 문의
             </h4>
-            <div className="text-xl font-black text-white">
+            <div className="text-xl font-black text-[#d66576]">
               {CLINIC_INFO.formattedPhone}
             </div>
-            <p className="text-[#bfaeb1] text-[11px]">
+            <p className="text-[#7d5d62] text-[11px] leading-relaxed">
               {CLINIC_INFO.address}
               <br />
               {CLINIC_INFO.addressDetail}
@@ -89,7 +89,7 @@ export default function Footer() {
         </div>
 
         {/* Business & Legal info */}
-        <div className="pt-6 space-y-2 text-[11px] text-[#9c898c]">
+        <div className="pt-6 space-y-2 text-[11px] text-[#9c787e]">
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <span>상호명: {CLINIC_INFO.name}</span>
             <span>대표자: {CLINIC_INFO.representative}</span>
@@ -98,14 +98,14 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address}</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 text-[10px] text-[#8a777a]">
+          <div className="flex items-center justify-between pt-2 text-[10px] text-[#b08b92]">
             <div>&copy; 2025 {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
-              <button onClick={openNonCovered} className="hover:text-white transition">
+              <button onClick={openNonCovered} className="hover:text-[#362427] transition">
                 비급여 수가표
               </button>
               <span>|</span>
-              <a href="#location" className="hover:text-white transition">
+              <a href="#location" className="hover:text-[#362427] transition">
                 오시는 길
               </a>
             </div>
