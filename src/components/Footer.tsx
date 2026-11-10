@@ -3,6 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
+import { getAssetPath } from "@/utils/assetPath";
 import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
 
 export default function Footer() {
@@ -14,11 +15,13 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="lg:col-span-5 space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 rounded-lg bg-[#fdf2f4] border border-[#f0d8dd] flex items-center justify-center text-[#7d3543] font-bold text-sm shadow-3xs">
-                愛
-              </div>
-              <span className="text-xl font-bold text-[#261d1f] tracking-tight">
-                {CLINIC_INFO.name}
+              <img
+                src={getAssetPath("/images/logo-full.png")}
+                alt={`${CLINIC_INFO.name} ${CLINIC_INFO.branchName}`}
+                className="h-8 w-auto object-contain"
+              />
+              <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded shrink-0 self-center">
+                {CLINIC_INFO.branchName}
               </span>
             </div>
 

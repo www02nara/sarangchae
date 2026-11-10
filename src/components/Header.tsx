@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
+import { getAssetPath } from "@/utils/assetPath";
 import { Phone, Calendar, Clock, Menu, X, ExternalLink } from "lucide-react";
 
 export default function Header() {
@@ -63,26 +64,16 @@ export default function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-9 h-9 rounded-xl bg-[#fdf5f7] border border-[#edd2d7] flex items-center justify-center text-[#7d3543] shadow-3xs group-hover:scale-105 transition-transform">
-              <span className="font-serif text-lg font-bold text-[#7d3543]">
-                愛
-              </span>
-            </div>
-            <div>
-              <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-lg sm:text-2xl tracking-tight text-[#2b2022]">
-                  경희사랑채<span className="font-light text-[#6e585c]">한의원</span>
-                </span>
-                <span className="text-[10px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded shrink-0">
-                  {CLINIC_INFO.branchName}
-                </span>
-              </div>
-              <p className="text-[10px] text-gray-400 tracking-wider uppercase font-medium">
-                Kyunghee Sarangchae Clinic
-              </p>
-            </div>
+          {/* Official Brand Logo */}
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0">
+            <img
+              src={getAssetPath("/images/logo-full.png")}
+              alt="경희사랑채한의원 부산 하단점"
+              className="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
+            />
+            <span className="text-[10px] sm:text-[11px] font-bold px-1.5 py-0.5 bg-[#fef7f9] text-[#7d3543] border border-[#f2dde1] rounded shrink-0 self-center">
+              {CLINIC_INFO.branchName}
+            </span>
           </Link>
 
           {/* Desktop Nav Items */}
