@@ -6,8 +6,8 @@ import { getAssetPath } from "@/utils/assetPath";
 export default function ClinicTour() {
   const tourItems = [
     {
-      title: "1인 프라이빗 경락·치료실",
-      desc: "위생적인 1회용 침구와 멸균 시트를 갖춘 아늑한 경락·침구 치료 공간",
+      title: "1인 프라이빗 치료실",
+      desc: "위생적인 1회용 침구와 멸균 시트를 갖춘 아늑한 집중 침구 치료 공간",
       image: "/images/facility-treatment-room.jpg",
     },
     {
