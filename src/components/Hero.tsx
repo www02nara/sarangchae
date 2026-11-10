@@ -2,10 +2,13 @@
 
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
+import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin, Sparkles } from "lucide-react";
+import { Heart, Clock, MapPin, MessageCircle } from "lucide-react";
 
 export default function Hero() {
+  const { openBooking } = useModal();
+
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +35,7 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Core Info Highlights (자연스럽고 꼭 필요한 정보만 정돈된 카드) */}
+            {/* Core Info Highlights (야간진료, 1층 위치, 카카오톡 간편 예약 상담) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
@@ -46,16 +49,6 @@ export default function Hero() {
 
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f2f9ec] text-[#72b033] flex items-center justify-center shrink-0">
-                  <Sparkles className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="font-bold text-xs sm:text-sm text-slate-900">한방소아과</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">성장 · 비염 · 면역</div>
-                </div>
-              </div>
-
-              <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
-                <div className="w-7 h-7 rounded-lg bg-[#fff7ed] text-[#ed5f21] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
@@ -63,6 +56,23 @@ export default function Hero() {
                   <div className="text-[11px] text-slate-500 mt-0.5">계단 없는 편안한 내원</div>
                 </div>
               </div>
+
+              <button
+                type="button"
+                onClick={() => openBooking()}
+                className="bg-white hover:bg-amber-50/50 transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-amber-200/80 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
+              >
+                <div className="w-7 h-7 rounded-lg bg-[#fee500] text-[#3c1e1e] flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-transform">
+                  <MessageCircle className="w-4 h-4 fill-[#3c1e1e]" />
+                </div>
+                <div>
+                  <div className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-1">
+                    <span>카카오톡 상담</span>
+                    <span className="text-[10px] text-amber-700 bg-amber-100 px-1 py-0.2 rounded font-semibold">간편예약</span>
+                  </div>
+                  <div className="text-[11px] text-slate-500 mt-0.5">간편한 1:1 예약 & 문의</div>
+                </div>
+              </button>
             </div>
           </div>
 
