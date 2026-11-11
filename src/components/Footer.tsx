@@ -55,11 +55,11 @@ export default function Footer() {
                 <span>토 요 일 (연속진료)</span>
                 <span>09:30 ~ 14:30</span>
               </li>
-              <li className="flex justify-between text-[#c2410c] font-medium">
+              <li className="flex justify-between text-[#9a3412] font-semibold">
                 <span>휴게시간(점심)</span>
                 <span>12:30 ~ 14:00 (14시 진료 시작)</span>
               </li>
-              <li className="flex justify-between text-red-500 font-semibold">
+              <li className="flex justify-between text-red-700 font-bold">
                 <span>일요일 (정기휴무)</span>
                 <span>휴진</span>
               </li>
@@ -84,7 +84,7 @@ export default function Footer() {
         </div>
 
         {/* Business & Legal info */}
-        <div className="pt-6 space-y-2 text-[11px] text-slate-500">
+        <div className="pt-6 space-y-2 text-[11px] text-slate-600">
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             <span>상호명: {CLINIC_INFO.name}</span>
             <span>대표자: {CLINIC_INFO.representative}</span>
@@ -93,7 +93,7 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address} (하단동 589-18, 1층)</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-500">
+          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-600">
             <div>&copy; {new Date().getFullYear()} {CLINIC_INFO.name}. All Rights Reserved.</div>
             <div className="flex items-center gap-3">
               <a href="#location" className="hover:text-slate-700 transition">

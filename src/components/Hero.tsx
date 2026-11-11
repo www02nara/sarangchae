@@ -50,17 +50,17 @@ export default function Hero() {
                 </div>
                 <div>
                   <div className="font-bold text-xs sm:text-sm text-slate-900">화 · 목 야간진료</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">저녁 8시까지 진료</div>
+                  <div className="text-[11px] text-slate-600 mt-0.5">저녁 8시까지 진료</div>
                 </div>
               </div>
 
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
-                <div className="w-7 h-7 rounded-lg bg-[#f2f9ec] text-[#72b033] flex items-center justify-center shrink-0">
+                <div className="w-7 h-7 rounded-lg bg-[#f2f9ec] text-[#4d7c1f] flex items-center justify-center shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="font-bold text-xs sm:text-sm text-slate-900">1층 위치</div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">계단 없는 편안한 내원</div>
+                  <div className="text-[11px] text-slate-600 mt-0.5">계단 없는 편안한 내원</div>
                 </div>
               </div>
 
@@ -77,7 +77,7 @@ export default function Hero() {
                     <span>카카오톡 상담</span>
                     <span className="text-[10px] text-amber-700 bg-amber-100 px-1 py-0.2 rounded font-semibold">간편예약</span>
                   </div>
-                  <div className="text-[11px] text-slate-500 mt-0.5">간편한 1:1 예약 & 문의</div>
+                  <div className="text-[11px] text-slate-600 mt-0.5">간편한 1:1 예약 & 문의</div>
                 </div>
               </button>
             </div>
