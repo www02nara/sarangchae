@@ -48,7 +48,6 @@ export const CLINIC_INFO = {
   parkingInfo: "한의원 전용 및 인근 주차 지원",
   naverPlaceUrl: "https://naver.me/x9Bkj6Al",
   naverBookingUrl: "https://naver.me/x9Bkj6Al",
-  kakaoChannelUrl: "https://pf.kakao.com",
   naverMapUrl: "https://naver.me/x9Bkj6Al",
   kakaoMapUrl: "https://map.kakao.com/?q=부산 사하구 하신중앙로 341 경희사랑채한의원",
   representative: "정병준",

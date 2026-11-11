@@ -4,7 +4,7 @@ import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin, MessageCircle } from "lucide-react";
+import { Heart, Clock, MapPin, Calendar } from "lucide-react";
 
 export default function Hero() {
   const { openBooking } = useModal();
@@ -42,7 +42,7 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Core Info Highlights (야간진료, 1층 위치, 카카오톡 간편 예약 상담) */}
+            {/* Core Info Highlights (야간진료, 1층 위치, 간편 진료예약) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
@@ -67,15 +67,15 @@ export default function Hero() {
               <button
                 type="button"
                 onClick={() => openBooking()}
-                className="bg-white hover:bg-amber-50/50 transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-amber-200/80 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
+                className="bg-white hover:bg-[#f0f7fb] transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
               >
-                <div className="w-7 h-7 rounded-lg bg-[#fee500] text-[#3c1e1e] flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-transform">
-                  <MessageCircle className="w-4 h-4 fill-[#3c1e1e]" />
+                <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5] group-hover:scale-105 transition-transform">
+                  <Calendar className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-1">
-                    <span>카카오톡 상담</span>
-                    <span className="text-[10px] text-amber-700 bg-amber-100 px-1 py-0.2 rounded font-semibold">간편예약</span>
+                    <span>간편 진료예약</span>
+                    <span className="text-[10px] text-[#0f70b1] bg-[#f0f7fb] border border-[#d0e5f5] px-1 py-0.2 rounded font-semibold">온라인접수</span>
                   </div>
                   <div className="text-[11px] text-slate-600 mt-0.5">간편한 1:1 예약 & 문의</div>
                 </div>
