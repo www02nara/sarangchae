@@ -47,7 +47,6 @@ export const CLINIC_INFO = {
   addressDetail: "부산 사하구 하단동 589-18 (1층 경희사랑채한의원)",
   parkingInfo: "한의원 전용 및 인근 주차 지원",
   naverPlaceUrl: "https://naver.me/x9Bkj6Al",
-  naverBookingUrl: "https://naver.me/x9Bkj6Al",
   naverMapUrl: "https://naver.me/x9Bkj6Al",
   kakaoMapUrl: "https://map.kakao.com/?q=부산 사하구 하신중앙로 341 경희사랑채한의원",
   representative: "정병준",
@@ -165,10 +164,10 @@ export const DOCTOR_PROFILE: DoctorProfile = {
 
 export const FAQ_LIST: FaqItem[] = [
   {
-    question: "예약 없이 당일 방문해도 진료가 가능한가요?",
+    question: "진료 예약이 가능한가요? 예약 없이 방문해도 되나요?",
     answer:
-      "네, 당일 예약 없이 방문하셔도 진료가 가능합니다. 대기 시간을 줄이시려면 내원 전 전화(051-207-1075)로 미리 연락해 주시면 더욱 빠르고 편안하게 안내받으실 수 있습니다.",
-    category: "진료 및 예약",
+      "저희 경희사랑채한의원은 별도의 예약제를 운영하지 않으며, 오시는 순서대로 당일 접수하여 진료를 진행하고 있습니다. 예약 없이 편하신 시간에 내원해 주시면 되며, 대기 현황이나 진료 관련 문의사항은 전화(051-207-1075)로 연락해 주시면 친절히 안내해 드립니다.",
+    category: "진료 안내",
   },
   {
     question: "교통사고 후유증 치료 시 본인부담금이 없나요?",
@@ -180,7 +179,7 @@ export const FAQ_LIST: FaqItem[] = [
     question: "야간진료는 언제 하며 몇 시까지 가야 하나요?",
     answer:
       "경희사랑채한의원은 화요일과 목요일 저녁 8시까지 야간진료를 시행하고 있습니다. 물리치료 및 침구치료 시간을 고려하여 최소 진료 종료 40분 전(오후 7시 20분경)까지 내원해 주시기를 권장합니다.",
-    category: "진료 및 예약",
+    category: "진료 안내",
   },
   {
     question: "아이들도 한방 치료를 받을 수 있나요?",

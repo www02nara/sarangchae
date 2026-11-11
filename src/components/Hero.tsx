@@ -2,12 +2,10 @@
 
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
-import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin, Calendar } from "lucide-react";
+import { Heart, Clock, MapPin, Phone } from "lucide-react";
 
 export default function Hero() {
-  const { openBooking } = useModal();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-slate-200">
@@ -42,7 +40,7 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Core Info Highlights (야간진료, 1층 위치, 간편 진료예약) */}
+            {/* Core Info Highlights (야간진료, 1층 위치, 당일 접수 진료) */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
@@ -64,22 +62,21 @@ export default function Hero() {
                 </div>
               </div>
 
-              <button
-                type="button"
-                onClick={() => openBooking()}
+              <a
+                href={`tel:${CLINIC_INFO.phone}`}
                 className="bg-white hover:bg-[#f0f7fb] transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
               >
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5] group-hover:scale-105 transition-transform">
-                  <Calendar className="w-4 h-4" />
+                  <Phone className="w-4 h-4" />
                 </div>
                 <div>
                   <div className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-1">
-                    <span>간편 진료예약</span>
-                    <span className="text-[10px] text-[#0f70b1] bg-[#f0f7fb] border border-[#d0e5f5] px-1 py-0.2 rounded font-semibold">온라인접수</span>
+                    <span>당일 접수 진료</span>
+                    <span className="text-[10px] text-[#0f70b1] bg-[#f0f7fb] border border-[#d0e5f5] px-1 py-0.2 rounded font-semibold">전화문의</span>
                   </div>
-                  <div className="text-[11px] text-slate-600 mt-0.5">간편한 1:1 예약 & 문의</div>
+                  <div className="text-[11px] text-slate-600 mt-0.5">예약 없이 편안한 당일 내원</div>
                 </div>
-              </button>
+              </a>
             </div>
           </div>
 

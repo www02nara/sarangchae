@@ -90,7 +90,7 @@ export default function ClinicGrid() {
                 진료 문의 & 상담
               </h3>
               <p className="text-slate-600 text-xs sm:text-sm leading-relaxed text-center max-w-sm">
-                궁금하신 점이나 예약 관련 문의는 언제든 편하게 전화해 주세요. 원내에서 정성껏 안내해 드립니다.
+                궁금하신 점이나 진료 관련 문의는 언제든 편하게 전화해 주세요. 원내에서 정성껏 안내해 드립니다.
               </p>
             </div>
 

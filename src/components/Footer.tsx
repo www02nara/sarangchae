@@ -2,7 +2,6 @@
 
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
-import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
 import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
 

@@ -1,11 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { CLINIC_INFO, OPERATING_HOURS, FAQ_LIST } from "@/data/clinicData";
-import { ModalProvider } from "@/context/ModalContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileQuickBar from "@/components/MobileQuickBar";
-import OnlineReservationModal from "@/components/OnlineReservationModal";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www02nara.github.io/sarangchae/"),
@@ -225,13 +223,10 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[#2b2022] antialiased selection:bg-[#fcebef] selection:text-[#7d3543]">
-        <ModalProvider>
-          <Header />
-          <main className="flex-1 pb-16 sm:pb-0">{children}</main>
-          <Footer />
-          <MobileQuickBar />
-          <OnlineReservationModal />
-        </ModalProvider>
+        <Header />
+        <main className="flex-1 pb-16 sm:pb-0">{children}</main>
+        <Footer />
+        <MobileQuickBar />
       </body>
     </html>
   );
