@@ -71,15 +71,17 @@ export default function Hero() {
                 src={getAssetPath("/images/hero-clinic.webp")}
                 alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
                 width={1200}
-                height={1068}
+                height={1130}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-5 sm:p-6 text-white">
-                <div className="text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
-                <div className="text-xl font-bold">{CLINIC_INFO.name}</div>
-                <div className="text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent pt-10 pb-4 px-5 text-white">
+                <div className="text-[11px] font-medium text-slate-200">{CLINIC_INFO.address}</div>
+                <div className="text-base sm:text-lg font-bold flex items-center gap-2">
+                  <span>{CLINIC_INFO.name}</span>
+                  <span className="text-xs font-normal text-slate-300">| {CLINIC_INFO.representative} 대표원장</span>
+                </div>
               </div>
             </div>
           </div>
