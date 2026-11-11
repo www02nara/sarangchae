@@ -122,11 +122,7 @@ export default function RootLayout({
           "부산 사하구 하단역 8번 출구 1층에 위치한 하단 한의원 경희사랑채한의원입니다. 경희대학교 한의과대학 출신 정병준 대표원장이 1:1 정밀 맞춤 책임 진료를 제공합니다. 통증·관절 치료, 한방소아과, 교통사고 후유증, 식약처 GMP 인증 한약, 화·목 저녁 8시 야간진료.",
         url: "https://www02nara.github.io/sarangchae/",
         logo: "https://www02nara.github.io/sarangchae/images/logo-full.webp",
-        image: [
-          "https://www02nara.github.io/sarangchae/images/hero-clinic.webp",
-          "https://www02nara.github.io/sarangchae/images/facility-treatment-room.webp",
-          "https://www02nara.github.io/sarangchae/images/facility-lounge.webp",
-        ],
+        image: "https://www02nara.github.io/sarangchae/images/hero-clinic.webp",
         telephone: CLINIC_INFO.phone,
         hasMap: CLINIC_INFO.naverPlaceUrl,
         sameAs: [
