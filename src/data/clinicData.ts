@@ -52,7 +52,7 @@ export const CLINIC_INFO = {
   naverMapUrl: "https://naver.me/x9Bkj6Al",
   kakaoMapUrl: "https://map.kakao.com/?q=부산 사하구 하신중앙로 341 경희사랑채한의원",
   representative: "정병준",
-  registrationNumber: "603-91-88752",
+  registrationNumber: "603-91-71224",
   medicalInstitutionNumber: "38104921",
 };
 
