@@ -49,7 +49,7 @@ export default function FaqSection() {
                     <span>{faq.question}</span>
                   </span>
                   <ChevronDown
-                    className={`w-4 h-4 text-slate-400 shrink-0 transition-transform ${
+                    className={`w-4 h-4 text-slate-500 shrink-0 transition-transform ${
                       isOpen ? "rotate-180 text-[#0f70b1]" : ""
                     }`}
                   />

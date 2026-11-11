@@ -97,7 +97,7 @@ export default function OnlineReservationModal() {
               <div className="bg-slate-50 border border-slate-200 rounded-xl p-3 flex items-center justify-between gap-3 text-xs">
                 <div>
                   <span className="font-bold text-slate-900">네이버 플레이스 예약 / 문의</span>
-                  <p className="text-slate-500 text-[11px] mt-0.5">
+                  <p className="text-slate-600 text-[11px] mt-0.5">
                     네이버 지도로 바로 연결하시겠습니까?
                   </p>
                 </div>

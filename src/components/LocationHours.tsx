@@ -47,7 +47,7 @@ export default function LocationHours() {
               {/* Timetable Rows (Strictly Aligned 3-Column Table) */}
               <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-3xs divide-y divide-slate-100">
                 {/* Table Header (Desktop) */}
-                <div className="hidden sm:grid sm:grid-cols-12 bg-slate-50/90 px-4 py-2.5 text-[11px] font-bold text-slate-500 uppercase tracking-wider border-b border-slate-200">
+                <div className="hidden sm:grid sm:grid-cols-12 bg-slate-50/90 px-4 py-2.5 text-[11px] font-bold text-slate-600 uppercase tracking-wider border-b border-slate-200">
                   <div className="sm:col-span-3">진료 요일</div>
                   <div className="sm:col-span-4">진료 시간</div>
                   <div className="sm:col-span-5 text-left">휴게시간 (점심시간)</div>
@@ -69,7 +69,7 @@ export default function LocationHours() {
                       {/* Column 1: Day & Badge */}
                       <div className="sm:col-span-3 flex items-center justify-between sm:justify-start gap-2">
                         <div className="flex items-center gap-1.5">
-                          <span className={`font-bold ${item.isClosed ? "text-rose-600" : item.isNight ? "text-[#0f70b1]" : "text-slate-800"}`}>
+                          <span className={`font-bold ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-800"}`}>
                             {item.day}
                           </span>
                           {item.isNight && (
@@ -79,19 +79,19 @@ export default function LocationHours() {
                           )}
                         </div>
                         {/* Mobile-only hours display right next to day */}
-                        <span className={`sm:hidden font-extrabold ${item.isClosed ? "text-rose-600" : "text-slate-900"}`}>
+                        <span className={`sm:hidden font-extrabold ${item.isClosed ? "text-rose-700" : "text-slate-900"}`}>
                           {item.hours}
                         </span>
                       </div>
 
                       {/* Column 2: Hours (Desktop) */}
-                      <div className={`hidden sm:block sm:col-span-4 font-bold tracking-tight ${item.isClosed ? "text-rose-600" : "text-slate-900"}`}>
+                      <div className={`hidden sm:block sm:col-span-4 font-bold tracking-tight ${item.isClosed ? "text-rose-700" : "text-slate-900"}`}>
                         {item.hours}
                       </div>
 
                       {/* Column 3: Break Time */}
-                      <div className={`sm:col-span-5 text-[11px] sm:text-xs flex items-center justify-between sm:justify-start gap-1.5 ${item.isClosed ? "text-rose-500 font-medium" : "text-slate-600"}`}>
-                        <span className="sm:hidden text-slate-500 font-medium">휴게:</span>
+                      <div className={`sm:col-span-5 text-[11px] sm:text-xs flex items-center justify-between sm:justify-start gap-1.5 ${item.isClosed ? "text-rose-700 font-semibold" : "text-slate-600"}`}>
+                        <span className="sm:hidden text-slate-600 font-medium">휴게:</span>
                         <span className="font-medium">{item.breakTime}</span>
                       </div>
                     </div>
@@ -120,7 +120,7 @@ export default function LocationHours() {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-slate-900">하단 한의원 오시는 길 & 약도</h3>
-                    <p className="text-xs text-slate-500">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
+                    <p className="text-xs text-slate-600">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
                   </div>
                 </div>
 

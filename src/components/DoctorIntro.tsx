@@ -57,31 +57,31 @@ export default function DoctorIntro() {
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-700">
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>경희대학교 한의과대학 출신</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>척추·관절 및 침구치료 임상</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>대한한방소아과학회 회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>대한한의학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>대한한방내과학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>사상체질의학회 정회원</span>
                 </div>
                 <div className="flex items-center gap-1.5 sm:col-span-2">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-[#72b033] shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-[#4d7c1f] shrink-0" />
                   <span>현 경희사랑채한의원 대표원장 (부산 사하구 하단)</span>
                 </div>
               </div>
