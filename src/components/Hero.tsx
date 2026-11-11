@@ -10,7 +10,7 @@ export default function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 text-left">
@@ -64,22 +64,22 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Visual Image (Height matched to left text) */}
-          <div className="lg:col-span-5 flex flex-col">
-            <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+          {/* Right Visual Image */}
+          <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="relative w-full aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/10] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
                 src={getAssetPath("/images/hero-clinic.webp")}
                 alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
-                width={1200}
-                height={1068}
+                width={1400}
+                height={747}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover object-top"
+                className="w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 sm:p-6 text-white">
-                <div className="text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
-                <div className="text-xl font-bold">{CLINIC_INFO.name}</div>
-                <div className="text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-4 sm:p-5 text-white">
+                <div className="text-[11px] sm:text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
+                <div className="text-lg sm:text-xl font-bold">{CLINIC_INFO.name}</div>
+                <div className="text-[11px] sm:text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
               </div>
             </div>
           </div>
