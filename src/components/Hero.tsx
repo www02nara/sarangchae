@@ -3,7 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin, Phone } from "lucide-react";
+import { Heart, Clock, MapPin } from "lucide-react";
 
 export default function Hero() {
 
@@ -40,8 +40,8 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Core Info Highlights (야간진료, 1층 위치, 당일 접수 진료) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+            {/* Core Info Highlights (야간진료, 1층 위치) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
                   <Clock className="w-4 h-4" />
@@ -61,22 +61,6 @@ export default function Hero() {
                   <div className="text-[11px] text-slate-600 mt-0.5">계단 없는 편안한 내원</div>
                 </div>
               </div>
-
-              <a
-                href={`tel:${CLINIC_INFO.phone}`}
-                className="bg-white hover:bg-[#f0f7fb] transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
-              >
-                <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5] group-hover:scale-105 transition-transform">
-                  <Phone className="w-4 h-4" />
-                </div>
-                <div>
-                  <div className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-1">
-                    <span>당일 접수 진료</span>
-                    <span className="text-[10px] text-[#0f70b1] bg-[#f0f7fb] border border-[#d0e5f5] px-1 py-0.2 rounded font-semibold">전화문의</span>
-                  </div>
-                  <div className="text-[11px] text-slate-600 mt-0.5">예약 없이 편안한 당일 내원</div>
-                </div>
-              </a>
             </div>
           </div>
 
@@ -85,14 +69,14 @@ export default function Hero() {
             <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
                 src={getAssetPath("/images/hero-clinic.webp")}
-                alt="부산 사하구 하단 한의원 경희사랑채한의원 대표원장 진료"
-                width={640}
-                height={520}
+                alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
+                width={1200}
+                height={1068}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-5 sm:p-6 text-white">
                 <div className="text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
                 <div className="text-xl font-bold">{CLINIC_INFO.name}</div>
                 <div className="text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
