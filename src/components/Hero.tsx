@@ -13,7 +13,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-stretch">
           
           {/* Left Text Column */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-6 text-left">
+          <div className="lg:col-span-6 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-4 sm:space-y-5">
               <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
                 <Heart className="w-3.5 h-3.5 text-[#ed5f21] fill-[#ed5f21] shrink-0" />
@@ -65,13 +65,13 @@ export default function Hero() {
           </div>
 
           {/* Right Visual Image (Height matched to left text) */}
-          <div className="lg:col-span-5 flex flex-col">
+          <div className="lg:col-span-6 flex flex-col">
             <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[380px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
                 src={getAssetPath("/images/hero-clinic.webp")}
                 alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
                 width={1200}
-                height={1147}
+                height={977}
                 fetchPriority="high"
                 decoding="async"
                 className="w-full h-full object-cover object-top"
