@@ -71,7 +71,7 @@ export default function Hero() {
                 src={getAssetPath("/images/hero-clinic.webp")}
                 alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
                 width={1200}
-                height={1130}
+                height={1147}
                 fetchPriority="high"
                 decoding="async"
                 className="w-full h-full object-cover object-top"
