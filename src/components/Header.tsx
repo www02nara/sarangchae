@@ -46,7 +46,7 @@ export default function Header() {
               fetchPriority="high"
               className="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
-            <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 bg-[#f0f7fb] text-[#0f70b1] border border-[#d0e5f5] rounded-md shrink-0 self-center">
+            <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 bg-slate-50 text-slate-900 border border-slate-300 rounded-md shrink-0 self-center">
               {CLINIC_INFO.branchName}
             </span>
           </Link>

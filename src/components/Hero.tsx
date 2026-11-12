@@ -3,7 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin } from "lucide-react";
+import { Clock, MapPin } from "lucide-react";
 
 export default function Hero() {
 
@@ -15,9 +15,8 @@ export default function Hero() {
           {/* Left Text Column */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-4 sm:space-y-5">
-              <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
-                <Heart className="w-3.5 h-3.5 text-[#ed5f21] fill-[#ed5f21] shrink-0" />
-                <span className="truncate">부산 사하구 하단 한의원 · 언제나 곁에서 든든한 주치의</span>
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-[#f0f7fb] text-[#0f70b1] text-xs font-bold border border-[#d0e5f5] max-w-full">
+                <span className="truncate">부산 사하구 하단 한의원 · 언제나 곁에서 나만의 주치의</span>
               </div>
 
               <h1 className="tracking-tight leading-[1.25]">
