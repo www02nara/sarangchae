@@ -27,9 +27,9 @@ export default function DoctorIntro() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           
           {/* Left Column: Doctor Photo Card */}
-          <div className="lg:col-span-5 flex flex-col">
+          <div className="lg:col-span-4 flex flex-col">
             <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white flex flex-col justify-between">
-              <div className="relative flex-1 min-h-[300px] sm:min-h-[360px] overflow-hidden bg-slate-100">
+              <div className="relative flex-1 min-h-[300px] sm:min-h-[340px] overflow-hidden bg-slate-100">
                 <img
                   src={getAssetPath("/images/doctor.webp")}
                   alt="경희사랑채한의원 정병준 대표원장"
@@ -48,16 +48,16 @@ export default function DoctorIntro() {
           </div>
 
           {/* Right Column: Doctor Philosophy Calligraphy Image */}
-          <div className="lg:col-span-7 flex flex-col">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white flex items-center justify-center p-6 sm:p-8 lg:p-10">
+          <div className="lg:col-span-8 flex flex-col">
+            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white flex items-center justify-center p-3 sm:p-5 lg:p-6">
               <img
                 src={getAssetPath("/images/doctor-message.webp")}
                 alt="화려함보다는 편안함을, 빠른 진료보다는 깊은 이야기를 나누고 싶습니다 - 경희사랑채한의원 정병준 대표원장 진료 철학"
-                width={1376}
-                height={768}
+                width={1241}
+                height={691}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain block"
+                className="w-full h-auto max-h-full object-contain block"
               />
             </div>
           </div>
