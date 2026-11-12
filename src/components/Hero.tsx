@@ -74,13 +74,15 @@ export default function Hero() {
                 height={1200}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover object-center"
+                className="w-full h-full object-cover object-bottom"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 via-black/25 to-transparent pt-10 pb-4 px-5 text-white">
-                <div className="text-[11px] font-medium text-slate-200">{CLINIC_INFO.address}</div>
-                <div className="text-base sm:text-lg font-bold flex items-center gap-2">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-6 pb-2.5 sm:pb-3 px-4 sm:px-5 text-white">
+                <div className="text-[10px] sm:text-[11px] font-medium text-slate-200 leading-tight mb-0.5">
+                  {CLINIC_INFO.address}
+                </div>
+                <div className="text-sm sm:text-base font-bold flex items-center gap-1.5 leading-tight">
                   <span>{CLINIC_INFO.name}</span>
-                  <span className="text-xs font-normal text-slate-300">| {CLINIC_INFO.representative} 대표원장</span>
+                  <span className="text-[11px] sm:text-xs font-normal text-slate-300">| {CLINIC_INFO.representative} 대표원장</span>
                 </div>
               </div>
             </div>
