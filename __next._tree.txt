@@ -2,4 +2,4 @@
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style"]
 :HL["/sarangchae/images/hero-clinic.webp","image",{"type":"image/webp"}]
 1:[["children",{"s":"__PAGE__","h":128}]]
-0:{"b":"HTZl3gt_VFsaUs8-VSSLA","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"t6rFqe3P5_z30fLcIQ7fe","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
