@@ -45,7 +45,7 @@ export const CLINIC_INFO = {
   formattedPhone: "051. 207. 1075",
   address: "부산광역시 사하구 하신중앙로 341, 1층",
   addressDetail: "부산 사하구 하단동 589-18 (1층 경희사랑채한의원)",
-  parkingInfo: "한의원 전용 및 인근 주차 지원",
+  parkingInfo: "한의원 바로 옆 ‘부산스테이’ 건물 기계식 주차장 이용 가능 (대형 SUV 주차 불가)",
   naverPlaceUrl: "https://naver.me/x9Bkj6Al",
   naverMapUrl: "https://naver.me/x9Bkj6Al",
   kakaoMapUrl: "https://map.kakao.com/?q=부산 사하구 하신중앙로 341 경희사랑채한의원",

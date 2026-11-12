@@ -160,7 +160,7 @@ export default function LocationHours() {
                     <span>주차 안내</span>
                   </div>
                   <p className="text-slate-600 text-[11px] leading-relaxed">
-                    한의원 바로 앞 전용 주차 공간 및 인근 지정 주차장을 지원하여 자가용으로도 편리하게 방문하실 수 있습니다.
+                    한의원 바로 옆 ‘부산스테이’ 건물 기계식 주차장을 이용하실 수 있으나, 기계식 주차장 특성상 대형 SUV는 주차가 어려운 점 양해 부탁드립니다.
                   </p>
                 </div>
               </div>
