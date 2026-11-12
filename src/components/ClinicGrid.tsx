@@ -7,11 +7,11 @@ import { Phone, ExternalLink } from "lucide-react";
 
 export default function ClinicGrid() {
   const clinicImages: { [key: string]: string } = {
-    "pain-joint": "/images/acupuncture-noface.webp",
-    "pediatrics": "/images/pediatric-noface.webp",
-    "traffic-accident": "/images/cupping-therapy.webp",
-    "herbal-medicine": "/images/herbal-remedy.webp",
-    "diet-women": "/images/women-diet-herbal.webp",
+    "pain-joint": "/images/acupuncture-webtoon.webp",
+    "pediatrics": "/images/pediatric-webtoon.webp",
+    "traffic-accident": "/images/cupping-webtoon.webp",
+    "herbal-medicine": "/images/herbal-remedy-webtoon.webp",
+    "diet-women": "/images/women-diet-webtoon.webp",
   };
 
   return (
@@ -42,7 +42,7 @@ export default function ClinicGrid() {
                 {/* Photo Header */}
                 <div className="relative h-48 overflow-hidden">
                   <img
-                    src={getAssetPath(clinicImages[clinic.id] || "/images/acupuncture-noface.webp")}
+                    src={getAssetPath(clinicImages[clinic.id] || "/images/acupuncture-webtoon.webp")}
                     alt={`하단 한의원 ${clinic.title} - 경희사랑채한의원`}
                     width={400}
                     height={192}
