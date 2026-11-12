@@ -23,33 +23,31 @@ export default function DoctorIntro() {
           </p>
         </div>
 
-        {/* Top: Doctor Photo & Philosophy Calligraphy Image (Matched Height & Alignment) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
+        {/* Main: Doctor Photo & Philosophy Calligraphy (Identical Vertical Height) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
           
           {/* Left Column: Doctor Photo Card */}
-          <div className="lg:col-span-4 flex flex-col">
-            <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white flex flex-col justify-between">
-              <div className="relative flex-1 min-h-[300px] sm:min-h-[340px] overflow-hidden bg-slate-100">
-                <img
-                  src={getAssetPath("/images/doctor.webp")}
-                  alt="경희사랑채한의원 정병준 대표원장"
-                  width={384}
-                  height={480}
-                  loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="p-4 bg-white border-t border-slate-100 text-center shrink-0">
-                <div className="text-xs text-[#0f70b1] font-semibold">경희대학교 한의과대학 출신</div>
-                <div className="text-lg font-bold text-slate-900 mt-0.5">정병준 대표원장</div>
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <div className="relative w-full max-w-sm h-[360px] sm:h-[400px] rounded-2xl overflow-hidden shadow-md border-4 border-white bg-white group">
+              <img
+                src={getAssetPath("/images/doctor.webp")}
+                alt="경희사랑채한의원 정병준 대표원장"
+                width={656}
+                height={600}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover object-top"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/45 to-transparent pt-10 pb-3.5 px-4 text-center text-white">
+                <div className="text-base sm:text-lg font-bold tracking-tight">정병준 대표원장</div>
+                <div className="text-xs text-slate-200 font-medium">경희사랑채한의원</div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Doctor Philosophy Calligraphy Image (Transparent Background) */}
-          <div className="lg:col-span-8 flex flex-col justify-center">
-            <div className="relative w-full h-full flex items-center justify-center px-2 py-4 sm:px-4 sm:py-6 lg:px-6">
+          {/* Right Column: Doctor Philosophy Calligraphy Image */}
+          <div className="lg:col-span-7 flex items-center justify-center">
+            <div className="w-full h-[360px] sm:h-[400px] flex items-center justify-center">
               <img
                 src={getAssetPath("/images/doctor-message.webp")}
                 alt="화려함보다는 편안함을, 빠른 진료보다는 깊은 이야기를 나누고 싶습니다 - 경희사랑채한의원 정병준 대표원장 진료 철학"
@@ -57,53 +55,42 @@ export default function DoctorIntro() {
                 height={681}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-auto max-h-full object-contain block"
+                className="w-full h-full object-contain block"
               />
             </div>
           </div>
 
         </div>
 
-        {/* Bottom: Core Qualifications & Career Details */}
-        <div className="mt-6 sm:mt-8 bg-white rounded-2xl p-5 sm:p-7 border border-slate-200 shadow-3xs space-y-4">
-          <div className="flex items-center justify-between pb-3 border-b border-slate-100">
-            <div className="text-sm sm:text-base font-bold text-slate-900 flex items-center gap-2">
-              <Award className="w-5 h-5 text-[#0f70b1]" />
-              <span>정병준 대표원장 주요 약력 & 학회 활동</span>
+        {/* Bottom: 4 Core Qualifications & Careers */}
+        <div className="mt-8 sm:mt-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-3xs flex items-center gap-3 hover:border-[#b9ddf5] transition">
+              <div className="w-8 h-8 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
+                <CheckCircle2 className="w-4 h-4" />
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-slate-800">경희대학교 한의과대학</span>
             </div>
-            <span className="text-xs text-[#0f70b1] font-semibold bg-[#f0f7fb] px-2.5 py-1 rounded-full border border-[#d0e5f5] hidden sm:inline">
-              1:1 맞춤 책임진료
-            </span>
-          </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 text-xs sm:text-sm text-slate-700">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>경희대학교 한의과대학 출신</span>
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-3xs flex items-center gap-3 hover:border-[#b9ddf5] transition">
+              <div className="w-8 h-8 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
+                <CheckCircle2 className="w-4 h-4" />
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-slate-800">대한한의학회 정회원</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>척추·관절 및 침구치료 임상</span>
+
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-3xs flex items-center gap-3 hover:border-[#b9ddf5] transition">
+              <div className="w-8 h-8 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
+                <CheckCircle2 className="w-4 h-4" />
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-slate-800">대한면역약침학회 정회원</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>대한한방소아과학회 회원</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>대한한의학회 정회원</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>대한한방내과학회 정회원</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-[#4d7c1f] shrink-0" />
-              <span>사상체질의학회 정회원</span>
-            </div>
-            <div className="flex items-center gap-2 sm:col-span-2 lg:col-span-3 pt-2 border-t border-slate-100 font-bold text-slate-900">
-              <CheckCircle2 className="w-4 h-4 text-[#0f70b1] shrink-0" />
-              <span>현 경희사랑채한의원 대표원장 (부산 사하구 하단)</span>
+
+            <div className="bg-white rounded-xl p-3.5 sm:p-4 border border-slate-200 shadow-3xs flex items-center gap-3 hover:border-[#b9ddf5] transition">
+              <div className="w-8 h-8 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
+                <CheckCircle2 className="w-4 h-4" />
+              </div>
+              <span className="text-xs sm:text-sm font-bold text-slate-800">대한청년추나학회 정회원</span>
             </div>
           </div>
         </div>

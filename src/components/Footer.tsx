@@ -92,13 +92,8 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address} (하단동 589-18, 1층)</span>
           </div>
 
-          <div className="flex items-center justify-between pt-2 text-[10px] text-slate-600">
+          <div className="pt-2 text-[10px] text-slate-600">
             <div>&copy; {new Date().getFullYear()} {CLINIC_INFO.name}. All Rights Reserved.</div>
-            <div className="flex items-center gap-3">
-              <a href="#location" className="hover:text-slate-700 transition">
-                하단 한의원 오시는 길
-              </a>
-            </div>
           </div>
         </div>
       </div>
