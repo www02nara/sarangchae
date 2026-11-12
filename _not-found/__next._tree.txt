@@ -1,6 +1,6 @@
-:HL["/sarangchae/_next/static/chunks/1n0isnf92xbdm.css","style"]
+:HL["/sarangchae/_next/static/chunks/24nwiq-m76d-t.css","style"]
 :HL["https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css","style"]
 :HL["/sarangchae/images/hero-clinic.webp","image",{"type":"image/webp"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":64,"c":"$Q2"}]]
-0:{"b":"SNb3LwY1sQILNefmKQthE","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"Z15-q5NYcV95NHSOht4aE","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
