@@ -2,12 +2,10 @@
 
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
-import { useModal } from "@/context/ModalContext";
 import { getAssetPath } from "@/utils/assetPath";
-import { Heart, Clock, MapPin, MessageCircle } from "lucide-react";
+import { Heart, Clock, MapPin } from "lucide-react";
 
 export default function Hero() {
-  const { openBooking } = useModal();
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-[#f8fafc] via-white to-white pt-10 pb-16 lg:pt-16 lg:pb-20 border-b border-slate-200">
@@ -42,8 +40,8 @@ export default function Hero() {
               </p>
             </div>
 
-            {/* Core Info Highlights (야간진료, 1층 위치, 카카오톡 간편 예약 상담) */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3 pt-2">
+            {/* Core Info Highlights (야간진료, 1층 위치) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
               <div className="bg-white p-3 sm:p-3.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5">
                 <div className="w-7 h-7 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0">
                   <Clock className="w-4 h-4" />
@@ -63,42 +61,29 @@ export default function Hero() {
                   <div className="text-[11px] text-slate-600 mt-0.5">계단 없는 편안한 내원</div>
                 </div>
               </div>
-
-              <button
-                type="button"
-                onClick={() => openBooking()}
-                className="bg-white hover:bg-amber-50/50 transition-colors text-left p-3 sm:p-3.5 rounded-2xl border border-amber-200/80 shadow-3xs flex items-center gap-2.5 sm:flex-col sm:items-start sm:gap-1.5 group cursor-pointer"
-              >
-                <div className="w-7 h-7 rounded-lg bg-[#fee500] text-[#3c1e1e] flex items-center justify-center shrink-0 shadow-3xs group-hover:scale-105 transition-transform">
-                  <MessageCircle className="w-4 h-4 fill-[#3c1e1e]" />
-                </div>
-                <div>
-                  <div className="font-bold text-xs sm:text-sm text-slate-900 flex items-center gap-1">
-                    <span>카카오톡 상담</span>
-                    <span className="text-[10px] text-amber-700 bg-amber-100 px-1 py-0.2 rounded font-semibold">간편예약</span>
-                  </div>
-                  <div className="text-[11px] text-slate-600 mt-0.5">간편한 1:1 예약 & 문의</div>
-                </div>
-              </button>
             </div>
           </div>
 
           {/* Right Visual Image (Height matched to left text) */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="relative w-full h-72 sm:h-96 lg:h-full rounded-3xl overflow-hidden shadow-lg border-4 border-white">
+            <div className="relative w-full h-80 sm:h-96 lg:h-full min-h-[380px] rounded-3xl overflow-hidden shadow-lg border-4 border-white">
               <img
                 src={getAssetPath("/images/hero-clinic.webp")}
-                alt="부산 사하구 하단 한의원 경희사랑채한의원 대표원장 진료"
-                width={640}
-                height={520}
+                alt="부산 사하구 하단 한의원 경희사랑채한의원 외관 전경"
+                width={1200}
+                height={1200}
                 fetchPriority="high"
                 decoding="async"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-bottom"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent flex flex-col justify-end p-6 text-white">
-                <div className="text-xs font-semibold text-slate-200">{CLINIC_INFO.address}</div>
-                <div className="text-xl font-bold">{CLINIC_INFO.name}</div>
-                <div className="text-xs text-slate-200 mt-0.5">{CLINIC_INFO.representative} 대표원장</div>
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pt-6 pb-2.5 sm:pb-3 px-4 sm:px-5 text-white">
+                <div className="text-[10px] sm:text-[11px] font-medium text-slate-200 leading-tight mb-0.5">
+                  {CLINIC_INFO.address}
+                </div>
+                <div className="text-sm sm:text-base font-bold flex items-center gap-1.5 leading-tight">
+                  <span>{CLINIC_INFO.name}</span>
+                  <span className="text-[11px] sm:text-xs font-normal text-slate-300">| {CLINIC_INFO.representative} 대표원장</span>
+                </div>
               </div>
             </div>
           </div>

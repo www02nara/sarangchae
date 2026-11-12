@@ -21,7 +21,6 @@ export default function Header() {
   const navLinks = [
     { name: "진료 과목", href: "#clinics" },
     { name: "원장 소개", href: "#doctor" },
-    { name: "원내 시설", href: "#tour" },
     { name: "진료시간 & 오시는 길", href: "#location" },
     { name: "자주 묻는 질문", href: "#faq" },
   ];
