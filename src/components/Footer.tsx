@@ -3,7 +3,7 @@
 import React from "react";
 import { CLINIC_INFO } from "@/data/clinicData";
 import { getAssetPath } from "@/utils/assetPath";
-import { Phone, Clock, ChevronRight, Heart } from "lucide-react";
+import { Phone, Clock } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -23,7 +23,7 @@ export default function Footer() {
                 decoding="async"
                 className="h-8 w-auto object-contain"
               />
-              <span className="text-[10px] font-bold px-2 py-0.5 bg-white text-[#0f70b1] border border-[#d0e5f5] rounded-md shrink-0 self-center">
+              <span className="text-[10px] font-bold px-2 py-0.5 bg-white text-slate-900 border border-slate-300 rounded-md shrink-0 self-center">
                 {CLINIC_INFO.branchName}
               </span>
             </div>
@@ -38,29 +38,29 @@ export default function Footer() {
           {/* Operating Hours Summary */}
           <div className="lg:col-span-4 space-y-2">
             <h3 className="text-xs font-bold text-slate-900 uppercase tracking-wider flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-[#0f70b1]" />
+              <Clock className="w-3.5 h-3.5 text-slate-900" />
               진료시간 안내
             </h3>
-            <ul className="space-y-1 text-slate-600 text-[11px]">
+            <ul className="space-y-1.5 text-slate-900 text-[11px]">
               <li className="flex justify-between">
-                <span className="text-[#0f70b1] font-bold">화 · 목 (야간진료)</span>
+                <span className="font-bold text-slate-900">화 · 목 (야간진료)</span>
                 <span className="font-semibold text-slate-900">09:30 ~ 20:00</span>
               </li>
               <li className="flex justify-between">
-                <span>월 · 수 · 금</span>
-                <span>09:30 ~ 18:00</span>
+                <span className="text-slate-900">월 · 수 · 금</span>
+                <span className="text-slate-900">09:30 ~ 18:00</span>
               </li>
               <li className="flex justify-between">
-                <span>토 요 일 (연속진료)</span>
-                <span>09:30 ~ 14:30</span>
+                <span className="text-slate-900">토 요 일 (연속진료)</span>
+                <span className="text-slate-900">09:30 ~ 14:30</span>
               </li>
-              <li className="flex justify-between text-[#9a3412] font-semibold">
-                <span>휴게시간(점심)</span>
-                <span>12:30 ~ 14:00 (14시 진료 시작)</span>
+              <li className="flex justify-between font-semibold text-slate-900">
+                <span className="text-slate-900">휴게시간(점심)</span>
+                <span className="text-slate-900">12:30 ~ 14:00 (14시 진료 시작)</span>
               </li>
-              <li className="flex justify-between text-red-700 font-bold">
-                <span>일요일 (정기휴무)</span>
-                <span>휴진</span>
+              <li className="flex justify-between font-bold text-slate-900">
+                <span className="text-slate-900">일요일 (정기휴무)</span>
+                <span className="text-slate-900">휴진</span>
               </li>
             </ul>
           </div>
@@ -83,8 +83,8 @@ export default function Footer() {
         </div>
 
         {/* Business & Legal info */}
-        <div className="pt-6 space-y-2 text-[11px] text-slate-600">
-          <div className="flex flex-wrap gap-x-4 gap-y-1">
+        <div className="pt-6 space-y-2 text-[11px] text-slate-600 text-center">
+          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-1">
             <span>상호명: {CLINIC_INFO.name}</span>
             <span>대표자: {CLINIC_INFO.representative}</span>
             <span>전화번호: {CLINIC_INFO.phone}</span>
