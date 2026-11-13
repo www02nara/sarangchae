@@ -12,6 +12,8 @@ export default function ClinicGrid() {
     "traffic-accident": "/images/cupping-webtoon.webp",
     "herbal-medicine": "/images/herbal-remedy-webtoon.webp",
     "diet-women": "/images/women-diet-webtoon.webp",
+    "student-exam": "/images/student-exam-webtoon.webp",
+    "mental-health": "/images/mental-health-webtoon.webp",
   };
 
   return (
@@ -80,8 +82,8 @@ export default function ClinicGrid() {
             </div>
           ))}
 
-          {/* 6th Card: Direct Contact (Center Aligned) */}
-          <div className="bg-gradient-to-br from-[#f0f7fb] via-white to-[#f0f7fb] border-2 border-[#b9ddf5] rounded-2xl p-6 sm:p-8 text-slate-900 flex flex-col justify-between items-center text-center shadow-3xs">
+          {/* Direct Contact Card (Spans 2 columns on lg for a balanced 3x3 layout) */}
+          <div className="lg:col-span-2 bg-gradient-to-br from-[#f0f7fb] via-white to-[#f0f7fb] border-2 border-[#b9ddf5] rounded-2xl p-6 sm:p-8 text-slate-900 flex flex-col justify-between items-center text-center shadow-3xs">
             <div className="space-y-3 flex flex-col items-center">
               <span className="text-xs font-bold text-[#0f70b1] bg-white border border-[#d0e5f5] px-2.5 py-1 rounded-md uppercase tracking-wider inline-block">
                 Direct Contact
