@@ -35,7 +35,9 @@ export default function Hero() {
               </h1>
 
               <p className="text-base sm:text-lg text-slate-600 max-w-xl leading-relaxed">
-                부산 사하구 <strong>하단 한의원</strong> 경희사랑채는 증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다. 하단역 8번 출구 앞, 내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
+                경희사랑채한의원은 증상에만 매달리지 않고 아픔의 뿌리를 바르게 치료합니다.
+                <br />
+                하단역 8번 출구 앞, 내 가족을 치료하는 마음으로 꼭 필요한 정직한 진료만을 약속드립니다.
               </p>
             </div>
 
