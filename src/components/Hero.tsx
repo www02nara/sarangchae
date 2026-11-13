@@ -43,7 +43,7 @@ export default function Hero() {
 
             {/* Core Info Highlights (야간진료, 1층 위치) */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
-              <div className="bg-white p-4 sm:p-4.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-3.5 sm:flex-col sm:items-start sm:gap-2 hover:border-[#b9ddf5] transition">
+              <div className="bg-white p-4 sm:p-4.5 rounded-2xl border border-slate-200 shadow-3xs flex flex-col items-center justify-center text-center gap-2 hover:border-[#b9ddf5] transition">
                 <div className="w-10 h-10 rounded-xl bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                   <Clock className="w-5 h-5" />
                 </div>
@@ -53,7 +53,7 @@ export default function Hero() {
                 </div>
               </div>
 
-              <div className="bg-white p-4 sm:p-4.5 rounded-2xl border border-slate-200 shadow-3xs flex items-center gap-3.5 sm:flex-col sm:items-start sm:gap-2 hover:border-[#b9ddf5] transition">
+              <div className="bg-white p-4 sm:p-4.5 rounded-2xl border border-slate-200 shadow-3xs flex flex-col items-center justify-center text-center gap-2 hover:border-[#b9ddf5] transition">
                 <div className="w-10 h-10 rounded-xl bg-[#f2f9ec] text-[#4d7c1f] flex items-center justify-center shrink-0 border border-[#d7ecc7]">
                   <MapPin className="w-5 h-5" />
                 </div>
