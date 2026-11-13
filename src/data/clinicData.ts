@@ -55,11 +55,11 @@ export const CLINIC_INFO = {
 };
 
 export const OPERATING_HOURS_TABLE = [
-  { day: "월요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00 (14시 진료 재개)", isNight: false, isClosed: false },
-  { day: "화요일", hours: "09:30 ~ 20:00", breakTime: "12:30 ~ 14:00 (14시 진료 재개)", isNight: true, isClosed: false },
-  { day: "수요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00 (14시 진료 재개)", isNight: false, isClosed: false },
-  { day: "목요일", hours: "09:30 ~ 20:00", breakTime: "12:30 ~ 14:00 (14시 진료 재개)", isNight: true, isClosed: false },
-  { day: "금요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00 (14시 진료 재개)", isNight: false, isClosed: false },
+  { day: "월요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00", isNight: false, isClosed: false },
+  { day: "화요일", hours: "09:30 ~ 20:00", breakTime: "12:30 ~ 14:00", isNight: true, isClosed: false },
+  { day: "수요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00", isNight: false, isClosed: false },
+  { day: "목요일", hours: "09:30 ~ 20:00", breakTime: "12:30 ~ 14:00", isNight: true, isClosed: false },
+  { day: "금요일", hours: "09:30 ~ 18:00", breakTime: "12:30 ~ 14:00", isNight: false, isClosed: false },
   { day: "토요일", hours: "09:30 ~ 14:30", breakTime: "점심시간 없이 연속 진료", isNight: false, isClosed: false },
   { day: "일요일", hours: "정기휴무", breakTime: "-", isNight: false, isClosed: true },
 ];

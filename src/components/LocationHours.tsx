@@ -33,10 +33,7 @@ export default function LocationHours() {
                   <div className="w-10 h-10 rounded-xl bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center border border-[#d0e5f5]">
                     <Clock className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-lg sm:text-xl text-slate-900">진료 시간표</h3>
-                    <p className="text-xs sm:text-sm text-[#0f70b1] font-bold">화 · 목 저녁 8시까지 야간진료</p>
-                  </div>
+                  <h3 className="font-bold text-lg sm:text-xl text-slate-900">진료 시간표</h3>
                 </div>
 
                 <span className="px-3 py-1 bg-[#fff7ed] text-[#c2410c] border border-[#ffedd5] rounded-full font-bold text-xs shrink-0">
@@ -44,92 +41,52 @@ export default function LocationHours() {
                 </span>
               </div>
 
-              {/* Timetable Rows (Streamlined Non-Overlapping Layout) */}
+              {/* Timetable Rows (Strictly Aligned 3-Column Table) */}
               <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-3xs divide-y divide-slate-100">
-                {/* Table Header */}
-                <div className="grid grid-cols-12 bg-slate-50/90 px-4 py-3 text-xs font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200">
-                  <div className="col-span-3">진료 요일</div>
-                  <div className="col-span-5">진료 시간</div>
-                  <div className="col-span-4 text-right">진료 구분</div>
+                {/* Table Header (Desktop) */}
+                <div className="hidden sm:grid sm:grid-cols-12 bg-slate-50/90 px-4 py-3 text-xs font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200">
+                  <div className="sm:col-span-3">진료 요일</div>
+                  <div className="sm:col-span-4">진료 시간</div>
+                  <div className="sm:col-span-5 text-left">휴게시간 (점심시간)</div>
                 </div>
 
                 {/* Rows */}
-                {OPERATING_HOURS_TABLE.map((item, idx) => {
-                  const isSaturday = item.day === "토요일";
-                  return (
-                    <div
-                      key={idx}
-                      className={`px-4 py-3 sm:py-3.5 transition-colors ${
-                        item.isNight
-                          ? "bg-[#f0f7fb]/75"
-                          : item.isClosed
-                          ? "bg-rose-50/40"
-                          : "hover:bg-slate-50/60"
-                      }`}
-                    >
-                      <div className="grid grid-cols-12 items-center gap-2 text-sm sm:text-base">
-                        {/* Column 1: Day (Pure text, never overlaps) */}
-                        <div className="col-span-3">
-                          <span
-                            className={`font-bold whitespace-nowrap ${
-                              item.isClosed
-                                ? "text-rose-700"
-                                : item.isNight
-                                ? "text-[#0f70b1]"
-                                : "text-slate-900"
-                            }`}
-                          >
-                            {item.day}
-                          </span>
-                        </div>
-
-                        {/* Column 2: Hours */}
-                        <div
-                          className={`col-span-5 font-extrabold tracking-tight whitespace-nowrap ${
-                            item.isClosed
-                              ? "text-rose-700"
-                              : item.isNight
-                              ? "text-[#0f70b1]"
-                              : "text-slate-900"
-                          }`}
-                        >
+                {OPERATING_HOURS_TABLE.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className={`px-3.5 py-3 sm:px-4 sm:py-3.5 transition-colors ${
+                      item.isNight
+                        ? "bg-[#f0f7fb]/75"
+                        : item.isClosed
+                        ? "bg-rose-50/40"
+                        : "hover:bg-slate-50/60"
+                    }`}
+                  >
+                    <div className="grid grid-cols-1 sm:grid-cols-12 items-center gap-1 sm:gap-2 text-sm sm:text-base">
+                      {/* Column 1: Day */}
+                      <div className="sm:col-span-3 flex items-center justify-between sm:justify-start">
+                        <span className={`font-bold whitespace-nowrap ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
+                          {item.day}
+                        </span>
+                        {/* Mobile-only hours display right next to day */}
+                        <span className={`sm:hidden font-extrabold ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
                           {item.hours}
-                        </div>
+                        </span>
+                      </div>
 
-                        {/* Column 3: Status Badge / Note */}
-                        <div className="col-span-4 flex items-center justify-end">
-                          {item.isNight ? (
-                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#0f70b1] text-white shadow-3xs whitespace-nowrap">
-                              야간진료
-                            </span>
-                          ) : isSaturday ? (
-                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-[#fff7ed] text-[#c2410c] border border-[#ffedd5] whitespace-nowrap">
-                              점심없이 진료
-                            </span>
-                          ) : item.isClosed ? (
-                            <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-bold bg-rose-100/80 text-rose-700 whitespace-nowrap">
-                              공휴일 휴진
-                            </span>
-                          ) : (
-                            <span className="text-xs sm:text-sm font-medium text-slate-500 whitespace-nowrap">
-                              정상 진료
-                            </span>
-                          )}
-                        </div>
+                      {/* Column 2: Hours (Desktop) */}
+                      <div className={`hidden sm:block sm:col-span-4 font-extrabold tracking-tight whitespace-nowrap ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
+                        {item.hours}
+                      </div>
+
+                      {/* Column 3: Break Time */}
+                      <div className={`sm:col-span-5 text-xs sm:text-sm flex items-center justify-between sm:justify-start gap-1.5 whitespace-nowrap ${item.isClosed ? "text-rose-700 font-bold" : "text-slate-700 font-medium"}`}>
+                        <span className="sm:hidden text-slate-500 font-medium">휴게:</span>
+                        <span>{item.breakTime}</span>
                       </div>
                     </div>
-                  );
-                })}
-
-                {/* Consolidated Lunch / Break Time Summary Row */}
-                <div className="bg-[#fff7ed]/60 px-4 py-3.5 border-t border-slate-200 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
-                  <span className="text-xs sm:text-sm font-bold text-[#c2410c]">
-                    평일 점심 · 휴게시간
-                  </span>
-                  <span className="text-xs sm:text-sm font-extrabold text-slate-900">
-                    12:30 ~ 14:00 <span className="font-semibold text-slate-600">(14시 진료 재개)</span>
-                  </span>
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
 
