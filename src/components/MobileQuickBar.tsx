@@ -13,10 +13,10 @@ export default function MobileQuickBar() {
           href={`tel:${CLINIC_INFO.phone}`}
           className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#0f70b1] flex items-center justify-center text-white mb-0.5 shadow-3xs">
+          <div className="w-9 h-9 rounded-full bg-[#0f70b1] flex items-center justify-center text-white mb-0.5 shadow-3xs">
             <Phone className="w-4 h-4 text-white" />
           </div>
-          <span className="text-[11px] font-bold text-[#0f70b1]">전화문의</span>
+          <span className="text-xs font-bold text-[#0f70b1]">전화문의</span>
         </a>
 
         {/* Map / Directions button */}
@@ -24,10 +24,10 @@ export default function MobileQuickBar() {
           href="#location"
           className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#f0f7fb] flex items-center justify-center text-[#0f70b1] mb-0.5 border border-[#d0e5f5]">
+          <div className="w-9 h-9 rounded-full bg-[#f0f7fb] flex items-center justify-center text-[#0f70b1] mb-0.5 border border-[#d0e5f5]">
             <MapPin className="w-4 h-4" />
           </div>
-          <span className="text-[11px] font-semibold text-slate-800">오시는길</span>
+          <span className="text-xs font-bold text-slate-800">오시는길</span>
         </a>
 
         {/* Naver Place button */}
@@ -37,10 +37,10 @@ export default function MobileQuickBar() {
           rel="noopener noreferrer"
           className="flex flex-col items-center justify-center py-1 rounded-lg text-slate-800 active:bg-slate-50 transition"
         >
-          <div className="w-8 h-8 rounded-full bg-[#03C75A]/15 flex items-center justify-center text-[#027a37] mb-0.5 font-bold text-xs">
+          <div className="w-9 h-9 rounded-full bg-[#03C75A]/15 flex items-center justify-center text-[#027a37] mb-0.5 font-bold text-sm">
             N
           </div>
-          <span className="text-[11px] font-semibold text-slate-800">플레이스</span>
+          <span className="text-xs font-bold text-slate-800">플레이스</span>
         </a>
       </div>
     </div>

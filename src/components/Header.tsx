@@ -37,7 +37,7 @@ export default function Header() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
           {/* Official Brand Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group shrink-0" title="하단 한의원 경희사랑채한의원">
+          <Link href="/" className="flex items-center gap-2 sm:gap-3 group shrink-0" title="하단 한의원 경희사랑채한의원">
             <img
               src={getAssetPath("/images/logo-full.webp")}
               alt="하단 한의원 경희사랑채한의원 (부산 사하구 하단역 8번 출구)"
@@ -46,13 +46,13 @@ export default function Header() {
               fetchPriority="high"
               className="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
-            <span className="text-[10px] sm:text-[11px] font-bold px-2 py-0.5 bg-slate-50 text-slate-900 border border-slate-300 rounded-md shrink-0 self-center">
+            <span className="text-xs font-bold px-2.5 py-0.5 bg-slate-50 text-slate-900 border border-slate-300 rounded-md shrink-0 self-center">
               {CLINIC_INFO.branchName}
             </span>
           </Link>
 
           {/* Desktop Nav Items */}
-          <nav className="hidden lg:flex items-center gap-8 text-sm font-semibold text-slate-700">
+          <nav className="hidden lg:flex items-center gap-8 text-base font-bold text-slate-800">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -69,9 +69,9 @@ export default function Header() {
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               aria-label="메뉴 토글"
-              className="p-1.5 sm:p-2 text-slate-700 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition"
+              className="p-2 text-slate-800 hover:text-slate-900 rounded-lg hover:bg-slate-100 transition"
             >
-              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-slate-700" />}
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6 text-slate-800" />}
             </button>
           </div>
         </div>
@@ -80,7 +80,7 @@ export default function Header() {
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
         <div className="lg:hidden bg-white border-b border-slate-200 shadow-xl px-5 py-6 space-y-4 animate-fade-in">
-          <div className="space-y-1 divide-y divide-slate-100 text-sm font-semibold text-slate-800">
+          <div className="space-y-1 divide-y divide-slate-100 text-base font-bold text-slate-900">
             {navLinks.map((link) => (
               <a
                 key={link.name}
