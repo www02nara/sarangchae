@@ -41,20 +41,19 @@ export default function LocationHours() {
                 </span>
               </div>
 
-              {/* Timetable Rows (Strictly Aligned 3-Column Table) */}
+              {/* Timetable Rows (2-Column Stacked Hours & Break Time Layout) */}
               <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-3xs divide-y divide-slate-100">
-                {/* Table Header (Desktop) */}
-                <div className="hidden sm:grid sm:grid-cols-12 bg-slate-50/90 px-4 py-3 text-xs font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200">
-                  <div className="sm:col-span-3">진료 요일</div>
-                  <div className="sm:col-span-4">진료 시간</div>
-                  <div className="sm:col-span-5 text-left">휴게시간 (점심시간)</div>
+                {/* Table Header */}
+                <div className="grid grid-cols-12 bg-slate-50/90 px-4 py-3 text-xs font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200">
+                  <div className="col-span-4">진료 요일</div>
+                  <div className="col-span-8">진료 시간 / 휴게시간</div>
                 </div>
 
                 {/* Rows */}
                 {OPERATING_HOURS_TABLE.map((item, idx) => (
                   <div
                     key={idx}
-                    className={`px-3.5 py-3 sm:px-4 sm:py-3.5 transition-colors ${
+                    className={`px-4 py-3 sm:py-3.5 transition-colors ${
                       item.isNight
                         ? "bg-[#f0f7fb]/75"
                         : item.isClosed
@@ -62,27 +61,40 @@ export default function LocationHours() {
                         : "hover:bg-slate-50/60"
                     }`}
                   >
-                    <div className="grid grid-cols-1 sm:grid-cols-12 items-center gap-1 sm:gap-2 text-sm sm:text-base">
+                    <div className="grid grid-cols-12 items-center gap-3">
                       {/* Column 1: Day */}
-                      <div className="sm:col-span-3 flex items-center justify-between sm:justify-start">
-                        <span className={`font-bold whitespace-nowrap ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
+                      <div className="col-span-4">
+                        <span
+                          className={`text-sm sm:text-base font-bold whitespace-nowrap ${
+                            item.isClosed
+                              ? "text-rose-700"
+                              : item.isNight
+                              ? "text-[#0f70b1]"
+                              : "text-slate-900"
+                          }`}
+                        >
                           {item.day}
                         </span>
-                        {/* Mobile-only hours display right next to day */}
-                        <span className={`sm:hidden font-extrabold ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
+                      </div>
+
+                      {/* Column 2: Hours (Top) + Break Time (Bottom) */}
+                      <div className="col-span-8 flex flex-col">
+                        <span
+                          className={`text-sm sm:text-base font-extrabold tracking-tight ${
+                            item.isClosed
+                              ? "text-rose-700"
+                              : item.isNight
+                              ? "text-[#0f70b1]"
+                              : "text-slate-900"
+                          }`}
+                        >
                           {item.hours}
                         </span>
-                      </div>
-
-                      {/* Column 2: Hours (Desktop) */}
-                      <div className={`hidden sm:block sm:col-span-4 font-extrabold tracking-tight whitespace-nowrap ${item.isClosed ? "text-rose-700" : item.isNight ? "text-[#0f70b1]" : "text-slate-900"}`}>
-                        {item.hours}
-                      </div>
-
-                      {/* Column 3: Break Time */}
-                      <div className={`sm:col-span-5 text-xs sm:text-sm flex items-center justify-between sm:justify-start gap-1.5 whitespace-nowrap ${item.isClosed ? "text-rose-700 font-bold" : "text-slate-700 font-medium"}`}>
-                        <span className="sm:hidden text-slate-500 font-medium">휴게:</span>
-                        <span>{item.breakTime}</span>
+                        {!item.isClosed && item.breakTime && item.breakTime !== "-" && (
+                          <span className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">
+                            {item.day === "토요일" ? item.breakTime : `휴게시간 ${item.breakTime}`}
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
