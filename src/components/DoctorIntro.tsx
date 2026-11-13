@@ -51,8 +51,8 @@ export default function DoctorIntro() {
               <img
                 src={getAssetPath("/images/doctor-message.webp")}
                 alt="화려함보다는 편안함을, 빠른 진료보다는 깊은 이야기를 나누고 싶습니다 - 경희사랑채한의원 정병준 대표원장 진료 철학"
-                width={1221}
-                height={681}
+                width={1220}
+                height={698}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-contain block"
