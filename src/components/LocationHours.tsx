@@ -91,8 +91,8 @@ export default function LocationHours() {
                           {item.hours}
                         </span>
                         {!item.isClosed && item.breakTime && item.breakTime !== "-" && (
-                          <span className="text-xs sm:text-sm text-slate-600 font-medium mt-0.5">
-                            {item.day === "토요일" ? item.breakTime : `휴게시간 ${item.breakTime}`}
+                          <span className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">
+                            {item.day === "토요일" ? `(${item.breakTime})` : `(휴게시간 ${item.breakTime})`}
                           </span>
                         )}
                       </div>
