@@ -115,7 +115,7 @@ export default function LocationHours() {
           {/* Right Column: Directions & Accurate Naver-based Route Map (약도) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-3xs flex flex-col justify-between space-y-5 h-full">
             <div className="space-y-4">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-100 pb-4">
+              <div className="flex items-center border-b border-slate-100 pb-4">
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center border border-[#d0e5f5]">
                     <MapPin className="w-5 h-5" />
@@ -125,10 +125,6 @@ export default function LocationHours() {
                     <p className="text-xs sm:text-sm text-slate-700">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
                   </div>
                 </div>
-
-                <span className="px-3 py-1 bg-[#fff1f0] text-[#b91c1c] border border-[#fecdd3] rounded-full font-bold text-xs self-start sm:self-center">
-                  하단역 8번 출구 도보 1~2분
-                </span>
               </div>
 
               {/* Official Clinic Route Map Graphic */}
@@ -152,7 +148,7 @@ export default function LocationHours() {
                     <span>지하철 & 도보</span>
                   </div>
                   <p className="text-slate-700 text-xs sm:text-sm leading-relaxed">
-                    부산 1호선 <strong>하단역 8번 출구</strong>(또는 6번 출구)에서 하신중앙로 방면으로 약 1~2분(100m) 직진하시면 1층에 위치해 있습니다.
+                    부산 1호선 <strong>하단역 8번 출구</strong>에서 하신중앙로 방면으로 약 1~2분(100m) 직진하시면 1층에 위치해 있습니다.
                   </p>
                 </div>
 
