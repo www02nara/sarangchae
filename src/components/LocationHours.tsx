@@ -2,7 +2,7 @@
 
 import React from "react";
 import { CLINIC_INFO, OPERATING_HOURS_TABLE } from "@/data/clinicData";
-import { Clock, MapPin, Phone, ExternalLink, Train, Car } from "lucide-react";
+import { Phone, ExternalLink, Train, Car } from "lucide-react";
 import { getAssetPath } from "@/utils/assetPath";
 
 export default function LocationHours() {
@@ -28,13 +28,8 @@ export default function LocationHours() {
           {/* Left Column: Operating Hours Card (Clean Aligned Table, Senior-friendly Fonts) */}
           <div className="lg:col-span-5 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-3xs flex flex-col justify-between space-y-6 h-full">
             <div className="space-y-5">
-              <div className="flex items-center justify-center border-b border-slate-100 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center border border-[#d0e5f5]">
-                    <Clock className="w-5 h-5" />
-                  </div>
-                  <h3 className="font-bold text-lg sm:text-xl text-slate-900">진료 시간표</h3>
-                </div>
+              <div className="flex items-center justify-center border-b border-slate-100 pb-4 text-center">
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">진료 시간표</h3>
               </div>
 
               {/* Timetable Rows (2-Column Stacked Hours & Break Time Layout) */}
@@ -111,16 +106,9 @@ export default function LocationHours() {
           {/* Right Column: Directions & Accurate Naver-based Route Map (약도) */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-6 sm:p-7 border border-slate-200 shadow-3xs flex flex-col justify-between space-y-5 h-full">
             <div className="space-y-4">
-              <div className="flex items-center justify-center border-b border-slate-100 pb-4">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center border border-[#d0e5f5] shrink-0">
-                    <MapPin className="w-5 h-5" />
-                  </div>
-                  <div className="text-center">
-                    <h3 className="font-bold text-lg sm:text-xl text-slate-900">한의원 오시는 길</h3>
-                    <p className="text-xs sm:text-sm text-slate-700">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
-                  </div>
-                </div>
+              <div className="flex flex-col items-center justify-center border-b border-slate-100 pb-4 text-center">
+                <h3 className="font-bold text-lg sm:text-xl text-slate-900">한의원 오시는 길</h3>
+                <p className="text-xs sm:text-sm text-slate-700 mt-0.5">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
               </div>
 
               {/* Official Clinic Route Map Graphic */}
