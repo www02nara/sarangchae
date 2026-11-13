@@ -119,7 +119,7 @@ export default function LocationHours() {
                     <MapPin className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg text-slate-900">하단 한의원 오시는 길 & 약도</h3>
+                    <h3 className="font-bold text-lg text-slate-900">한의원 오시는 길 & 약도</h3>
                     <p className="text-xs text-slate-600">{CLINIC_INFO.address} (하단동 589-18, 1층)</p>
                   </div>
                 </div>
