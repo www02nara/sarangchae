@@ -112,7 +112,7 @@ export default function ClinicGrid() {
                   href={CLINIC_INFO.naverPlaceUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full py-3 bg-[#03C75A] hover:bg-[#02b14f] text-white font-semibold text-xs sm:text-sm rounded-xl transition flex items-center justify-center gap-2 shadow-3xs"
+                  className="w-full py-3 bg-[#01803b] hover:bg-[#016b31] text-white font-semibold text-xs sm:text-sm rounded-xl transition flex items-center justify-center gap-2 shadow-3xs"
                 >
                   <span>네이버 플레이스 보기</span>
                   <ExternalLink className="w-4 h-4" />

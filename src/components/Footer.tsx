@@ -92,7 +92,7 @@ export default function Footer() {
             <span>소재지: {CLINIC_INFO.address} (하단동 589-18, 1층)</span>
           </div>
 
-          <div className="pt-2 text-xs text-slate-500">
+          <div className="pt-2 text-xs text-slate-600">
             <div>&copy; {new Date().getFullYear()} {CLINIC_INFO.name}. All Rights Reserved.</div>
           </div>
         </div>

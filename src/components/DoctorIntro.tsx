@@ -32,13 +32,13 @@ export default function DoctorIntro() {
               <img
                 src={getAssetPath("/images/doctor.webp")}
                 alt="경희사랑채한의원 정병준 대표원장"
-                width={656}
-                height={600}
+                width={640}
+                height={640}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover object-top"
               />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/45 to-transparent pt-10 pb-4 px-4 text-center text-white">
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/60 to-transparent pt-10 pb-4 px-4 text-center text-white">
                 <div className="text-lg sm:text-xl font-bold tracking-tight">정병준 대표원장</div>
                 <div className="text-xs sm:text-sm text-slate-200 font-medium mt-0.5">경희사랑채한의원</div>
               </div>
@@ -51,11 +51,11 @@ export default function DoctorIntro() {
               <img
                 src={getAssetPath("/images/doctor-message.webp")}
                 alt="화려함보다는 편안함을, 빠른 진료보다는 깊은 이야기를 나누고 싶습니다 - 경희사랑채한의원 정병준 대표원장 진료 철학"
-                width={1220}
-                height={698}
+                width={880}
+                height={504}
                 loading="lazy"
                 decoding="async"
-                className="w-full h-full object-contain block drop-shadow-xs"
+                className="w-full h-full object-contain block"
               />
             </div>
           </div>

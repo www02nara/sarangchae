@@ -42,8 +42,8 @@ export default function Header() {
               src={getAssetPath("/images/logo-full.webp")}
               alt="하단 한의원 경희사랑채한의원 (부산 사하구 하단역 8번 출구)"
               width={180}
-              height={40}
-              fetchPriority="high"
+              height={34}
+              decoding="async"
               className="h-8 sm:h-10 w-auto object-contain transition-transform group-hover:scale-[1.02]"
             />
             <span className="text-xs font-bold px-2.5 py-0.5 bg-slate-50 text-slate-900 border border-slate-300 rounded-md shrink-0 self-center">

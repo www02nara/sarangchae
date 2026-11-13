@@ -82,7 +82,7 @@ export default function LocationHours() {
                           {item.hours}
                         </span>
                         {!item.isClosed && item.breakTime && item.breakTime !== "-" && (
-                          <span className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">
+                          <span className="text-[11px] sm:text-xs text-slate-600 font-medium mt-0.5">
                             {item.day === "토요일" ? `(${item.breakTime})` : `(휴게시간 ${item.breakTime})`}
                           </span>
                         )}
@@ -154,7 +154,7 @@ export default function LocationHours() {
                 href={CLINIC_INFO.naverPlaceUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 py-3.5 bg-[#03C75A] hover:bg-[#02b14f] text-white font-bold text-sm sm:text-base rounded-xl shadow-3xs flex items-center justify-center gap-2 transition"
+                className="flex-1 py-3.5 bg-[#01803b] hover:bg-[#016b31] text-white font-bold text-sm sm:text-base rounded-xl shadow-3xs flex items-center justify-center gap-2 transition"
               >
                 <span>네이버 지도 길찾기</span>
                 <ExternalLink className="w-4 h-4" />
