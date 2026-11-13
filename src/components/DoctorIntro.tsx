@@ -69,7 +69,7 @@ export default function DoctorIntro() {
               <div className="w-9 h-9 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+              <span className="flex-1 text-center text-sm sm:text-base font-bold text-slate-900 leading-snug">
                 경희대학교
                 <br />
                 한의과대학
@@ -80,7 +80,7 @@ export default function DoctorIntro() {
               <div className="w-9 h-9 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+              <span className="flex-1 text-center text-sm sm:text-base font-bold text-slate-900 leading-snug">
                 대한한의학회
                 <br />
                 정회원
@@ -91,7 +91,7 @@ export default function DoctorIntro() {
               <div className="w-9 h-9 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+              <span className="flex-1 text-center text-sm sm:text-base font-bold text-slate-900 leading-snug">
                 대한면역약침학회
                 <br />
                 정회원
@@ -102,7 +102,7 @@ export default function DoctorIntro() {
               <div className="w-9 h-9 rounded-lg bg-[#f0f7fb] text-[#0f70b1] flex items-center justify-center shrink-0 border border-[#d0e5f5]">
                 <CheckCircle2 className="w-5 h-5" />
               </div>
-              <span className="text-sm sm:text-base font-bold text-slate-900 leading-snug">
+              <span className="flex-1 text-center text-sm sm:text-base font-bold text-slate-900 leading-snug">
                 대한청년추나학회
                 <br />
                 정회원
