@@ -46,7 +46,7 @@ export default function LocationHours() {
                 {/* Table Header */}
                 <div className="grid grid-cols-12 bg-slate-50/90 px-4 py-3 text-xs font-bold text-slate-700 uppercase tracking-wider border-b border-slate-200">
                   <div className="col-span-4">진료 요일</div>
-                  <div className="col-span-8">진료 시간 / 휴게시간</div>
+                  <div className="col-span-8 text-center">진료 시간 / 휴게시간</div>
                 </div>
 
                 {/* Rows */}
@@ -77,8 +77,8 @@ export default function LocationHours() {
                         </span>
                       </div>
 
-                      {/* Column 2: Hours (Top) + Break Time (Bottom) */}
-                      <div className="col-span-8 flex flex-col">
+                      {/* Column 2: Hours (Top) + Break Time (Bottom) Centered */}
+                      <div className="col-span-8 flex flex-col items-center text-center">
                         <span
                           className={`text-sm sm:text-base font-extrabold tracking-tight ${
                             item.isClosed
