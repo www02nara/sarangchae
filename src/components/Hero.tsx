@@ -27,7 +27,7 @@ export default function Hero() {
                 <img
                   src={getAssetPath("/images/logo-text.webp")}
                   alt="부산 사하구 하단 한의원 경희사랑채한의원"
-                  width={400}
+                  width={302}
                   height={74}
                   decoding="async"
                   className="h-14 sm:h-18 lg:h-22 w-auto object-contain block max-w-full my-1.5"

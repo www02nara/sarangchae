@@ -17,7 +17,7 @@ export default function Footer() {
               <img
                 src={getAssetPath("/images/logo-full.webp")}
                 alt={`${CLINIC_INFO.name} ${CLINIC_INFO.branchName}`}
-                width={144}
+                width={121}
                 height={32}
                 loading="lazy"
                 decoding="async"
