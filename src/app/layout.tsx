@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/sarangchae/favicon.ico", sizes: "any" },
       { url: "/sarangchae/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/sarangchae/images/logo-symbol.png", sizes: "any", type: "image/png" },
+      { url: "/sarangchae/images/favicon-master.png", sizes: "512x512", type: "image/png" },
     ],
     apple: [
       { url: "/sarangchae/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
