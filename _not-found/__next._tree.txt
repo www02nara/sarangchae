@@ -2,4 +2,4 @@
 :HL["/sarangchae/images/hero-clinic.webp","image",{"type":"image/webp"}]
 2:[["children",{"s":"__PAGE__","h":160}]]
 1:[["children",{"s":"/_not-found","h":64,"c":"$Q2"}]]
-0:{"b":"tHugc85ZC21qqY2ab_Jj_","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
+0:{"b":"0c3otIbinYFl5KwIs0bUE","t":{"t":{"s":"","h":16,"c":"$Q1"}}}
